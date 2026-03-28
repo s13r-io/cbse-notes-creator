@@ -32,7 +32,7 @@ You need three things from the user:
 | Source material | Yes | — |
 | Subject | Yes | — |
 | Chapter name | Yes | — |
-| Output file path | No | `{ChapterName}_Notes.md` in the source file's directory |
+| Output file path | No | `{SourceFilename}_notes.md` in the source file's directory |
 
 **Source material** can be: a file path (markdown, PDF, or text file), or content pasted directly in the conversation.
 
@@ -144,7 +144,7 @@ After the user approves the notes (or the complete draft):
 
 1. **Assemble** all sections into a single markdown file in the correct order (Sections 1-10 + Answer Key at the end).
 
-2. **Save** to the specified output path. Default: `{ChapterName}_Notes.md` in the same directory as the source file. Use underscores for spaces in the filename.
+2. **Save** to the specified output path. Default: `{SourceFilename}_notes.md` in the same directory as the source file. Derive `{SourceFilename}` from the source file's name (without extension). Use underscores for spaces in the filename.
 
 3. **Report** to the user:
    - File path where the notes were saved
