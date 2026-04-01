@@ -1,0 +1,10 @@
+{
+  "ocrLanguage": "en",
+  "ocrEnabled": true,
+  "maxPages": 1000,
+  "dpi": 300,
+  "outputFormat": "text",
+  "preciseBoundingBox": false,
+  "skipDiagonalText": false,
+  "preserveVerySmallText": true
+}

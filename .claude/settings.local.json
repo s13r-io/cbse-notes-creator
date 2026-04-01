@@ -13,7 +13,9 @@
       "Bash(find:*)",
       "WebSearch",
       "Bash(grep:*)",
-      "Bash(wc:*)"
+      "Bash(wc:*)",
+      "Bash(lit --version)",
+      "Bash(lit parse:*)"
     ]
   }
 }
