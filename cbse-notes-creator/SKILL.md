@@ -1,6 +1,6 @@
 ---
 name: cbse-notes-generator
-description: "Generates comprehensive CBSE Class 9 study notes from source material for any subject — Mathematics, Science (Physics, Chemistry, Biology), History, Geography, Economics, Political Science, Computer Science, English, and Hindi. The notes include 9 structured sections: chapter introduction, key terms, core content (adapted per subject type), common misconceptions, concept connections, self-assessment quiz, exam-oriented summary with model answers, quick revision sheet, and mnemonics. Use this skill whenever the user wants to create study notes, revision notes, exam prep material, chapter summaries, or study guides for CBSE Class 9. Trigger on: 'generate notes', 'create study notes', 'make notes from', 'CBSE notes', 'Class 9 notes', 'chapter notes', 'study material', 'revision notes', or any request to transform textbook content, PDF chapters, or raw educational material into structured study notes for a Class 9 student. Also use when the user says things like 'help my child study', 'prepare notes for exams', 'summarize this chapter for Class 9', or provides NCERT textbook content and wants it turned into study material."
+description: "Generate comprehensive, exam-aligned CBSE Class 9 study notes from textbook chapters, PDFs, or raw material. Covers all 9 Class 9 subjects including Mathematics, Science, Social Science, Languages, and Computer Science."
 ---
 
 # CBSE Class 9 Study Notes Generator
@@ -13,13 +13,35 @@ The goal is study notes that a student can use as their primary revision resourc
 
 ## Step 1 — Load Reference Files
 
-Before doing anything else, read these three files from the `references/` directory (relative to this skill):
+Before doing anything else, read these two shared files from the `references/` directory (relative to this skill):
 
-1. `references/note-structure-template.md` — The 9-section structure, subject variants, and quality checks
-2. `references/subject-profiles.md` — Per-subject adaptation rules, formatting conventions, pain points
-3. `references/exam-patterns.md` — CBSE exam structure, model answer formats, marking schemes
+1. `references/universal-template.md` — The 10-section structure, quality checks, and answer key
+2. `references/exam-patterns-general.md` — General CBSE exam structure, question type formats, answer-writing tips
 
 These references are your operating manual. Every decision you make about structure, content, and formatting should trace back to guidance in these files.
+
+**After identifying the subject in Step 2**, load the corresponding per-subject file from `references/subjects/`:
+
+| Subject | File to Load |
+|---------|-------------|
+| Mathematics | `references/subjects/mathematics.md` |
+| Science — Physics | `references/subjects/science-physics.md` |
+| Science — Chemistry | `references/subjects/science-chemistry.md` |
+| Science — Biology | `references/subjects/science-biology.md` |
+| History | `references/subjects/history.md` |
+| Geography | `references/subjects/geography.md` |
+| Economics | `references/subjects/economics.md` |
+| Political Science | `references/subjects/political-science.md` |
+| Computer Science | `references/subjects/computer-science.md` |
+| English | `references/subjects/english.md` |
+| Hindi | `references/subjects/hindi.md` |
+
+Each per-subject file contains: the structural variant template for Section 3, subject-specific formatting rules, common pain points, word count targets, and subject-specific exam patterns.
+
+**Fallbacks:** If a reference file is missing, proceed with defaults from the skill's own guidance:
+- If `universal-template.md` is missing: Use the 10-section structure described in `SKILL.md`.
+- If a per-subject file is missing: Identify the subject from the source content and apply the rules in `SKILL.md` Writing Principles.
+- If `exam-patterns-general.md` is missing: Use standard 80-mark CBSE model: 1-mark (1-2 sentences), 3-mark (60-80 words, 3 points), 5-mark (120-150 words, 5 points with examples).
 
 ---
 
@@ -30,31 +52,52 @@ You need three things from the user:
 | Input | Required? | Default |
 |-------|-----------|---------|
 | Source material | Yes | — |
-| Subject | Yes | — |
+| Subject | No | Auto-detected from content |
 | Chapter name | Yes | — |
 | Output file path | No | `{SourceFilename}_notes.md` in the source file's directory |
 
 **Source material** can be: a file path (markdown, PDF, or text file), or content pasted directly in the conversation.
 
-**Subject** must be one of: Mathematics, Science, History, Geography, Economics, Political Science, Computer Science, English, Hindi. If the user says "Science", ask which chapter — then determine the branch (Physics, Chemistry, or Biology) from the chapter-to-branch mapping in `subject-profiles.md`.
+**Subject** must be one of: Mathematics, Science, History, Geography, Economics, Political Science, Computer Science, English, Hindi. If the user provides the subject, use it. If not, auto-detect from the source content:
+- **Mathematics**: formulas, proofs, theorems, equations, geometric figures
+- **Science**: experiments, biological processes, chemical reactions, physical laws, diagrams
+- **History/Social Science**: events, dates, political movements, historical figures
+- **Geography**: maps, landforms, climate, rivers, population, vegetation
+- **Economics**: indicators, case studies, poverty, employment, GDP
+- **Political Science**: democracy, constitution, elections, rights, institutions
+- **Computer Science**: code, algorithms, binary, programming, networks
+- **English/Hindi**: literary analysis, grammar rules, vocabulary, poetry, prose
 
-If any required input is missing, ask for it. Don't guess the subject — a chapter about "Motion" could be Physics or Geography depending on context.
+For Science specifically, determine the branch (Physics, Chemistry, or Biology) from: formulas and numerical problems → Physics; classification and processes → Chemistry; diagrams and hierarchies → Biology. Then load the corresponding per-subject file from `references/subjects/`.
+
+If auto-detection is ambiguous, ask the user to confirm your best guess rather than listing all 9 options.
 
 ---
 
 ## Step 3 — Analyze the Source Material
 
-Read the source material completely. Then:
+Read the source material completely. Then immediately validate:
 
-1. **Identify the subject branch** — Use the chapter-to-branch mapping in `subject-profiles.md` to determine the structural variant (A through E).
+**Stop-and-check — before proceeding, verify you can:**
+1. Identify the chapter's main topic in 1 sentence
+2. List 3-4 key themes or sub-topics
+3. Name 2-3 terms, events, or formulas the source introduces
 
-2. **Extract core concepts** — List 10-15 core concepts from the source. These become the backbone of the Core Content section. Present this list to the user.
+If the source is garbled, incomplete, or you can't extract this basic structure, STOP and ask the user for an alternative format. Do not guess or improvise with partial content.
+
+If the check passes, continue with:
+
+1. **Identify the subject branch** — Use the subject-to-file mapping in Step 1 to determine the structural variant (A through E) and load the corresponding per-subject file.
+
+2. **Extract core concepts** — List 8-12 core concepts from the source. These become the backbone of the Core Content section. Include them in the outline for user approval.
 
 3. **Identify key terms** — Every term the chapter introduces or relies on. These go into Section 2.
 
 4. **Assess content density** — Is this a concept-heavy chapter (many ideas, less depth) or a depth chapter (fewer ideas, more detail)? This affects how you allocate word count across sub-sections.
 
 5. **Note what's in the source vs. what you'll need to supplement** — The source may not have real-world examples, modern connections, or exam-style questions. You'll generate those. But the factual content must come from or be consistent with the source. Do not invent facts that contradict the source material.
+
+6. **Handle source conflicts** — If the source contradicts widely-accepted NCERT content (e.g., wrong formula, incorrect date, outdated term), flag it in the final report to the user. In the notes themselves, use the source's version (it's the student's textbook), but add a brief clarifying note if the conflict could affect exam answers. Don't silently override the source.
 
 ---
 
@@ -66,11 +109,16 @@ Before writing, show the user a clear outline:
 Subject: [Subject]
 Chapter: [Chapter Name]
 Structural Variant: [A/B/C/D/E] ([Variant Name])
-Target Word Count: [range from subject-profiles.md]
+Target Word Count: [range from the per-subject file]
+
+Core Concepts (included in Core Content):
+- [Concept 1]
+- [Concept 2]
+- [...]
 
 Planned Sections:
 1. Chapter Introduction
-2. Key Terms & Definitions ([estimated number] terms)
+2. Key Terms & Definitions (10-15 terms)
 3. Core Content
    3.1 [Sub-section topic]
    3.2 [Sub-section topic]
@@ -79,10 +127,10 @@ Planned Sections:
 4. Common Mistakes & Misconceptions
 5. Concept Connections
 6. Self-Assessment Quiz (10 questions)
-7. Exam-Oriented Summary (3×1-mark, 3×3-mark, 2×5-mark model answers)
+7. Exam-Oriented Summary (3×1-mark, 2×3-mark, 2×5-mark model answers)
 8. Quick Revision Sheet
-9. Mnemonics & Memory Aids
-10. Extra Practice Questions with Answers (15-20 questions across all mark types)
+9. Mnemonics & Memory Aids (2-4, at least 3)
+10. Extra Practice Questions with Answers (8-12 questions across all mark types)
 
 Review mode: [Section-by-section / Complete draft]
 ```
@@ -95,13 +143,13 @@ Wait for the user's response before proceeding.
 
 ## Step 5 — Generate the Notes
 
-Now write the notes following the structure and guidelines in `note-structure-template.md`, applying the subject-specific rules from `subject-profiles.md`.
+Now write the notes following the structure and guidelines in `universal-template.md`, applying the subject-specific rules from the per-subject file loaded in Step 1.
 
 ### If the user chose "section-by-section review":
 Write each section and present it. After each section, ask: **"How does this section look? Any changes before I continue?"** Wait for approval before moving to the next section. After all sections are approved, assemble into the complete file.
 
 ### If the user chose "complete draft":
-Write all 9 sections plus the Answer Key in one go. Present the complete document for review.
+Write all 10 sections plus the Answer Key in one go. Present the complete document for review.
 
 ### Writing Principles
 
@@ -117,24 +165,24 @@ These principles apply regardless of subject or variant:
 
 **Formatting is not decoration.** Bold terms, tables, bullet points, and markers (⭐ △) are navigation aids. A student scanning the notes before an exam should be able to find what they need in seconds.
 
-**Be thorough, not thin.** The notes should be dense and comprehensive — a student's primary study resource, not a summary. Aim for the word count targets in `subject-profiles.md`. If the output feels short, you are probably under-explaining concepts, skipping worked examples, or not including enough practice questions. Specifically:
-- **Core Content** should have detailed explanations with multiple examples per concept, not just one-paragraph treatments.
-- **Formula/STEM subjects**: Include 2-3 worked examples per formula/concept (easy → medium → hard) AND 5 practice problems per sub-section.
+**Be complete but concise.** Cover every topic from the source. But explain concepts clearly and briefly — if an idea takes 3 sentences, don't stretch it to 5. The notes should be a student's primary study resource, not a copy of the textbook. Aim for the word count targets in the per-subject file. If output feels short, you are probably under-explaining concepts, skipping worked examples, or not including enough practice questions. Specifically:
+- **Core Content** should have clear explanations with examples per concept, not just one-sentence treatments.
+- **Formula/STEM subjects**: Include 2 worked examples per formula/concept (easy → hard) AND 3-5 practice problems per sub-section.
 - **Language subjects**: Include grammar rules and writing format templates relevant to the chapter, even if the source material doesn't explicitly cover grammar. CBSE English/Hindi exams test grammar alongside literature.
-- **Biology/Science**: Include detailed diagram descriptions — describe what a labeled diagram would show, part by part, with functions. Students need to visualize.
+- **Biology/Science**: Include labeled diagram descriptions — describe what a diagram would show, part by part, with functions. Students need to visualize.
 
-**Questions are the most valuable part.** Students learn by doing, not just reading. The notes must include a large variety of practice questions with complete ideal answers. Beyond the self-assessment quiz (Section 6) and model answers (Section 7), include an **Extra Practice Questions** section (Section 10) with 15-20 additional questions spanning all mark types (1, 2, 3, and 5 marks), each with a complete ideal answer. This section alone can be 2,000-3,000 words.
+**Questions are the most valuable part.** Students learn by doing, not just reading. Include a focused set of practice questions with complete ideal answers spanning all mark types (1, 2, 3, and 5 marks). Beyond the self-assessment quiz (Section 6) and model answers (Section 7), include an **Extra Practice Questions** section (Section 10) with 8-12 additional questions, each with a complete ideal answer. Quality over quantity — every question should test a different skill or concept.
 
 ### Quality Checks During Writing
 
-As you write each section, verify against the quality checks in `note-structure-template.md`:
+As you write each section, verify against the quality checks in `universal-template.md`:
 - Language clear for 14-15 year olds
 - No paragraph > 5 sentences
 - Key terms bolded on first use
 - Tables for comparisons of 3+ items
 - Real-world examples included
 - ⭐ and △ markers applied
-- Exam answer formats match `exam-patterns.md`
+- Exam answer formats match `exam-patterns-general.md`
 
 ---
 

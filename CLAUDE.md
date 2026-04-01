@@ -14,9 +14,12 @@ The skill produces 10-section structured notes with subject-specific adaptations
 cbse-notes-creator/          # The skill itself
 ├── SKILL.md                 # Main orchestration (workflow steps for the AI to follow)
 └── references/              # Reference files loaded by the skill at runtime
-    ├── exam-patterns.md     # CBSE exam structure, marking schemes, model answer formats
-    ├── subject-profiles.md  # Per-subject adaptation rules, formatting, pain points
-    └── note-structure-template.md  # 10-section template, 5 variants, quality checks
+    ├── universal-template.md     # 10-section template, quality checks, answer key (shared)
+    ├── exam-patterns-general.md  # CBSE exam structure, question type formats (shared)
+    └── subjects/                 # Per-subject files (loaded conditionally)
+        ├── mathematics.md, science-physics.md, science-chemistry.md,
+        ├── science-biology.md, history.md, geography.md, economics.md,
+        ├── political-science.md, computer-science.md, english.md, hindi.md
 
 docs/                        # French Revolution example materials (reference implementation)
 ├── French_Revolution_Notes_v2.md  # Example output — study notes (the quality benchmark)
@@ -36,7 +39,7 @@ evals/samples/               # Sample NCERT chapter PDFs for testing across subj
 
 ## How the Skill Works
 
-1. The AI reads the 3 reference files from `cbse-notes-creator/references/`
+1. The AI reads 2 shared reference files from `cbse-notes-creator/references/`, then loads the per-subject file from `references/subjects/` based on the subject
 2. User provides: source material (PDF/markdown/pasted text), subject, chapter name
 3. AI analyzes source, identifies subject variant, extracts core concepts
 4. AI presents outline for user approval (with option for section-by-section review)
@@ -48,7 +51,7 @@ evals/samples/               # Sample NCERT chapter PDFs for testing across subj
 - **Notes are structured into 10 mandatory sections** (not 9 — Section 10 "Extra Practice Questions with Answers" was added in iteration 2 based on user feedback that more question variations with ideal answers were needed)
 - **5 structural variants** adapt the core content section per subject type — don't try to make one format fit all subjects
 - **Every question must have a complete ideal answer** — no exceptions
-- **Target word counts** vary by subject (Math: 8K-12K, Science: 10K-15K, History: 12K-18K, etc.) — see `subject-profiles.md`
+- **Target word counts** vary by subject (Math: 5K-7K, Science: 6K-9K, History: 7K-10K, Geography/Economics/Pol Sci/English/Hindi: 6K-9K, Computer Science: 5K-7K) — see the per-subject file in `references/subjects/`
 - **Language subjects (English/Hindi)** must include grammar sub-sections even when the source chapter is only prose/poetry, because CBSE exams test grammar alongside literature
 - **French_Revolution_Notes_v2.md** in `docs/` is the original reference example but the skill is designed to produce higher quality output (with misconceptions, quizzes, mnemonics, cross-chapter connections, and practice questions that v2 lacks)
 
@@ -62,7 +65,7 @@ evals/samples/               # Sample NCERT chapter PDFs for testing across subj
 - **Skill created and tested** — `cbse-notes-creator/SKILL.md` + 3 reference files are complete and functional
 - **2 iterations of testing done** — tested with 3 subjects (Math, Science/Biology, English) using sample PDFs from `evals/samples/`
   - **Iteration 1**: Skill worked structurally (10/10 assertions passed) but word counts were too low (4.5K-6.7K vs targets of 8K-18K) and questions were insufficient
-  - **Iteration 2**: Fixed — added Section 10 (Extra Practice Questions), strengthened word count guidance, added grammar requirement for Language variants. Results: all 12/12 assertions passed, word counts in target (Math: 10.2K, Science: 11.1K, English: 10.5K), 28-46 questions per output all with ideal answers
+  - **Iteration 2**: Fixed — added Section 10 (Extra Practice Questions), strengthened word count guidance, added grammar requirement for Language variants. Results: all 12/12 assertions passed, word counts slightly above revised targets (Math: 10.2K vs 5K-7K, Science: 11.1K vs 6K-9K, English: 10.5K vs 6K-9K), 28-46 questions per output all with ideal answers
 - **Baseline comparison done** — with-skill outputs scored 10-12/12 vs without-skill baselines scoring 1-2/10 on structural assertions
 - **Test outputs exist** at `~/.claude/my-plugins/my-skills/skills/cbse-notes-generator/cbse-notes-generator-workspace/` (iteration-1/ and iteration-2/) — these are from before the skill was moved to the project folder
 
