@@ -1,80 +1,35 @@
-# Science — Biology — Subject Profile & Variant Structure
+# Science — Biology — Subject Profile
 
-## Structural Variant: C — Process/Classification
+## Topic Type Patterns
 
-#### Organization
-Organize by process stages or classification levels. Biology chapters often combine both.
+| Topic Type | When It Occurs | Explanation Style | Depth Requirements |
+|------------|---------------|-------------------|-------------------|
+| Biological Process | Photosynthesis, respiration, osmosis, cell division, digestion | Cause-Effect Chain (5-8 numbered steps) | Each step: WHAT happens AND WHY. Include input → output. For photosynthesis: raw materials → where → what happens → products. |
+| Classification | Cell types, tissue types, animal kingdoms, disease types, organism groups | Category Breakdown (tree or table) | Each category: Name + Distinguishing Characteristic + Example + Function. Use tree structure with 3+ items per level. |
+| Diagram-Dependent | Cell structure, tissue organization, digestive system, heart structure | Text Diagram Description: Part → Position → Function | Describe as if the student must draw it from your description. Every part needs: where it is (position) and what it does (function). |
+| Experiment | Testing for starch, osmosis in potato, microscope observation | Experiment Format: Aim → Materials → Procedure (numbered) → Observation → Conclusion | Conclusion must answer the Aim directly. "This proves that X." |
+| Concept Definition | Cell theory, biodiversity, health vs disease, immunity | Define → Explain → Apply | 1-2 sentence definition + 150-250 word explanation + 1 real-world example + 1 exam scenario |
+| Comparison | Plant vs animal cell, mitosis vs meiosis, arteries vs veins, infectious vs non-infectious disease | Side-by-Side Table (4+ aspects) + Decision Rule | Always end with: "To tell X from Y, look for Z." |
 
-#### Required Elements
+## Quality Guidance for Biology
 
-**Classification Hierarchies**
-```markdown
-### [Classification Topic]
+### Process Fidelity — Every Step Must Explain Why
+For biological processes (photosynthesis, respiration, osmosis, cell division), number each step and explain both WHAT happens and WHY. "Step 1: Light energy is absorbed by chlorophyll in the leaves — because chlorophyll is the green pigment that traps sunlight, just like a solar panel." The "because" is what makes the step memorable. Steps without "why" are memorized and forgotten.
 
-**[Level 1]**
-├── **[Category A]**
-│   ├── [Sub-category A1] — [key characteristic]
-│   └── [Sub-category A2] — [key characteristic]
-├── **[Category B]**
-│   ├── [Sub-category B1] — [key characteristic]
-│   └── [Sub-category B2] — [key characteristic]
-```
+### Plant vs Animal — Always Compare Explicitly
+Whenever a concept applies differently to plants and animals (cell structure, tissues, respiration, reproduction), present a side-by-side comparison table. Students constantly confuse which features belong to which. "Cell wall: plant = yes, animal = no. Chloroplasts: plant = yes, animal = no. Vacuole: plant = large central, animal = small multiple." One table prevents 10 errors.
 
-**Process Descriptions**
-```markdown
-### [Process Name]
+### Diagram Descriptions Must Be Complete
+A diagram description must let the student draw the diagram from your text alone. Include: overall shape, position of each part relative to others, and function of each part. Example: "The nucleus is a spherical structure near the center of the cell, surrounded by a double membrane called the nuclear envelope. It contains chromosomes (thread-like structures carrying genes) and the nucleolus (a dark spot that makes ribosomes)." Incomplete descriptions force students to look elsewhere.
 
-**What it is**: [1 sentence definition]
-**Why it happens**: [1-2 sentences explaining the purpose]
+### Named Structures Need the "Factory Analogy"
+For cell organelles and similar structures, use the factory analogy consistently: nucleus = management office, mitochondria = power plant, ribosomes = assembly line, Golgi body = packaging and shipping, lysosomes = waste disposal, ER = transport network. Assign each new organelle to a factory department the first time it's introduced. This gives students a single mental model they can expand.
 
-**Steps**:
-1. **[Step name]**: [What happens] → [Why it happens]
-2. **[Step name]**: [What happens] → [Why it happens]
-3. **[Step name]**: [What happens] → [Why it happens]
+### Disease vs Infection vs Symptom — Define Separately
+Students use these terms interchangeably. When covering health/disease: "Disease = the condition (being sick). Infection = what caused it (virus/bacteria entering the body). Symptom = what you feel/observe (fever, cough)." Present these as a table: Term | Definition | Example. Never assume students know the distinction.
 
-**Result**: [What the end product/outcome is]
-```
-
-**Diagram Descriptions**
-```markdown
-> **[DIAGRAM]: [Title]**
-> Imagine a labeled diagram showing:
-> - [Part A] at [position] — it does [function]
-> - [Part B] connected to [Part A] — it does [function]
-> - [Part C] surrounding [everything] — it does [function]
-> [Describe the overall shape and spatial relationships]
-```
-
-**Experiments**
-```markdown
-### Experiment: [Title]
-
-**Aim**: [What we want to find out]
-**Materials**: [List of materials needed]
-**Procedure**:
-1. [Step 1]
-2. [Step 2]
-3. [Step 3]
-**Observation**: [What you would see]
-**Conclusion**: [What this tells us]
-```
-
-**"Did You Know?" Facts**
-```markdown
-> **[FACT] Did You Know?** [Interesting, surprising fact related to the topic that makes it memorable — keep it to 1-2 sentences]
-```
-
-**Common Mistakes** (use alongside each concept where relevant)
-```markdown
-> **Watch Out:** [Describe a common biology error — e.g., "Students often say 'plants breathe CO₂ and release O₂ all the time.' But plants also respire 24/7 — they take in O₂ and release CO₂ just like us. Photosynthesis is separate from respiration."]
-```
-
-Common biology watch-outs:
-- Photosynthesis happens only during the day (needs sunlight); respiration happens 24/7
-- "Cell wall" is present in plant cells, not animal cells — but both have cell membranes
-- Mitochondria produce energy (ATP), not "food" — food is broken down elsewhere
-- Veins carry blood TO the heart; arteries carry blood AWAY — the names don't match common usage ("arteries = red, thick" vs the actual function)
-- Ovule becomes the seed; ovary becomes the fruit — students often swap these
+### Levels of Organization — Show the Chain
+Students see cell division, differentiation, and tissue formation as disconnected topics. Always show the chain: "Cell division → more cells → differentiation → tissues → organs → organ systems → organism." When covering any topic in this chain, reference where it fits. "Mitosis creates identical copies of cells (cell division) → these cells then specialize into tissues (differentiation)."
 
 ---
 
@@ -104,19 +59,6 @@ Common biology watch-outs:
 - **Classification hierarchy — "why these groups?"**: Kingdom → Phylum → Class → Order → Family → Genus → Species. Students memorize levels but don't understand the logic. Explain: "The more characteristics two organisms share, the closer they are in the classification. It's not random — it's based on evolution." Happens in Diversity in Living Organisms chapter.
 - **Disease vs infection vs symptom — using terms interchangeably**: "I have a cold" vs "I have a cold virus" vs "I have a fever". Students don't separate cause, condition, and sign. Decision rule: "Disease = the condition. Infection = what caused it. Symptom = what you feel." Happens in Why Do We Fall Ill? chapter.
 - **"How does a single cell become a whole organism?"**: Cell division, differentiation, tissue formation — students see these as separate but don't connect the chain. Show: "Division → more cells → cells become different → tissues → organs → systems." Happens in Tissues, The Fundamental Unit of Life chapters.
-
-### Mnemonics Guidance
-
-Biology-specific mnemonic patterns to use in Section 9:
-
-- **Cell organelles — factory analogy**: "N = nucleus = management. M = mitochondria = power plant. R = ribosomes = assembly line. G = Golgi = packaging and shipping. E = ER = transport network. L = lysosomes = waste disposal." — Use the full factory analogy to remember functions.
-- **Photosynthesis equation**: "Plants need S W C O² H²O" — Sunlight, Water, Chlorophyll, Carbon dioxide, Water → Glucose + Oxygen
-- **Levels of organization**: "C T O S" — Cell → Tissue → Organ → System → Organism
-- **Blood components**: "R W P" — Red blood cells (carry O₂), White blood cells (fight infection), Platelets (clotting) — "Red Wagon Platelets"
-- **Plant tissue types**: "MPSE" — Meristematic (growth), Permanent (structure), Simple (one cell type), Epidermal (protection)
-- **Kingdom classification**: "MPFPA" — Monera, Protista, Fungi, Plantae, Animalia — "My Pet Frog Prefers Apples"
-
-For each mnemonic: the mnemonic itself + a 1-sentence explanation of how to recall it.
 
 ---
 

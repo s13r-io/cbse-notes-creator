@@ -1,92 +1,35 @@
-# English — Subject Profile & Variant Structure
+# English — Subject Profile
 
-## Structural Variant: D — Language
+## Topic Type Patterns
 
-#### Organization
-Organize by chapter component: literary content first (summary, character analysis, literary devices), then grammar relevant to the chapter, then writing skills. **Important**: Even if the source material is only a prose/poetry chapter with no grammar content, you MUST include a grammar sub-section. CBSE exams test grammar alongside literature. For English, cover grammar topics like tenses, reported speech, active/passive voice, subject-verb agreement, or determiners — pick 2-3 topics relevant to the language patterns in the chapter. For Hindi, cover relevant व्याकरण topics like संधि, समास, अलंकार, or पद-परिचय.
+| Topic Type | When It Occurs | Explanation Style | Depth Requirements |
+|------------|---------------|-------------------|-------------------|
+| Prose Analysis | Stories, essays, narrative chapters | Summary (Brief + Detailed) → Character Analysis → Theme Discussion | Character analysis table: Name | Key Traits | Evidence from Text | Role in Theme. Theme needs 2-3 sentences connecting to student's world. |
+| Poetry Analysis | Poems from Beehive/Moments | Stanza-by-Stanza: Original → Word Meanings → Explanation → Literary Devices | Three-layer explanation per stanza: Literal (what does it say?) → Figurative (deeper meaning?) → Thematic (how connects to main idea?) |
+| Grammar Rule | Tenses, voice, reported speech, subject-verb agreement | Rule Statement → When It Applies → Examples (3) → Practice (3) | Rule in simple language. Examples must show common usage AND edge cases. Practice items with answers. |
+| Writing Format | Formal letter, informal letter, diary entry, story, article | Template → Example → Common Mistakes | Template must be complete enough to replicate. Example follows the template exactly. Common mistakes are specific, not generic. |
+| Vocabulary | Words from the chapter, synonyms/antonyms, idioms | Word | Meaning | Part of Speech | Synonym | Antonym | Use in Sentence | 15-20 words per chapter. |
+| Reference to Context | Extract-based questions from prose/poetry | Speaker → Context → Significance | Three-part answer: who is speaking/writing → what is happening in this moment → why this line matters to the story/poem |
 
-#### Required Elements
+## Quality Guidance for English
 
-**Chapter/Poem Summary**
-```markdown
-### Summary
+### Quote Integration
+Every literary analysis point must be supported by a quote or reference from the text. Format: point + evidence. Example: "Kezia was terrified of her father. The text says she would feel 'relieved' when he left for work, showing her anxiety was tied to his physical presence." Analysis without textual evidence is opinion, not exam writing.
 
-**In Brief**: [2-3 sentence summary of the plot/argument/theme]
+### Three-Layer Stanza Explanations
+For every stanza of a poem, provide three layers: (1) Literal meaning — what the line says in plain English, (2) Figurative meaning — what the poet actually means (metaphor, symbolism), (3) Thematic connection — how this stanza contributes to the poem's central idea. Students who stop at layer 1 write superficial answers; students who reach layer 3 score high marks.
 
-**Detailed Summary**:
-[3-5 paragraphs telling the story or explaining the poem. Use simple language. For poetry, explain stanza by stanza.]
-```
+### Writing Templates Must Be Replicable
+A writing format template must be complete enough that a student could follow it and produce a correct piece of writing. Include every element in order with placeholders. Then provide one full example that follows the template exactly. Finally, list 2-3 common mistakes specific to that format. "A formal letter needs: sender's address → date → receiver's address → subject → salutation → body (3 paragraphs) → complimentary close."
 
-**Character Analysis** (for prose) / **Literary Devices** (for poetry)
-```markdown
-### Character Analysis
+### Grammar Rules Need Edge Cases
+For every grammar topic, include: the rule stated simply, 3 standard examples, and 2 edge cases that trip students up. For tenses: "Present perfect: 'I have lived here since 2010.' Edge case: Don't use present perfect with specific past time markers ('I have lived here in 2010' is WRONG — use past simple: 'I lived here in 2010')." Edge cases are what exam questions test.
 
-| Character | Key Traits | Evidence from Text | Role in Theme |
-|-----------|-----------|-------------------|---------------|
-| [Name] | [2-3 traits] | "[Quote or reference]" | [How they serve the theme] |
-```
+### Reference to Context — Three-Part Answer
+When answering extract-based questions, always structure as: (1) Who says this / who is being described? (2) What is happening at this point in the story/poem? (3) What is the significance of this line to the theme or character development? Students who only answer part 1 score 1 out of 3 marks.
 
-```markdown
-### Literary Devices Used
-
-| Device | Example from Poem | Effect |
-|--------|------------------|--------|
-| [Metaphor/Simile/etc.] | "[Exact line]" | [What effect it creates] |
-```
-
-**Poetry: Stanza-by-Stanza Explanation** (for Hindi: भावार्थ)
-```markdown
-### Stanza 1
-> [Original stanza text]
-
-**Word Meanings**: [word] = [meaning]; [word] = [meaning]
-**Explanation**: [What the poet is saying in plain language — 2-3 sentences]
-**Literary Devices**: [Identify any devices used in this stanza]
-```
-
-**Grammar Rules**
-```markdown
-### Grammar: [Topic — e.g., Tenses, संधि, समास]
-
-**Rule**: [State the rule clearly]
-**Explanation**: [Elaborate with simple language — when does this rule apply?]
-
-**Examples**:
-1. [Example with the rule applied — bold the relevant part]
-2. [Example]
-3. [Example]
-
-**Practice**:
-1. [Sentence for the student to correct/complete] → Answer: [answer]
-2. [...]
-3. [...]
-```
-
-**Vocabulary List**
-```markdown
-### Vocabulary
-
-| Word | Meaning | Part of Speech | Synonym | Antonym | Sentence |
-|------|---------|---------------|---------|---------|----------|
-| [word] | [meaning] | [noun/verb/adj/etc.] | [synonym] | [antonym] | [Use in a sentence] |
-```
-
-**Writing Format Templates**
-```markdown
-### Writing: [Format Name — e.g., Formal Letter, Diary Entry]
-
-**When to use**: [Brief description of when this format is used]
-
-**Template**:
-[Show the complete structure with placeholders]
-
-**Example**:
-[One complete example following the template]
-
-**Common Mistakes to Avoid**:
-- [Mistake 1]
-- [Mistake 2]
-```
+### Vocabulary in Context, Not Isolation
+Don't just list word meanings — show how the word is used in a sentence from the chapter AND a new sentence the student creates. "Timid: shy, lacking confidence. In the chapter: 'Kezia was too timid to approach her father.' Your sentence: 'The timid puppy hid behind its owner when strangers approached.'" Context makes vocabulary stick.
 
 ---
 
@@ -121,18 +64,6 @@ Organize by chapter component: literary content first (summary, character analys
 - **Vocabulary in context — "I don't know what this word means so I skip it"**: Students skip unknown words instead of using surrounding text. Teach: "Look at the sentence before and after. What word would fit? Is it positive or negative? Noun, verb, adjective?" Happens in Section A (Reading), vocabulary sections.
 - **Poetry interpretation — "what does the poet mean?" feels subjective**: Students give a one-word answer or copy the line. 3-step: literal (what does the line say?) → figurative (what's the deeper meaning?) → thematic (how does this connect to the poem's main idea?). Happens in Section C (Literature — poetry chapters).
 - **Reference to context — "I identify the speaker but can't explain why it matters"**: Students say "This is from Chapter 3" without connecting the quote to character, theme, or plot. Teach: identify speaker → explain context → explain significance to the story. Happens in Section C (Literature — prose chapters).
-
-### Mnemonics Guidance
-
-English-specific mnemonic patterns to use in Section 9:
-
-- **Letter format order (formal)**: "SDSBBCC" — Sender's address, Date, Subject, Salutation, Body, Complimentary close, (not always needed: signature)
-- **Story writing structure**: "OBCR" — Opening (setting + characters), Build-up (problem), Climax (turning point), Resolution (ending)
-- **Tense decision rule**: "TTT" — Time marker? (specific time → past simple. No time → present perfect). Type of action? (ongoing → continuous. Completed → simple).
-- **Comprehension strategy**: "SQ3R" — Survey (scan headings/questions), Question (what do I need to find?), Read (focused reading), Recite (answer in your own words), Review (check against passage)
-- **Parts of speech identification**: "VANP" — Verb (action), Adjective (describe noun), Noun (thing), Preposition (position) — check in order when analyzing a sentence
-
-For each mnemonic: the mnemonic itself + a 1-sentence explanation of how to recall it.
 
 ---
 

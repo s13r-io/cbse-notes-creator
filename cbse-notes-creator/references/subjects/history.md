@@ -1,63 +1,35 @@
-# History — Subject Profile & Variant Structure
+# History — Subject Profile
 
-## Structural Variant: A — Narrative
+## Topic Type Patterns
 
-#### Organization
-Choose chronological (for events) or thematic (for concepts) organization based on the chapter. History chapters are usually chronological. Geography/Economics chapters are usually thematic.
+| Topic Type | When It Occurs | Explanation Style | Depth Requirements |
+|------------|---------------|-------------------|-------------------|
+| Historical Event | French Revolution, Russian Revolution, Industrial Revolution, Nazism | Sequence of Events (chronological) | Why it started (2-3 sentences) + 4+ stages with years/dates + Impact table by group | Problems/Limitations |
+| Ideology/Movement | Liberalism, Socialism, Nazism, Democracy, Women's Rights | Define → Key Principles → Who Supported It → Who Opposed It → Historical Impact | Explain the spectrum: "Individual freedom ←→ Equality ←→ State control" helps students place ideologies. |
+| Institutional Change | Abolition of monarchy, creation of Constitution, Electoral reforms | Before vs After comparison table + How the Change Happened (steps) | What existed before → What triggered the change → Steps taken → What replaced it |
+| Key Person | Robespierre, Napoleon, Hitler, Lenin, Ambedkar | Person-Action Pair: Name + Role + Key Actions (2-3) + Significance (1-2 sentences) | Always in table format. Never a wall of text. Students remember pairs, not paragraphs. |
+| Comparison | French Revolution vs Russian Revolution, Democracy vs Dictatorship, Colonial vs Independent India | Side-by-Side Table (4+ aspects) + Narrative of most important differences | Include a decision rule for telling them apart |
+| Source Analysis | Passages, images, cartoons from the period | Source → Context → What It Shows → Reliability | Identify the source type, who created it, when, and what perspective it represents |
 
-#### Required Elements
+## Quality Guidance for History
 
-**Cause → Event → Effect Chains**
-```markdown
-### [Event/Topic Name]
+### The "So What?" Test
+After every event, ask and answer: "Who gained? Who lost? What changed? What stayed the same?" If you can't answer these, the explanation is narrative without analysis. CBSE rewards analysis, not storytelling. Example: "The Bastille was stormed on 14 July 1789" is narrative. "The storming of the Bastille was significant because it demonstrated that the king's military power could be challenged by ordinary citizens, shifting the balance of power to the people" passes the test.
 
-**Background**: [1-2 sentences setting context]
+### Dates Are Anchors, Not Lists
+Never present a list of dates without context. Each date must be anchored to a "why it matters" sentence. When teaching chronology, pick 3 anchor dates per chapter and hang everything else off them. Example: "1789 is your anchor for the French Revolution. The Estates General met that year, the Bastille fell, and the Declaration of Rights was drafted. Everything else connects to one of these three."
 
-**Causes**:
-1. [Cause 1 — with explanation]
-2. [Cause 2 — with explanation]
-3. [Cause 3 — with explanation]
+### Person-Action Pairs
+Never introduce a historical figure without immediately stating their role and one defining action. Format: **Name** (Role) — Key Action. Example: **Robespierre** (Leader of Jacobins) — Presided over the Reign of Terror. Students remember "Robespierre = Terror", not "Robespierre was a lawyer who became influential during the Revolution." Every person in the notes gets this treatment.
 
-**What Happened**: [2-3 paragraphs narrating the event in simple language]
+### Cause → Event → Effect Chains (Always)
+Every historical event explanation must follow this chain: Causes (why it started, 2-3 with explanation) → Event (what happened, in chronological stages) → Effects (immediate + long-term, by group if applicable). Use arrow notation in the text: Cause → Event → Immediate Effect → Long-term Impact. Never skip the "why it started" step — students who can narrate events but not explain causes will lose marks.
 
-**Effects**:
-- **Immediate**: [What changed right away]
-- **Long-term**: [What changed over years/decades]
+### Ideologies Need Spectrums, Not Just Definitions
+When explaining political ideologies (liberalism, socialism, democracy, fascism), always place them on a spectrum relative to each other. "Liberalism values individual freedom. Socialism prioritizes equality, even if it means less individual freedom. Fascism rejects both in favor of state control." This helps students distinguish ideologies they often flatten into "they're all the same."
 
-> **THINK Think About It:** [Question connecting this to the student's world]
-```
-
-**Comparison Tables** (use whenever comparing 2+ things)
-```markdown
-| Aspect | [Thing A] | [Thing B] | [Thing C] |
-|--------|-----------|-----------|-----------|
-| [Aspect 1] | ... | ... | ... |
-| [Aspect 2] | ... | ... | ... |
-```
-
-**Timeline**
-```markdown
-### Timeline of Key Events
-
-| Year | Event | Significance |
-|------|-------|-------------|
-| [Year] | [What happened] | [Why it matters — 1 sentence] |
-```
-
-**Personality/Place Profiles**
-```markdown
-### Key Personalities
-
-**[Name]** ([Birth-Death] or [Active Period])
-- **Role**: [Their position/title]
-- **Key Actions**: [2-3 bullet points of what they did]
-- **Significance**: [Why they matter to this chapter — 1-2 sentences]
-```
-
-**"In Today's World" Connections**
-```markdown
-> **[WORLD] In Today's World:** [1-2 sentences connecting a historical/geographical/economic concept to something happening today. Make it specific — name a country, event, or issue the student might have heard about.]
-```
+### Modern Relevance Is Not Optional
+Connect every major event or theme to something happening today. "The French Revolution established the idea that citizens have rights governments must respect — this idea is now enshrined in India's Constitution." Students who see the thread from past to present retain better. Be specific: name a country, movement, or current event.
 
 ---
 
@@ -75,8 +47,7 @@ Choose chronological (for events) or thematic (for concepts) organization based 
 - **Timelines**: Chronological table with Year | Event | Significance
 - **Cause-Effect**: Use arrow chains: Cause → Event → Immediate Effect → Long-term Impact
 - **Comparison tables**: Before vs After, Country A vs Country B, Group X vs Group Y
-- **Personalty profiles**: Name | Role | Key Actions | Significance (table format)
-- **"In Today's World"**: Connect historical events to current issues (e.g., French Revolution → modern democracy movements)
+- **Personality profiles**: Table format — Name | Role | Key Actions | Significance
 
 ### Target Word Count
 7K-10K words
@@ -88,18 +59,6 @@ Choose chronological (for events) or thematic (for concepts) organization based 
 - **Events as stories, not causes — "and then this happened" instead of "why did this happen?"**: Students narrate without analyzing impact. Teach the "So what?" test: after every event, ask "Who gained? Who lost? What changed? What stayed the same?" Happens across all chapters.
 - **"Who did what?" — leader names, roles, and actions get swapped**: Napoleon, Hitler, Lenin, Tsar Nicholas II. Students remember actions but attach them to the wrong person. Always pair name + role + key action in a table. Happens in French Revolution, Nazism, Russian Revolution chapters.
 - **Comparing "then" to "now" — students don't see modern relevance**: A student thinks "Nazism is history, not relevant today." Connect to modern issues: democratic backsliding, propaganda, inequality. Show the thread: "This mechanism existed then, and here's where it appears now." Happens especially in Nazism and Forest Society chapters.
-
-### Mnemonics Guidance
-
-History-specific mnemonic patterns to use in Section 9:
-
-- **Revolution causes**: Acronym for French Revolution causes — "FEAST" (Financial crisis, Estates General failure, Assembly, Social inequality, Tennis Court Oath)
-- **Ideology spectrum**: "LES" scale — Liberal (individual freedom) → Egalitarian (equality) → Socialist (state control) — left-to-right political spectrum
-- **Event sequences**: Chronological anchor method — "Pick 3 anchor dates per chapter. Everything else hangs off those anchors."
-- **Leader-role pairing**: Table format — "Name + Title + One Key Action" for each leader (more effective than a list of names alone)
-- **Rights and amendments**: Acronym for key rights — "FRASE" (Freedom, Right to equality, Against exploitation, Secularism, Equality before law)
-
-For each mnemonic: the mnemonic itself + a 1-sentence explanation of how to recall it.
 
 ---
 

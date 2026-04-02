@@ -1,69 +1,35 @@
-# Political Science — Subject Profile & Variant Structure
+# Political Science — Subject Profile
 
-## Structural Variant: A — Narrative
+## Topic Type Patterns
 
-#### Organization
-Organize by theme (democracy, constitution, elections, rights). Political Science chapters are thematic. Focus on concepts, institutional structures, and real-world democratic examples.
+| Topic Type | When It Occurs | Explanation Style | Depth Requirements |
+|------------|---------------|-------------------|-------------------|
+| Political Concept | Democracy, constitution, elections, federalism, secularism | Define → In Simple Words → Real-World Example → Limits/Nuances | Always give formal definition + everyday explanation. Example must be from India or a known country. |
+| Institutional Process | How a bill becomes law, election process, judicial review | Process Flowchart (numbered steps with who is responsible + what can go wrong) | 5+ steps. Each step: What happens + Who does it + Why it matters. Include safeguards at each stage. |
+| Rights/Duties | Fundamental Rights, DPSPs, constitutional remedies | Table: Right | What It Means | Real-World Example | Limitations | | Limits explain why the right has boundaries. "Your right to free speech stops where someone else's safety begins." |
+| Country/System Comparison | Democratic vs non-democratic, Parliamentary vs Presidential, India vs other constitutions | Side-by-Side Table (4+ aspects) + Narrative of key differences | Use contrasting examples: "India has elections AND free press. Zimbabwe has elections but NOT free press — that's the difference." |
+| Case Study | Zimbabwe, Chile, Poland, Saudi Arabia (democracy/dictatorship examples) | Case Study Format: Setting → What Happened → Democratic Principle Tested → Outcome → Lesson | Connect each case to a general principle. "Chile shows that democracy can be overthrown by force, but also that it can be restored." |
+| Debate-Style Question | "Can democracy exist without elections?", "Should rights have limits?" | Present Both Sides → Weigh Arguments → State the Principle | Neither side is "wrong" — the exercise is in reasoning. Show the trade-off. |
 
-#### Required Elements
+## Quality Guidance for Political Science
 
-**Concept with Example** (for political/governance concepts)
-```markdown
-### [Concept Name]
+### Formal Definition + Everyday Explanation (Always)
+Every political concept needs two sentences: the formal definition and the "in simple words" version. "Universal Adult Franchise means every adult citizen has the right to vote regardless of caste, religion, or gender. In simple words: if you're 18 or older, you can vote — no one can stop you." Students who only get the formal version memorize it without understanding it. Students who only get the simple version can't write exam answers. They need both.
 
-**Definition**: [Formal definition — 1-2 sentences]
+### Institutions Need "Who Does What" Tables
+For every institution (Parliament, Supreme Court, Election Commission), create a table: Body | Role | How Members Are Chosen | Key Power. Students confuse institutional roles constantly. "Parliament = Legislature (writes laws). Prime Minister/Ministers = Executive (implements laws). Supreme Court = Judiciary (reviews laws)." Without explicit role assignment, students mix them up.
 
-**In simple words**: [Explain like you're talking to a friend — what does this actually mean?]
+### "Democracy Is More Than Elections" — Show the Full Picture
+Whenever discussing democracy, cover at least these features: free and fair elections, independent judiciary, free press, rule of law, constitutional limits on power, and respect for rights. Students equate elections with democracy. Counter with examples: "Zimbabwe has elections but isn't fully democratic because the opposition is suppressed and the press isn't free."
 
-**Real-world example**: [A concrete example from India or another country — e.g., "When India holds elections, every adult citizen can vote — that's universal adult franchise in action."]
+### Rights Come With Limits — Explain Why
+Students find it contradictory that rights have limitations. For every right, explain both what it guarantees AND where it stops. "Right to Freedom of Speech means you can express your opinion. But you cannot use speech to incite violence or spread hatred — because that would violate someone else's Right to Life." The limitation IS what protects other rights.
 
-> **THINK Think About It:** [Question that challenges the student — e.g., "Can a country have elections but still not be democratic? What else would it need?"]
-```
+### Process Steps Must Explain Purpose
+For institutional processes (how a bill becomes law, how elections work), every step must explain WHY it exists, not just WHAT happens. "The bill is sent to a parliamentary committee for review — this ensures experts examine it before the full Parliament votes, preventing poorly-drafted laws." Students who understand purpose remember the process.
 
-**Institution Function Flowcharts**
-```markdown
-### [Institution/Process Name]
-
-**Flow**: [Step 1] → [Step 2] → [Step 3] → [Step 4]
-
-Example: How a bill becomes a law:
-[Drafted by Cabinet] → [Introduced in Lok Sabha] → [Discussed & Voted] → [Sent to Rajya Sabha] → [Discussed & Voted] → [President's Assent] → [Law]
-
-**At each step**: [What happens] + [Who is responsible] + [What can go wrong]
-```
-
-**Rights/Duties Tables**
-```markdown
-| Right/Duty | What It Means | Real-World Example | Limitations (if any) |
-|------------|--------------|-------------------|---------------------|
-| [Right name] | [Explanation] | [Concrete example] | [Why this right has boundaries] |
-```
-
-**Country/System Comparison Tables** (use whenever comparing governance systems)
-```markdown
-| Aspect | [Country/System A] | [Country/System B] |
-|--------|-------------------|-------------------|
-| [Aspect 1] | ... | ... |
-| [Aspect 2] | ... | ... |
-```
-
-Common comparisons: Democratic vs Non-democratic government, Parliamentary vs Presidential system, India's Constitution vs other countries, Fundamental Rights vs DPSPs.
-
-**Case Study Format**
-```markdown
-### Case Study: [Country/Event]
-
-**Setting**: [Country, time period, political context]
-**What happened**: [2-3 sentences narrating the event]
-**Democratic principle tested**: [Which principle does this illustrate — e.g., free elections, judicial independence, federalism]
-**Outcome**: [What happened and why]
-**Lesson**: [1-2 sentences on what this teaches about governance]
-```
-
-**"In Today's World" Connections**
-```markdown
-> **[WORLD] In Today's World:** [1-2 sentences connecting a political concept to current events — elections, constitutional amendments, judicial rulings, civil rights movements. Make it specific — name a country or event.]
-```
+### Use Country Examples as Proof Points
+Abstract principles need concrete proof. When explaining "free elections," reference India. When explaining "lack of press freedom," reference a specific country. "Saudi Arabia does not hold elections for its legislature — the king appoints all officials." Named examples convert principles into evidence students can use in exam answers.
 
 ---
 
@@ -78,7 +44,7 @@ Common comparisons: Democratic vs Non-democratic government, Parliamentary vs Pr
 | Critical thinking (debate-style) | 10% |
 
 ### Formatting Rules
-- **Definitions**: Always give the formal definition + a simple "in other words" explanation
+- **Definitions**: Always give formal definition + simple "in other words" explanation
 - **Country comparisons**: Use tables (India vs other democracies, democratic vs non-democratic)
 - **Institution functions**: Flowchart-style (Bill introduced → Discussed in Lok Sabha → Passed → Rajya Sabha → President's assent)
 - **Rights**: Table format with Right | What It Means | Example | Limitations
@@ -93,18 +59,6 @@ Common comparisons: Democratic vs Non-democratic government, Parliamentary vs Pr
 - **Electoral process — "why so many steps between voting and results?"**: Students memorize step numbers but don't understand the purpose. Explain: "Each step exists to prevent fraud. EVM verification prevents ballot stuffing. Counting centers ensure transparency." Happens in Electoral Politics chapter.
 - **"Rights have limitations" — seems contradictory**: "If I have free speech, why can't I say anything?" Students don't see why limits exist. Explain: "Rights protect individuals and society. Limitations protect other rights. Your right stops where someone else's safety begins." Happens in Democratic Rights chapter.
 - **Rights without duties — "I have rights, what's in it for me?"**: Students focus on what they get, not what they owe. Show the connection: "Rights give you freedom. Duties ensure you use that freedom responsibly. You can't claim rights while violating others' rights." Happens in Democratic Rights chapter.
-
-### Mnemonics Guidance
-
-Political Science-specific mnemonic patterns to use in Section 9:
-
-- **Features of democracy**: "EFIR" — Elections, Freedom of press, Independent judiciary, Rights protected
-- **Fundamental Rights (6)**: "REDUCE" — Right to Equality, Right to Freedom, Right against Exploitation, Right to Freedom of religion, Cultural and Educational rights, Right to Constitutional remedies
-- **Organs of government**: "LEJ" — Legislature (makes laws), Executive (implements laws), Judiciary (interprets laws)
-- **Key constitutional values**: "JIFS" — Justice, Independence of judiciary, Federalism, Secularism
-- **Steps in election process**: "VCCA" — Voter registration, Candidate nomination, Campaigning, Counting and results
-
-For each mnemonic: the mnemonic itself + a 1-sentence explanation of how to recall it.
 
 ---
 

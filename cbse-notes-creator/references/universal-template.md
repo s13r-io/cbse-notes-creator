@@ -1,8 +1,8 @@
 # CBSE Class 9 Study Notes — Universal Structure Template
 
-This template defines the mandatory sections and quality checks for generating study notes. Every set of notes must include all 10 numbered sections (plus an Answer Key section).
+This template defines the mandatory sections and quality checks for generating study notes. Every set of notes must include all 7 numbered sections.
 
-**Subject-specific content** (structural variant for Section 3, subject profile rules, and subject exam patterns) is loaded from the per-subject file in `references/subjects/`.
+**Subject-specific content** (topic-type patterns, quality guidance, subject profile rules, and subject exam patterns) is loaded from the per-subject file in `references/subjects/`.
 
 ---
 
@@ -14,38 +14,32 @@ This template defines the mandatory sections and quality checks for generating s
 4. [Section 3: Core Content](#section-3-core-content)
 5. [Section 4: Common Mistakes & Misconceptions](#section-4-common-mistakes--misconceptions)
 6. [Section 5: Concept Connections](#section-5-concept-connections)
-7. [Section 6: Self-Assessment Quiz](#section-6-self-assessment-quiz)
-8. [Section 7: Exam-Oriented Summary](#section-7-exam-oriented-summary)
-9. [Section 8: Quick Revision Sheet](#section-8-quick-revision-sheet)
-10. [Section 9: Mnemonics & Memory Aids](#section-9-mnemonics--memory-aids)
-11. [Section 10: Extra Practice Questions with Answers](#section-10-extra-practice-questions-with-answers)
-12. [Quality Checks](#quality-checks)
+7. [Section 6: Quick Revision](#section-6-quick-revision)
+8. [Section 7: Questions and Answers](#section-7-questions-and-answers)
+9. [Quality Checks](#quality-checks)
 
 ---
 
 ## Mandatory Sections Overview
 
-Every generated note must contain these 10 sections in this order:
+Every generated note must contain these 7 sections in this order:
 
 | # | Section | Purpose | Approximate Length |
 |---|---------|---------|-------------------|
-| 1 | Chapter Introduction | Orient the student: what, why, prerequisites | 300-500 words |
+| 1 | Chapter Introduction | Chapter structure outline, prerequisites, why it matters | **200-300 words max** |
 | 2 | Key Terms & Definitions | Quick-reference glossary | 10-15 terms |
-| 3 | Core Content | Main body — structure defined by subject variant | 30-45% of total |
+| 3 | Core Content | Main body — source-driven, flexible structure | Substantive explanations for every topic |
 | 4 | Common Mistakes & Misconceptions | Prevent common errors | 4-6 items |
 | 5 | Concept Connections | Link to other chapters/subjects | 200-400 words |
-| 6 | Self-Assessment Quiz | Test understanding | 10-12 questions |
-| 7 | Exam-Oriented Summary | Exam-ready revision + model answers | 800-1,200 words |
-| 8 | Quick Revision Sheet | One-page recap | 400-600 words |
-| 9 | Mnemonics & Memory Aids | Memory tricks | 2-4 (at least 3) items |
-| 10 | Extra Practice Questions with Answers | Focused question bank | 12-16 questions |
+| 6 | Quick Revision | Top things to remember, revision table, examiner's tips | 400-700 words |
+| 7 | Questions and Answers | All question types with inline answers | 22+ questions |
 
 ---
 
 ## Section 1: Chapter Introduction
 
 ### Purpose
-Set the stage. The student should know within 30 seconds what this chapter is about, why it matters, and whether they have the prerequisites.
+Give the student a roadmap of the chapter in under 300 words. They should know what topics are covered, in what order, and whether they have the prerequisites. **This section must be 200-300 words. Do not exceed 300 words.**
 
 ### Structure
 
@@ -53,34 +47,28 @@ Set the stage. The student should know within 30 seconds what this chapter is ab
 # [Chapter Name] — [Subject]
 ## CBSE Class 9 | Comprehensive Study Notes
 
-### What This Chapter Is About
-[One paragraph, 3-4 sentences. Plain language. No jargon without definition. Give the student a mental model of what they're about to learn.]
+### Chapter Overview
+[2-3 sentences: a hook (surprising fact or question) + what this chapter is about + why it matters. No jargon.]
 
-### Why This Matters
-- [Connection to real life — something the student encounters]
-- [Connection to other subjects or future learning]
-- [Connection to exams — how much weightage, what types of questions]
-- [Connection to the broader world — current events, historical significance, practical application]
+### Chapter Structure
+This chapter covers these topics in this order:
+1. **[Topic Name]** — [One clause: what this topic covers]
+2. **[Topic Name]** — [One clause]
+3. **[Topic Name]** — [One clause]
+4. **[Topic Name]** — [One clause]
+...
 
-### What You'll Learn
-After studying this chapter, you will be able to:
-1. [Specific learning objective — use action verbs: define, explain, calculate, compare, analyze]
-2. [...]
-3. [...]
-4. [...]
-5. [...]
-
-### Before You Start
-You should already know:
-- [Prerequisite concept 1 — from which chapter/class]
-- [Prerequisite concept 2]
+### Prerequisites
+- [Concept 1 — from which chapter/class]
+- [Concept 2 — from which chapter/class]
 - [If no prerequisites: "This chapter starts from the basics. No prior knowledge needed."]
 ```
 
 ### Writing Guidelines
-- The overview paragraph is the most important paragraph in the entire document. It should make the student curious. Use a hook — a surprising fact, a question, a real-world scenario.
-- Learning objectives must be specific and measurable. "Understand polynomials" is too vague. "Factor a polynomial expression into its components" is specific.
-- Keep prerequisites honest — if a student needs Class 8 algebra to follow this Math chapter, say so.
+- The overview paragraph is the hook — make the student curious with a surprising fact, a question, or a real-world scenario.
+- The chapter structure list must match the actual sub-sections in Section 3 (Core Content). Do not list topics here that don't appear in Core Content, and vice versa.
+- Prerequisites should be honest — if a student needs Class 8 algebra to follow this Math chapter, say so.
+- **Hard constraint**: This section must be between 200 and 300 words. If you're approaching 300, cut the prerequisites or shorten the overview. Do not pad.
 
 ---
 
@@ -112,35 +100,100 @@ A scannable glossary the student can refer back to while reading. Definitions sh
 
 ## Section 3: Core Content
 
-This is the main body of the notes and takes up 30-45% of the total word count. The structure depends on the subject's structural variant (see the per-subject file in `references/subjects/`).
+This is the main body of the notes. Unlike earlier templates, this section does NOT use a fixed "What it is / How it works / Effects" structure. Instead, the explanation style must match the topic type.
 
-### Universal Rules (Apply to ALL Variants)
+### Step 1: Determine the Explanation Style for Each Topic
 
-1. **Sub-sections**: Break content into 3-6 sub-sections based on natural topic divisions in the source material.
-2. **Each sub-section structure**: Concept explanation → Examples → Visual aid (table, flowchart, or diagram description)
-3. **Bold key terms** on first use in the core content (even if already defined in Section 2).
-4. **Bullet points** for lists of 3+ items.
-5. **"Think About It" boxes**: Include 1-2 thought-provoking questions per sub-section.
+Before writing, classify each sub-topic from the source material using this framework:
+
+| Topic Type | Explanation Style | Use When |
+|------------|-----------------|----------|
+| Event/Development | Sequence of Events (chronological) | Green Revolution, French Revolution, PDS evolution, independence movements |
+| Concept/Definition | Define → Explain → Apply | Food security, democracy, climate, types of government, cell theory |
+| Process/Mechanism | Cause-Effect Chain (steps with reasons) | Monsoon mechanism, photosynthesis, osmosis, soil formation, nitrogen cycle |
+| Classification | Category Breakdown (tree or table) | Tissue types, soil types, economic sectors, types of angles, parts of speech |
+| Comparison | Side-by-Side Analysis (table + narrative) | Plant vs animal cell, rural vs urban, primary vs secondary sector |
+| Formula/Theorem | Intuition → Statement → Worked Examples | Any math/physics formula, quadratic formula, Pythagoras theorem |
+
+**A single sub-section can combine multiple styles.** For example, explaining "The Green Revolution" uses: Concept (define it) → Sequence of Events (chronology) → Comparison (before vs after) → Cause-Effect (positive and negative impacts).
+
+### Step 2: Follow the Source Material's Sequence
+
+Organize Core Content sub-sections in the **same order as the source material (textbook chapter)**. Do not reorder topics unless the source itself jumps around confusingly. The chapter structure you listed in Section 1 must match what appears here.
+
+### Step 3: Apply Depth Minimums by Explanation Style
+
+Each explanation style has minimum depth requirements. These are not optional:
+
+**Sequence of Events**
+- "Why it Started" (2-3 sentences explaining the trigger/cause)
+- 4+ chronological stages with years/dates where applicable
+- Impact table: | Group/Region | Effect | Why it matters |
+- "Problems/Limitations" sub-heading (every historical event has downsides)
+
+**Concept/Definition**
+- Definition (1-2 sentences, bold key terms)
+- Explanation (150-250 words on "how" it works and "why" it matters)
+- Application: 1 real-world example + 1 exam-relevant scenario
+- "Think About It" box (1 per sub-section, see below)
+
+**Process/Mechanism**
+- 5-8 numbered steps, each with WHAT happens AND WHY it happens
+- For geography: include spatial references (locations, directions, altitude)
+- Input → Output summary: what goes in, what comes out, what changes
+
+**Classification**
+- Tree structure or nested list with 3+ items per level
+- Each item has: name + distinguishing characteristic + example
+- A comparison table if the categories are commonly confused
+
+**Comparison**
+- Side-by-side table with 4+ aspects
+- Narrative paragraph on the most important differences (the ones that matter for exams)
+- A decision rule: "To tell X apart from Y, look for Z"
+
+**Formula/Theorem**
+- "The Big Idea" intuition (what problem does this solve, in everyday language)
+- Formal statement with variable definitions and units
+- 2-3 graded worked examples (easy → medium → hard)
+- Each worked example includes a "Why this approach?" sentence before the solution
+- Common calculation errors box (see below)
+
+### Step 4: Label Everything with Headings
+
+**No undifferentiated paragraphs.** Every explanation must have labeled parts using H3/H4 headings. Students should be able to scan the headings and understand the structure.
+
+Good: `### Why the Revolution Began`, `### Impact on Different Groups`, `### Limitations`
+Bad: A 300-word block of text with no sub-headings
+
+### Universal Rules (Apply to ALL Topic Types)
+
+1. **Sub-sections**: Break Core Content into 3-6 sub-sections based on natural topic divisions in the source material. Each sub-section = one major topic from the chapter.
+2. **Bold key terms** on first use in Core Content (even if already defined in Section 2).
+3. **Bullet points** for lists of 3+ items.
+4. **"Think About It" boxes**: Include 1 per sub-section.
    ```markdown
-   > **THINK Think About It:** [Question that makes the student apply the concept they just read about]
+   > **THINK Think About It:** [Question that makes the student apply the concept they just read about — not a recall question, but an extension or "what if" question]
    ```
-6. **Frequently tested markers**: Mark concepts that appear often in exams with ⭐ at the start of the paragraph/point. Mark important but rarely tested concepts with △.
-7. **No paragraph longer than 5 sentences.** If you need more, break into two paragraphs or use bullet points.
-8. **Progressive scaffolding**: Within each sub-section, start with the simplest idea and build to the most complex. Don't start with exceptions, edge cases, or advanced applications. Build the foundation first, then layer complexity.
+5. **Frequently tested markers**: Mark concepts that appear often in exams with ⭐ at the start of the paragraph/point. Mark important but rarely tested concepts with △.
+6. **No paragraph longer than 5 sentences.** If you need more, break into two paragraphs or use bullet points.
+7. **Progressive scaffolding**: Within each sub-section, start with the simplest idea and build to the most complex. Don't start with exceptions, edge cases, or advanced applications.
 
-### Depth Requirements Per Sub-Section
+### Common Calculation Errors Box (Math/Science)
 
-Each sub-section must meet ALL of these minimums:
+```markdown
+> **⚠️ Watch Out:** [Describe a common error — e.g., "Students often forget to convert km/h to m/s before using the formula. Always check your units first!"]
+```
 
-1. **Explanation length**: 150-300 words per sub-section (not counting tables, worked examples, or Think About It boxes). If a concept is complex, err on the longer side. A 3-sentence treatment is never sufficient for a sub-section.
-2. **Examples**: At least 2 concrete examples per sub-section — one familiar/accessible (from a student's daily life), one exam-style (the kind CBSE would ask about).
-3. **Cause-effect chains**: For any process or mechanism, include 5-8 steps minimum. Do not abbreviate a complex process (e.g., the Indian monsoon) to 3-4 steps — that loses exam-relevant detail.
-4. **Worked examples** (Math/Science): 2-3 per formula/concept, graded easy → medium → hard. Each must show complete reasoning, not just "substitute and solve."
-5. **Comparison depth**: When comparing 2+ items, cover at least 3 aspects. Surface-level comparisons ("A is bigger, B is smaller") earn no depth points.
+Include 1 per sub-section where calculations or formulas are involved.
 
-> **⚠️ Depth vs. Bloat**: Depth means explaining *why* and *how*, not adding filler words. A 200-word explanation of why the Aravallis cause rain shadow (adiabatic warming, wind direction, altitude effect) is depth. A 200-word restatement of "rain falls on the windward side" is bloat.
+### "In Today's World" Connections (Social Science)
 
-**Variant-specific structure** (Cause→Event→Effect chains, formulas, classifications, literary analysis, code examples, etc.) is defined in the per-subject file for the subject you are generating notes for. Consult that file for the exact Section 3 template.
+```markdown
+> **[WORLD] In Today's World:** [1-2 sentences connecting a concept to current events — name a specific policy, event, or phenomenon. Not generic.]
+```
+
+Include 1-2 per chapter where real-world relevance is strong (History, Geography, Economics, Political Science).
 
 ---
 
@@ -162,7 +215,7 @@ Prevent errors before they happen. Students learn as much from "what NOT to do" 
 
 ### Writing Guidelines
 - Include 4-6 items per chapter.
-- **Source the misconceptions from the per-subject file's "Common Pain Points" section first.** These are verified student errors for the subject. Supplement with 1-2 misconceptions specific to THIS chapter's content (e.g., a formula where sign errors are likely, a historical event where cause and effect are commonly confused).
+- **Source the misconceptions from the per-subject file's "Common Pain Points" section first.** These are verified student errors for the subject. Supplement with 1-2 misconceptions specific to THIS chapter's content.
 - Frame the misconception in the student's language — write it as they would say it.
 - The "Correct Understanding" column should be memorable and clear.
 - For Math/Science: include at least 2 calculation-specific errors.
@@ -172,7 +225,7 @@ Prevent errors before they happen. Students learn as much from "what NOT to do" 
 ## Section 5: Concept Connections
 
 ### Purpose
-Show the student that knowledge isn't isolated. This chapter connects to other chapters, other subjects, and the real world. This builds deeper understanding and helps with HOTS (Higher Order Thinking Skills) questions in exams.
+Show the student that knowledge isn't isolated. This chapter connects to other chapters, other subjects, and the real world. This builds deeper understanding and helps with analytical questions in exams.
 
 ### Writing Guidelines
 - Each connection must name a **specific chapter** (not just a subject) and explain **how** it connects in 1 sentence. Vague connections like "connects to Science" are not useful.
@@ -207,128 +260,29 @@ Show the student that knowledge isn't isolated. This chapter connects to other c
 
 ---
 
-## Section 6: Self-Assessment Quiz
+## Section 6: Quick Revision
 
 ### Purpose
-Let the student test themselves before the exam. This is active recall — the most effective study technique. The answer key goes at the very end of the document (after Section 9) to prevent peeking.
+This is the section students return to most before exams. Dense, scannable, and directly aligned with what examiners test. It contains only revision material — no practice questions or model answers (those go in Section 7).
 
 ### Structure
 
 ```markdown
-## Self-Assessment Quiz
+## Quick Revision
 
-**Instructions**: Try to answer without looking at the notes. Check your answers at the end of this document.
-
-### Multiple Choice (1 mark each)
-
-**Q1.** [Question] ⭐
-(a) [Option]  (b) [Option]  (c) [Option]  (d) [Option]
-
-**Q2.** [Question]
-(a) [Option]  (b) [Option]  (c) [Option]  (d) [Option]
-
-**Q3.** [Question]
-(a) [Option]  (b) [Option]  (c) [Option]  (d) [Option]
-
-**Q4.** [Question]
-(a) [Option]  (b) [Option]  (c) [Option]  (d) [Option]
-
-### Fill in the Blanks (1 mark each)
-
-**Q5.** [Sentence with _______ for the blank]
-**Q6.** [...]
-**Q7.** [...]
-
-### Assertion-Reason (1-2 questions)
-
-**Q8.** **Assertion (A):** [Statement — concept from the chapter]
-**Reason (R):** [Statement — reason related to the assertion]
-(a) Both A and R are true and R is the correct explanation of A
-(b) Both A and R are true but R is NOT the correct explanation of A
-(c) A is true but R is false
-(d) A is false but R is true
-
-### Short Answer (2-3 sentences each)
-
-**Q9.** [Question requiring brief explanation]
-**Q10.** [Question requiring brief explanation]
-**Q11.** [Question requiring application or analysis]
-```
-
-### Difficulty Definitions
-
-| Level | Bloom's Level | Criteria | Example |
-|-------|--------------|----------|---------|
-| Easy | Remember/Recall | Student can answer by recalling a definition, fact, or formula directly from the notes | "What is the formula for area of a circle?" |
-| Medium | Understand/Apply | Student must explain in their own words, apply a concept to a straightforward scenario, or connect two ideas | "Calculate the area of a circle with radius 7 cm." |
-| Hard | Analyze/Evaluate | Student must compare, evaluate, apply to an unfamiliar scenario, or explain *why* something happens | "Why does doubling the radius more than double the area? Explain with an example." |
-
-### Writing Guidelines
-- Questions should cover all major sub-sections of the chapter — don't cluster them in one area.
-- Difficulty mix: 4 easy (recall), 4 medium (understanding), 2 hard (application/analysis). Use the definitions above to calibrate.
-- For Math/Science: replace some fill-in-the-blank with numerical problems.
-- MCQ distractors should be plausible — don't include obviously wrong options.
-- Mark the most frequently-tested questions with ⭐.
-
----
-
-## Section 7: Exam-Oriented Summary
-
-### Purpose
-This is the section students will return to most before exams. It should be dense, scannable, and directly aligned with how CBSE asks questions. Refer to `exam-patterns-general.md` for answer format specifications.
-
-### Structure
-
-```markdown
-## Exam-Oriented Summary
-
-### Top 8 Things to Remember
+### Top [X] Things to Remember
 1. ⭐ [Most important point — 1-2 sentences]
 2. ⭐ [Second most important]
 3. [...]
 ...
-8. [...]
 
-### Model Answers
+### Quick Revision Table
 
-#### 1-Mark Questions
-
-**Q:** [Question]
-**A:** [Answer — 1-2 sentences, precise]
-
-**Q:** [Question]
-**A:** [Answer]
-
-**Q:** [Question]
-**A:** [Answer]
-
-#### 3-Mark Questions
-
-**Q:** [Question]
-**A:**
-[Direct answer — 1 sentence]
-1. [Point 1 with explanation]
-2. [Point 2 with explanation]
-3. [Point 3 with example]
-
-**Q:** [Question]
-**A:**
-[Same format — 3 distinct points]
-
-#### 5-Mark Questions
-
-**Q:** [Question]
-**A:**
-[Introduction — 1 sentence framing the topic]
-1. [Point 1 with explanation]
-2. [Point 2 with explanation]
-3. [Point 3 with example]
-4. [Point 4 with example or data]
-5. [Point 5 or conclusion]
-
-**Q:** [Question]
-**A:**
-[Same format — 5 distinct points with examples]
+| Topic | Key Points | Exam Relevance |
+|-------|-----------|----------------|
+| **[Sub-section 1 name]** | [2-3 bullet points] | [What type of question to expect] |
+| **[Sub-section 2 name]** | [2-3 bullet points] | [...] |
+| **[Sub-section 3 name]** | [2-3 bullet points] | [...] |
 
 ### Examiner's Tips for This Chapter
 - [Specific tip about what examiners look for in this chapter]
@@ -338,232 +292,177 @@ This is the section students will return to most before exams. It should be dens
 ```
 
 ### Writing Guidelines
-- The "Top 8" list should be genuinely the most exam-relevant points.
-- Model answers must follow the exact format specified in `exam-patterns-general.md` for each mark category.
-- Examiner's Tips should be specific to THIS chapter, not generic exam advice.
-- **Include 2-3 answer-writing tips from `exam-patterns-general.md`** that are specifically relevant to this chapter's question types. For example: for a Math chapter, include the tip about writing the formula first; for a History chapter, include the tip about underlining key terms.
-- For Math: model answers must show complete step-by-step working.
-- For History: model answers must include dates, names, and places.
+- **Top X Things to Remember**: X should be 6-10 depending on chapter density. Focus on the most exam-relevant points — the ones a student must know regardless of which question appears. Use ⭐ for the 3-4 most critical ones.
+- **Quick Revision Table**: One row per Core Content sub-section. Every sub-section from Section 3 must appear here. Key points should be the 2-3 facts most likely to be asked in an exam. Exam relevance column tells the student what type of question to expect for that topic.
+- **Examiner's Tips**: 3-4 specific tips for THIS chapter, not generic exam advice. Include answer-writing tips from `exam-patterns-general.md` that are specifically relevant to this chapter's question types.
+- For Math: tips about showing working, units, and common calculation errors.
+- For History: tips about including dates, names, and places in answers.
+- For Science: tips about labeled diagrams and key terms.
+- Keep the entire section between 400-700 words. This is a revision summary, not a rewrite of the chapter.
 
 ---
 
-## Section 8: Quick Revision Sheet
+## Section 7: Questions and Answers
 
 ### Purpose
-A conceptually one-page recap the student can read in 5 minutes before an exam. Dense but scannable.
+This is the practice section — all questions in one place, ordered by question type to mirror the exam paper structure. Every question is followed immediately by its complete ideal answer. No separate answer key.
 
 ### Structure
 
 ```markdown
-## Quick Revision Sheet
+## Questions and Answers
 
-### Key Concepts (in 1-2 sentences each)
-- **[Concept 1]**: [Brief explanation]
-- **[Concept 2]**: [Brief explanation]
-- ...
+### Multiple Choice
 
-### Key Terms
-| Term | Quick Definition |
-|------|-----------------|
-| [Term] | [1-sentence definition] |
-
-### Key [Formulas / Dates / Facts] ← choose based on subject
-| [Formula/Date/Fact] | [Context] |
-|---------------------|-----------|
-| [...] | [...] |
-
-### Key Comparisons
-| Aspect | [A] | [B] |
-|--------|-----|-----|
-| [...] | [...] | [...] |
-```
-
-### Writing Guidelines
-- This section should feel like a cheat sheet (but a legitimate one).
-- Narrative subjects: focus on dates, names, places, cause-effect pairs.
-- Formula subjects: list all formulas with variable definitions.
-- Language subjects: grammar rules summary + key vocabulary.
-- Keep it under 600 words. If it's longer, it's not a "quick" revision sheet.
-
----
-
-## Section 9: Mnemonics & Memory Aids
-
-### Purpose
-Give the student specific tricks to remember key facts. Good mnemonics dramatically improve recall.
-
-### Structure
-
-```markdown
-## Mnemonics & Memory Aids
-
-### 1. [What It Helps Remember]
-**Mnemonic**: [The mnemonic itself — acronym, rhyme, story, or visual]
-**How to Use**: [Brief explanation of how to recall the information using this mnemonic]
-
-### 2. [What It Helps Remember]
-**Mnemonic**: [...]
-**How to Use**: [...]
-
-### 3. [What It Helps Remember]
-**Mnemonic**: [...]
-**How to Use**: [...]
-```
-
-### Writing Guidelines
-- Include 3-5 mnemonics for standard chapters, 5-7 for content-heavy chapters (Geography, History, Biology).
-- Types to use: acronyms (first letters), rhymes, visual associations, mini-stories, number associations.
-- For Math: formula recall tricks (e.g., "Some People Have Curly Brown Hair Through Proper Brushing" for trig ratios — adapted for what's relevant at Class 9 level).
-- For History: date associations (link years to something memorable).
-- For Science: process step recalls (e.g., for cell division stages).
-- For Hindi: grammar rule mnemonics (e.g., for संधि types).
-
-### Mnemonic Quality Criteria
-A good mnemonic meets ALL of these:
-1. **Memorable**: The acronym/phrase/story is easier to recall than the raw information. "FEAST" for French Revolution causes is good; a 10-letter acronym no one can remember is not.
-2. **Complete**: It covers all key items, not just a subset.
-3. **Age-appropriate**: Uses references familiar to a 14-15 year old Indian student. Avoid culturally obscure references.
-4. **Accurate**: Each letter/element maps to exactly one item with no ambiguity. No forcing items to fit.
-
-### Mnemonic Depth Standards
-
-- **Don't just list the mnemonic** — every mnemonic must include a "How to Use" explanation AND a concrete recall scenario ("When you see a question about X, recall Y")
-- **Vary the types**: Do not use 3 acronyms in a row. Mix types across the section: acronym + story + visual association + rhyme
-- **Go beyond generic subject mnemonics**: The per-subject file provides starting mnemonics. Create additional chapter-specific ones that help recall THIS chapter's unique details (specific dates, specific processes, specific data points)
-- **Content-heavy chapters deserve more investment**: For Geography and History chapters with many facts to memorize, aim for 5-7 mnemonics covering different aspects (processes, locations, dates, classifications)
-
-## Section 10: Extra Practice Questions with Answers
-
-### Purpose
-This is the question bank — the section students will use most for active practice. It provides a wide variety of questions with complete ideal answers, covering every major topic in the chapter and every mark category. The goal is that a student who works through all these questions will have practised every type of question an examiner could ask.
-
-### Structure
-
-```markdown
-## Extra Practice Questions with Answers
-
-### 1-Mark Questions (3 questions)
-
-**Q1.** [Question] ⭐
-**A:** [Complete ideal answer — 1-2 sentences]
+**Q1.** [Question]
+(a) [Option]  (b) [Option]  (c) [Option]  (d) [Option]
+**A:** (a) [Correct option] — [Brief explanation if the correct answer isn't self-evident]
 
 **Q2.** [Question]
-**A:** [Complete ideal answer]
+(a) [Option]  (b) [Option]  (c) [Option]  (d) [Option]
+**A:** (c) [Correct option] — [Brief explanation]
 
 **Q3.** [Question]
-**A:** [Complete ideal answer]
-
-### 2-Mark Questions (3 questions)
+(a) [Option]  (b) [Option]  (c) [Option]  (d) [Option]
+**A:** (b) [Correct option] — [Brief explanation]
 
 **Q4.** [Question]
+(a) [Option]  (b) [Option]  (c) [Option]  (d) [Option]
+**A:** (d) [Correct option] — [Brief explanation]
+
+### Fill in the Blanks
+
+**Q5.** [Sentence with _______ for the blank]
+**A:** [Answer]
+
+**Q6.** [Sentence with _______ for the blank]
+**A:** [Answer]
+
+**Q7.** [Sentence with _______ for the blank]
+**A:** [Answer]
+
+### Assertion-Reason
+
+**Q8.** **Assertion (A):** [Statement — concept from the chapter]
+**Reason (R):** [Statement — reason related to the assertion]
+(a) Both A and R are true and R is the correct explanation of A
+(b) Both A and R are true but R is NOT the correct explanation of A
+(c) A is true but R is false
+(d) A is false but R is true
+**A:** (a) [Correct option] — [Explanation of why this option is correct]
+
+### 1-Mark Questions
+
+**Q9.** [Question]
+**A:** [Complete ideal answer — 1-2 sentences, precise]
+
+**Q10.** [Question]
+**A:** [Complete ideal answer]
+
+**Q11.** [Question]
+**A:** [Complete ideal answer]
+
+**Q12.** [Question]
+**A:** [Complete ideal answer]
+
+### 2-Mark Questions
+
+**Q13.** [Question]
 **A:**
 1. [Point 1]
 2. [Point 2]
 
-**Q5.** [Question]
-**A:** [Same format — 2 distinct points]
+**Q14.** [Question]
+**A:**
+1. [Point 1]
+2. [Point 2]
 
-**Q6.** [Question]
-**A:** [Same format — 2 distinct points]
+**Q15.** [Question]
+**A:**
+1. [Point 1]
+2. [Point 2]
 
-### 3-Mark Questions (3 questions)
+### 3-Mark Questions
 
-**Q7.** [Question] ⭐
+**Q16.** [Question]
 **A:**
 [Direct answer — 1 sentence]
 1. [Point 1 with explanation]
 2. [Point 2 with explanation]
 3. [Point 3 with example]
 
-**Q8.** [Question]
-**A:** [Same format — 3 distinct points]
-
-**Q9.** [Question]
-**A:** [Same format — 3 distinct points]
-
-### 5-Mark Questions (2 questions)
-
-**Q10.** [Question] ⭐
+**Q17.** [Question]
 **A:**
-[Introduction — 1 sentence]
+[Same format — 3 distinct points]
+
+**Q18.** [Question]
+**A:**
+[Same format — 3 distinct points]
+
+### 5-Mark Questions
+
+**Q19.** [Question]
+**A:**
+[Introduction — 1 sentence framing the topic]
 1. [Point 1 with explanation]
 2. [Point 2 with explanation]
 3. [Point 3 with example]
-4. [Point 4 with example]
+4. [Point 4 with example or data]
 5. [Conclusion or additional point]
 
-**Q11.** [Question]
-**A:** [Same format — 5 distinct points]
+**Q20.** [Question]
+**A:**
+[Same format — 5 distinct points with examples]
 
-### HOTS (Higher Order Thinking Skills) (1 question)
+### Case-Based / Source-Based Questions
 
-**Q12.** [Question requiring analysis, comparison, or application beyond the textbook]
-**A:** [Detailed answer showing analytical thinking — 100-150 words]
+**Q21.** [Provide a passage, data table, scenario, or diagram description — 2-3 sentences]
 
-### Case-Based / Source-Based Questions (1 question, 4 marks)
+**21a.** [Question requiring identification of the concept — 1 mark]
+**21b.** [Question requiring application of the concept to the case — 1 mark]
+**21c.** [Question requiring analysis or inference from the case — 2 marks]
 
-**Q13.** [Provide a passage, data table, scenario, or diagram description — 2-3 sentences]
-
-**13a.** [Question requiring identification of the concept — 1 mark]
-**13b.** [Question requiring application of the concept to the case — 1 mark]
-**13c.** [Question requiring analysis or inference from the case — 2 marks]
-
-**A13a:** [Answer — 1 sentence]
-**A13b:** [Answer — 1-2 sentences linking the case to the concept]
-**A13c:**
+**A21a:** [Answer — 1 sentence]
+**A21b:** [Answer — 1-2 sentences linking the case to the concept]
+**A21c:**
 [Direct answer — 1 sentence]
 1. [Point with explanation]
 2. [Point with reference to the case]
 ```
 
 ### Writing Guidelines
-- **Every question must have a complete ideal answer.** No exceptions. The answer should be exactly what a student should write in an exam to get full marks.
-- **Cover all major topics** — distribute questions across all sub-sections of the chapter. Don't cluster 10 questions on one topic.
-- **Vary the question types**: define, explain, compare, contrast, analyze, evaluate, describe, give reasons, prove (Math), draw and label (Science), write in format (Language).
-- **Include previously asked questions** — if you know certain questions are CBSE favourites for this chapter, include them.
-- **For Math/Science**: Include numerical/calculation problems with complete step-by-step solutions showing formulas, substitution, and units.
-- **For English/Hindi**: Include extract-based questions (give a passage, ask questions about it), grammar exercises, and writing format practice.
-- **For History/Geography/Economics**: Include source-based questions and map-work questions.
-- **Mark frequently-tested questions with ⭐**.
-- **HOTS questions** should require the student to think beyond the textbook — apply concepts to new situations, compare across chapters, or evaluate different perspectives.
-- **Difficulty calibration**: Use the same difficulty definitions as Section 6. Ensure the overall question bank across Sections 6 and 10 has a balanced mix — roughly 30% easy, 40% medium, 30% hard.
-- 1,500-2,500 words. Questions should be exam-quality precise, not padded.
 
-### Competency-Based Question Mix
+**Every question must have a complete ideal answer immediately after it.** No exceptions. The answer should be exactly what a student should write in an exam to get full marks.
 
-Target roughly 30% recall and 70% competency-based (application/analysis/evaluation) across all 22-28 questions in Sections 6 and 10 combined. Competency-based questions require the student to *use* knowledge, not just recall it:
+**Question ordering**: Follow the structure above — Multiple Choice → Fill in the Blanks → Assertion-Reason → 1-Mark → 2-Mark → 3-Mark → 5-Mark → Case-Based. This mirrors the exam paper and makes it easy for students to find specific question types.
 
-- **Recall**: "What is X?" — defines, states, lists
-- **Application**: "Given [scenario], use X to find Y" — applies a formula/process to a new situation
-- **Analysis**: "Why does X happen when Y occurs?" — explains relationships, compares, identifies patterns
-- **Evaluation**: "Which approach is better and why?" — judges, justifies, critiques
+**Question count**: Minimum 22 questions total. No upper cap — include as many as needed for comprehensive coverage. Aim for:
+- Multiple Choice: 3-4
+- Fill in the Blanks: 2-3
+- Assertion-Reason: 1-2
+- 1-Mark: 3-4
+- 2-Mark: 3-4
+- 3-Mark: 3-4
+- 5-Mark: 2-3
+- Case-Based: 1-2
 
----
+**Question deduplication**: Don't test the same concept across same-depth question types. MCQ, fill-in-the-blank, and 1-mark questions all test recall — a concept tested as an MCQ should not reappear as a 1-mark question or fill-in-the-blank. However, a recall question and an analytical question about the same concept ARE fine (they test different cognitive levels). For example: "What is buffer stock?" (MCQ) and "Analyse why buffer stock alone cannot ensure food security" (5-mark) is acceptable.
 
-## Answer Key
+**Textbook questions**: If the source material contains end-of-chapter questions, include them in this section with complete model answers. These frequently appear on CBSE exams. Adapt the textbook question into the appropriate question type sub-section.
 
-Place this at the very end of the document, after all 10 sections. This key covers **Section 6 (Self-Assessment Quiz)** and **Variant B practice problems** only.
+**Higher-order thinking**: Include at least 3 questions that require analysis, evaluation, or application beyond recall — questions where the student must compare, evaluate, apply to an unfamiliar scenario, or explain *why* something happens. Do not label these as "HOTS" — just ensure they're present in the question mix.
 
-> **Why Section 10 answers are not here:** Section 10 (Extra Practice Questions) has answers inline immediately after each question because students should see the ideal answer right after attempting. Section 6 and Variant B practice problems have answers at the end to enable self-testing without peeking.
+**No markers in Q&A**: Do not use ⭐ or △ in this section. Markers are for Core Content scanning only.
 
-```markdown
----
+**Difficulty mix**: Roughly 30% recall (1-mark, fill-in, MCQ), 40% application/understanding (2-mark, 3-mark), 30% analysis/evaluation (5-mark, case-based, analytical questions).
 
-## Answer Key
+**Model answer formats**: Must follow the exact format specified in `exam-patterns-general.md` for each mark category. For Math: show complete step-by-step working. For History: include dates, names, and places. For English/Hindi: include extract-based questions and grammar exercises. For Science: include labeled diagram descriptions and numerical problems.
 
-### Self-Assessment Quiz Answers
+**Cover all topics**: Distribute questions across all Core Content sub-sections. Don't cluster 10 questions on one topic while ignoring another.
 
-**Q1.** (c) [Correct option] — [Brief explanation if needed]
-**Q2.** (a) [...]
-...
-**Q11.** [Answer — 2-3 sentences for short answer questions]
+**Vary question types**: Define, explain, compare, contrast, analyze, evaluate, describe, give reasons, prove (Math), draw and label (Science), write in format (Language).
 
-### Practice Problems Answers *(if applicable — Variant B)*
-
-**Problem 1**: [Answer with brief solution]
-**Problem 2**: [...]
-...
-```
+**Include previously asked questions**: If you know certain questions are CBSE favourites for this chapter, include them.
 
 ---
 
@@ -584,35 +483,41 @@ Apply these checks to every section before considering the notes complete. These
 - [ ] Consistent heading hierarchy (H1 for title, H2 for sections, H3 for sub-sections)
 - [ ] Horizontal rules (---) separate major sections
 - [ ] Code blocks used for formulas, code, and structured data
+- [ ] Core Content uses H3/H4 headings for labeled parts — no undifferentiated paragraphs
 
 ### Content Quality
 - [ ] At least 2 real-world examples per major concept
-- [ ] Frequently tested concepts marked with ⭐
-- [ ] Rarely tested (but important) concepts marked with △
+- [ ] Frequently tested concepts marked with ⭐ in Core Content
+- [ ] Rarely tested (but important) concepts marked with △ in Core Content
 - [ ] No factual errors — every fact cross-checked against source material
 - [ ] Source material coverage is complete — no major topic from the source is missing
+- [ ] Core Content follows the source material's topic sequence
+- [ ] Explanation style matches the topic type (not forced into a fixed template)
+- [ ] Core Content has substantive explanations for every major topic (not just brief mentions)
 
 ### Exam Alignment
 - [ ] Model answers follow CBSE format from `exam-patterns-general.md`
-- [ ] 1-mark, 3-mark, and 5-mark questions all present with proper format
-- [ ] Self-assessment quiz has correct difficulty distribution (4 easy, 4 medium, 2 hard)
-- [ ] Answer key is at the END of the document, not inline
-- [ ] At least 70% of questions across Sections 6 and 10 are competency-based (application/analysis/evaluation), not recall
-- [ ] Case-based/source-based question included in Section 10 (with passage + multi-part answers)
-- [ ] Assertion-reason question included in Section 6
-- [ ] Answer-writing tips from `exam-patterns-general.md` are embedded in Section 7
+- [ ] 1-mark, 2-mark, 3-mark, and 5-mark questions all present with proper format
+- [ ] At least 70% of questions are competency-based (application/analysis/evaluation), not recall
+- [ ] Case-based/source-based question included (with passage + multi-part answers)
+- [ ] Assertion-reason question included
+- [ ] Answer-writing tips from `exam-patterns-general.md` are embedded in Section 6 (Quick Revision)
+- [ ] At least 3 questions require analysis/evaluation (not recall)
 
 ### Completeness
-- [ ] All 10 mandatory sections are present (including Extra Practice Questions)
+- [ ] All 7 mandatory sections are present
 - [ ] Total word count is within target range (check the per-subject file for subject-specific range)
 - [ ] Key Terms section covers all important terms from the source material
-- [ ] Quick Revision Sheet is concise enough to read in 5 minutes
-- [ ] At least 3 mnemonics are included (5-7 for Geography, History, Biology)
-- [ ] Extra Practice Questions section has 12-16 questions, ALL with complete ideal answers
-- [ ] Practice questions cover all mark types (1, 2, 3, 5 marks) and all major topics in the chapter
+- [ ] Quick Revision Table in Section 6 covers every Core Content sub-section
+- [ ] Questions and Answers section has 22+ questions, ALL with inline answers
+- [ ] No concept tested across multiple same-depth question types (MCQ/fill-in/1-mark)
+- [ ] Textbook end-of-chapter questions from source are included with model answers
+- [ ] Questions cover all mark types (1, 2, 3, 5 marks) and all major topics in the chapter
+- [ ] Section 1 is between 200-300 words
 
 ### Pedagogical Quality
 - [ ] Content builds progressively from simple to complex within each sub-section
 - [ ] Common mistakes draw from the per-subject file's pain points first
 - [ ] Concept connections name specific chapters, not just subjects
-- [ ] Mnemonics are age-appropriate, complete, and actually easier to recall than the raw information
+- [ ] Each Core Content sub-section has a "Think About It" box
+- [ ] Worked examples (Math/Science) include a "Why this approach?" sentence

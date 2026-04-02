@@ -71,72 +71,60 @@ score_file() {
     total_lines=$(wc -l < "$file" | tr -d ' ')
 
     # Section line numbers
-    local sec1_line sec2_line sec3_line sec4_line sec5_line sec7_line sec10_line
-    sec1_line=$(section_line "$file" "Chapter Introduction\|What This Chapter\|## 1\.")
+    local sec1_line sec2_line sec3_line sec4_line sec5_line sec6_line sec7_line
+    sec1_line=$(section_line "$file" "Chapter Introduction\|Chapter Overview\|## 1\.")
     sec2_line=$(section_line "$file" "Key Terms\|## 2\.")
     sec3_line=$(section_line "$file" "Core Content\|## 3\.")
     sec4_line=$(section_line "$file" "Common Mistakes\|## 4\.")
     sec5_line=$(section_line "$file" "Concept Connections\|How This\|## 5\.")
-    sec7_line=$(section_line "$file" "Exam-Oriented\|## 7\.")
-    sec10_line=$(section_line "$file" "Extra Practice\|## 10\.")
+    sec6_line=$(section_line "$file" "Quick Revision\|## 6\.")
+    sec7_line=$(section_line "$file" "Questions and Answers\|Questions & Answers\|## 7\.")
 
     # Section text extractions
-    local sec1_text="" sec2_text="" cc_text="" sec4_text="" sec6_text="" sec10_text=""
+    local sec1_text="" sec2_text="" cc_text="" sec4_text="" sec6_text="" sec7_text=""
     [ -n "$sec1_line" ] && [ -n "$sec2_line" ] && sec1_text=$(extract_range "$file" "$sec1_line" "$((sec2_line - 1))")
     [ -n "$sec2_line" ] && [ -n "$sec3_line" ] && sec2_text=$(extract_range "$file" "$sec2_line" "$((sec3_line - 1))")
     [ -n "$sec3_line" ] && [ -n "$sec4_line" ] && cc_text=$(extract_range "$file" "$sec3_line" "$((sec4_line - 1))")
     [ -n "$sec4_line" ] && [ -n "$sec5_line" ] && sec4_text=$(extract_range "$file" "$sec4_line" "$((sec5_line - 1))")
-
-    local sec6_line
-    sec6_line=$(section_line "$file" "Self-Assessment\|Quiz\|## 6\.")
     [ -n "$sec6_line" ] && [ -n "$sec7_line" ] && sec6_text=$(extract_range "$file" "$sec6_line" "$((sec7_line - 1))")
-    [ -n "$sec10_line" ] && sec10_text=$(extract_range "$file" "$sec10_line" "$total_lines")
+    [ -n "$sec7_line" ] && sec7_text=$(extract_range "$file" "$sec7_line" "$total_lines")
 
     # =============================================
     # A. STRUCTURAL COMPLETENESS (25 pts)
     # =============================================
     echo -e "${YELLOW}A. Structural Completeness${NC}"
 
-    # Check 1: All 10 sections present (10 pts)
+    # Check 1: All 7 sections present (10 pts)
     local sections_found=0
-    grep -qi "chapter introduction\|what this chapter" "$file" 2>/dev/null && ((sections_found++))
+    grep -qi "chapter introduction\|chapter overview" "$file" 2>/dev/null && ((sections_found++))
     grep -qi "key terms" "$file" 2>/dev/null && ((sections_found++))
     grep -qi "core content" "$file" 2>/dev/null && ((sections_found++))
     grep -qi "common mistakes\|misconceptions" "$file" 2>/dev/null && ((sections_found++))
     grep -qi "concept connections\|how this chapter connect" "$file" 2>/dev/null && ((sections_found++))
-    grep -qi "self-assessment\|quiz" "$file" 2>/dev/null && ((sections_found++))
-    grep -qi "exam-oriented\|exam summary" "$file" 2>/dev/null && ((sections_found++))
     grep -qi "quick revision" "$file" 2>/dev/null && ((sections_found++))
-    grep -qi "mnemonics\|memory aids" "$file" 2>/dev/null && ((sections_found++))
-    grep -qi "extra practice\|practice questions" "$file" 2>/dev/null && ((sections_found++))
+    grep -qi "questions and answers\|questions & answers" "$file" 2>/dev/null && ((sections_found++))
     local sec_score=$sections_found
-    echo "  Check 1 - Sections found: $sections_found/10 -> ${sec_score}/10 pts"
+    echo "  Check 1 - Sections found: $sections_found/7 -> ${sec_score}/10 pts"
     ((total_score += sec_score))
 
-    # Check 2: Answer Key at end (3 pts)
-    local ak_score=0
-    local ak_line
-    ak_line=$(grep -n -i "answer key" "$file" 2>/dev/null | tail -1 | cut -d: -f1)
-    if [ -n "$ak_line" ]; then
-        local ak_pct=$((ak_line * 100 / total_lines))
-        if [ "$ak_pct" -gt 80 ]; then
-            ak_score=3
-            echo "  Check 2 - Answer Key at end (line $ak_line/$total_lines): -> 3/3 pts"
-        else
-            ak_score=1
-            echo "  Check 2 - Answer Key present but not at end (line $ak_line/$total_lines): -> 1/3 pts"
-        fi
-    else
-        echo "  Check 2 - Answer Key: NOT FOUND -> 0/3 pts"
-    fi
-    ((total_score += ak_score))
+    # Check 2: Quick Revision sub-elements (3 pts)
+    local qr_score=0
+    local qr_elem=0
+    echo "$sec6_text" | grep -qi "top\|things to remember" && ((qr_elem++))
+    echo "$sec6_text" | grep -qi "revision table\|key points" && ((qr_elem++))
+    echo "$sec6_text" | grep -qi "examiner.*tip\|tips.*chapter" && ((qr_elem++))
+    [ "$qr_elem" -ge 3 ] && qr_score=3
+    [ "$qr_elem" -ge 2 ] && [ "$qr_score" -lt 3 ] && qr_score=2
+    [ "$qr_elem" -ge 1 ] && [ "$qr_score" -lt 2 ] && qr_score=1
+    echo "  Check 2 - Quick Revision elements: $qr_elem/3 -> ${qr_score}/3 pts"
+    ((total_score += qr_score))
 
     # Check 3: Section 1 sub-sections (2 pts)
     local s1_count=0
-    echo "$sec1_text" | grep -qi "what" && ((s1_count++))
-    echo "$sec1_text" | grep -qi "matter" && ((s1_count++))
-    echo "$sec1_text" | grep -qi "learn" && ((s1_count++))
+    echo "$sec1_text" | grep -qi "overview\|about" && ((s1_count++))
+    echo "$sec1_text" | grep -qi "structure\|topic" && ((s1_count++))
     echo "$sec1_text" | grep -qi "prerequisite" && ((s1_count++))
+    echo "$sec1_text" | grep -qi "matter\|important\|why" && ((s1_count++))
     local s1_score=0
     [ "$s1_count" -ge 4 ] && s1_score=2
     [ "$s1_count" -ge 2 ] && [ "$s1_score" -lt 2 ] && s1_score=1
@@ -229,7 +217,7 @@ score_file() {
     echo "  Check 8 - Total words: ${total_wc} (target ${min_w}-${max_w}) -> ${wc_score}/5 pts"
     ((total_score += wc_score))
 
-    # Check 9: Core Content percentage (5 pts)
+    # Check 9: Core Content word count (5 pts)
     local cc_wc=0 cc_pct=0
     if [ -n "$cc_text" ]; then
         cc_wc=$(echo "$cc_text" | wc -w | tr -d ' ')
@@ -238,10 +226,10 @@ score_file() {
         cc_pct=$((cc_wc * 100 / total_wc))
     fi
     local cp_score=0
-    [ "$cc_pct" -ge 30 ] && [ "$cc_pct" -le 45 ] && cp_score=5
-    [ "$cc_pct" -ge 25 ] && [ "$cc_pct" -le 55 ] && [ "$cp_score" -lt 5 ] && cp_score=3
-    [ "$cc_pct" -ge 20 ] && [ "$cc_pct" -le 65 ] && [ "$cp_score" -lt 3 ] && cp_score=1
-    echo "  Check 9 - Core Content: ${cc_wc} words (${cc_pct}%, target 30-45%) -> ${cp_score}/5 pts"
+    [ "$cc_wc" -ge 2000 ] && cp_score=5
+    [ "$cc_wc" -ge 1500 ] && [ "$cp_score" -lt 5 ] && cp_score=3
+    [ "$cc_wc" -ge 800 ] && [ "$cp_score" -lt 3 ] && cp_score=1
+    echo "  Check 9 - Core Content: ${cc_wc} words (${cc_pct}% of total) -> ${cp_score}/5 pts"
     ((total_score += cp_score))
 
     local wc_subtotal=$((wc_score + cp_score))
@@ -329,7 +317,7 @@ score_file() {
     # Check 16: MCQs (2 pts)
     local mcq_count
     mcq_count=$(grep -ci '(a)' "$file" 2>/dev/null || echo 0)
-    # Subtract MCQs in answer key (they won't have all 4 options on same line)
+    # Subtract MCQs in answer lines (inline answers may repeat option letters)
     local mcq_score=0
     [ "$mcq_count" -ge 4 ] && mcq_score=2
     [ "$mcq_count" -ge 1 ] && [ "$mcq_score" -lt 2 ] && mcq_score=1
@@ -345,25 +333,30 @@ score_file() {
     echo "  Check 17 - Fill-in-blanks: ${fib_count} -> ${fib_score}/2 pts"
     ((total_score += fib_score))
 
-    # Check 18: Assertion-Reason in Section 6 (2 pts)
+    # Check 18: Assertion-Reason in Section 7 (2 pts)
     local ar_score=0
-    echo "$sec6_text" | grep -qi "assertion" && echo "$sec6_text" | grep -qi "reason" && ar_score=2
-    echo "  Check 18 - Assertion-Reason (Sec 6): $([ "$ar_score" -eq 2 ] && echo "FOUND" || echo "NOT FOUND") -> ${ar_score}/2 pts"
+    echo "$sec7_text" | grep -qi "assertion" && echo "$sec7_text" | grep -qi "reason" && ar_score=2
+    echo "  Check 18 - Assertion-Reason (Sec 7): $([ "$ar_score" -eq 2 ] && echo "FOUND" || echo "NOT FOUND") -> ${ar_score}/2 pts"
     ((total_score += ar_score))
 
-    # Check 19: HOTS in Section 10 (2 pts)
-    local hots_score=0
-    echo "$sec10_text" | grep -qi "HOTS\|Higher Order" && hots_score=2
-    echo "  Check 19 - HOTS (Sec 10): $([ "$hots_score" -eq 2 ] && echo "FOUND" || echo "NOT FOUND") -> ${hots_score}/2 pts"
-    ((total_score += hots_score))
+    # Check 19: Inline answers in Section 7 (2 pts)
+    local ia_score=0
+    local ia_count=0
+    if [ -n "$sec7_text" ]; then
+        ia_count=$(echo "$sec7_text" | grep -c '\*\*A[0-9]*:' 2>/dev/null) || ia_count=0
+    fi
+    [ "$ia_count" -ge 10 ] && ia_score=2
+    [ "$ia_count" -ge 5 ] && [ "$ia_score" -lt 2 ] && ia_score=1
+    echo "  Check 19 - Inline answers (Sec 7): ${ia_count} found -> ${ia_score}/2 pts"
+    ((total_score += ia_score))
 
-    # Check 20: Case-based/Source-based in Section 10 (2 pts)
+    # Check 20: Case-based/Source-based in Section 7 (2 pts)
     local case_score=0
-    echo "$sec10_text" | grep -qi "case.based\|source.based\|case study\|source.based passage" && case_score=2
-    echo "  Check 20 - Case/Source (Sec 10): $([ "$case_score" -eq 2 ] && echo "FOUND" || echo "NOT FOUND") -> ${case_score}/2 pts"
+    echo "$sec7_text" | grep -qi "case.based\|source.based\|case study\|source.based passage" && case_score=2
+    echo "  Check 20 - Case/Source (Sec 7): $([ "$case_score" -eq 2 ] && echo "FOUND" || echo "NOT FOUND") -> ${case_score}/2 pts"
     ((total_score += case_score))
 
-    local q_subtotal=$((q_score + mcq_score + fib_score + ar_score + hots_score + case_score))
+    local q_subtotal=$((q_score + mcq_score + fib_score + ar_score + ia_score + case_score))
     echo -e "  Subtotal D: ${q_subtotal}/15 pts"
     echo ""
 
@@ -552,7 +545,7 @@ if [ $# -eq 2 ] && [ -d "$1" ] && [ -d "$2" ]; then
         echo ""
         printf "| %-20s | %10s | %10s |\n" "Total Words" "$s1_twc" "$s2_twc"
         printf "| %-20s | %9s%% | %9s%% |\n" "Core Content %" "$s1_ccp" "$s2_ccp"
-        printf "| %-20s | %10s | %10s |\n" "Sections (of 10)" "$s1_sec" "$s2_sec"
+        printf "| %-20s | %10s | %10s |\n" "Sections (of 7)" "$s1_sec" "$s2_sec"
         printf "| %-20s | %10s | %10s |\n" "Total Questions" "$s1_qc" "$s2_qc"
         printf "| %-20s | %10s | %10s |\n" "MCQs" "$s1_mcq" "$s2_mcq"
         printf "| %-20s | %10s | %10s |\n" "Fill-in-Blanks" "$s1_fib" "$s2_fib"

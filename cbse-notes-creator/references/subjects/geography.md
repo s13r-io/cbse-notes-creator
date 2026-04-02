@@ -1,83 +1,35 @@
-# Geography — Subject Profile & Variant Structure
+# Geography — Subject Profile
 
-## Structural Variant: A — Narrative
+## Topic Type Patterns
 
-#### Organization
-Organize by theme (climate zones, physiographic regions, drainage systems). Geography chapters are almost always thematic, not chronological.
+| Topic Type | When It Occurs | Explanation Style | Depth Requirements |
+|------------|---------------|-------------------|-------------------|
+| Geographic Process | Monsoon mechanism, soil formation, erosion, climate change | Cause-Effect Chain (5-8 numbered steps) | Each step: WHAT happens AND WHY. Include spatial references (locations, directions, altitude). Minimum 6 steps for complex processes like the Indian monsoon. |
+| Spatial Feature | Himalayas, Deccan Plateau, Western Ghats, Northern Plains | Spatial Description: Location (relative to landmarks) → Key Characteristics → Why it Matters | Location must use cardinal directions and known landmarks. "The Himalayas stretch from the Indus in the west to the Brahmaputra in the east." |
+| Climate Data | Temperature ranges, rainfall distribution, seasonal patterns | Data Table → Interpretation → Cause Explanation | Present as: Region/Station | Temperature | Rainfall | Season. Follow with 2-3 sentences on why the pattern exists. |
+| Classification | Soil types, vegetation types, wildlife zones, forest types | Category Breakdown (tree or table) | Each item: Name + Distinguishing Characteristic + Where Found + Examples. Use a tree or nested list. |
+| River System | Ganga, Godavari, Indus, Brahmaputra | River Profile: Source → Tributaries (left/right bank) → Course (upper/middle/lower) → Mouth | Include a flow summary. Compare Himalayan (perennial, snow-fed) vs Peninsular (seasonal, rain-fed). |
+| Comparison | Western vs Eastern Ghats, Himalayan vs Peninsular rivers, Tropical vs Subtropical | Side-by-Side Table (4+ aspects) + Narrative | Include decision rule: "West coast = Arabian Sea side. East coast = Bay of Bengal side." |
 
-#### Required Elements
+## Quality Guidance for Geography
 
-**Cause → Effect Chains** (for geographical processes)
-```markdown
-### [Process/Phenomenon Name]
+### Every Location Needs an Anchor
+Never describe a location without anchoring it to something the student already knows. "The Deccan Plateau" means nothing alone. "The Deccan Plateau — the triangular region south of the Narmada-Tapti line, between the Western and Eastern Ghats" gives the student a mental map. Use cardinal directions and known landmarks (rivers, mountain ranges, seas) for every spatial description.
 
-**What causes it**: [1-2 sentences explaining the driving factor]
+### "Distance from Sea → Rainfall. Latitude → Temperature. Altitude → Colder."
+These three rules explain most geographic patterns in India. Whenever explaining climate, vegetation, or rainfall, explicitly state which rule applies. Students mix up cause and effect: "Why does Mumbai get more rain than Delhi?" → "Distance from the Arabian Sea. Mumbai is coastal; Delhi is inland." Never leave a geographic pattern unexplained with these three.
 
-**Process Steps**:
-1. [Step 1 — with explanation of why it happens]
-2. [Step 2 — with explanation]
-3. [Step 3 — with explanation]
+### Complex Processes Need 6+ Steps
+Do not abbreviate the Indian monsoon mechanism to 3-4 steps. Minimum 6 steps covering: differential heating of land and sea → pressure gradient formation → wind direction shift → branch splitting (Arabian Sea + Bay of Bengal) → orographic effects → retreating monsoon characteristics. Each step must explain WHY it happens, not just what. Students can skip detail, but they can't recover what was never written.
 
-**Effects**:
-- **On the landscape**: [What changes physically]
-- **On human life**: [How it affects people, agriculture, settlement]
+### Map Descriptions Must Be Actionable
+Every "Locate on a map" note must give the student enough information to actually find it on a blank map. Include: cardinal direction, relation to at least 2 known landmarks, and approximate position. "The Deccan Plateau lies south of the Narmada-Tapti line, between the Western and Eastern Ghats" is actionable. "The Deccan Plateau is in central India" is not.
 
-> **THINK Think About It:** [Question connecting this to the student's world — e.g., "If the monsoon fails, what happens to the food you eat?"]
-```
+### Population Numbers Need Context
+"India has 1.4 billion people" — students don't know if that's high or low density. Always pair with: "That's X people per sq km. Compare: Bangladesh has Y, Australia has Z." Context converts a number into understanding.
 
-**Minimum depth for complex processes**: 5-8 steps. Complex geographical processes like the Indian monsoon mechanism require at least 6 steps covering: differential heating → pressure gradient formation → wind direction shift → branch splitting (Arabian Sea + Bay of Bengal) → orographic effects → retreating monsoon characteristics. Shortening to 3-4 steps loses essential exam-relevant detail (e.g., why Chennai gets winter rain from the northeast monsoon, the role of the Intertropical Convergence Zone, or the El Nino effect). When in doubt, include the step — students can skip it, but they can't recover what was never written.
-
-**Spatial Description** (for physical features, locations)
-```markdown
-### [Feature Name]
-
-**Location**: [Describe relative to known landmarks — e.g., "The Himalayas stretch from the Indus river in the west to the Brahmaputra in the east, forming an arc of about 2,400 km"]
-
-**Key Characteristics**:
-- [Characteristic 1 — with data if available]
-- [Characteristic 2]
-
-**Why it matters**: [1-2 sentences on significance]
-```
-
-**Climate Data Tables**
-```markdown
-| Region/Station | Temperature Range | Rainfall (cm) | Season/Climate Type |
-|----------------|-------------------|---------------|---------------------|
-| [Region] | ... | ... | ... |
-```
-
-**River System / Process Flowcharts**
-```markdown
-### [River/System Name]
-
-**Source**: [Where it begins]
-**Tributaries**: [Left bank | Right bank]
-**Course**: [Upper course → Middle course → Lower course — key features at each stage]
-**Mouth**: [Where it ends]
-
-**Flow**: [Source] → [Tributary 1 confluence] → [Tributary 2 confluence] → [Mouth]
-```
-
-**Comparison Tables** (use whenever comparing 2+ regions, climate types, or features)
-```markdown
-| Aspect | [Region A] | [Region B] | [Region C] |
-|--------|-----------|-----------|-----------|
-| [Aspect 1] | ... | ... | ... |
-| [Aspect 2] | ... | ... | ... |
-```
-
-Common geography comparisons: Western vs Eastern Ghats, Himalayan vs Peninsular rivers, Tropical vs Subtropical climate, Evergreen vs Deciduous forests, Northern vs Southern Plains.
-
-**Map/Location Description**
-```markdown
-> **[MAP] Locate on a map:** [Feature name] — [Relative position using cardinal directions and known landmarks. E.g., "The Deccan Plateau lies south of the Narmada-Tapti line, between the Western and Eastern Ghats."]
-```
-
-**"In Today's World" Connections**
-```markdown
-> **[WORLD] In Today's World:** [1-2 sentences connecting a geographical concept to current issues — climate change, natural disasters, resource depletion, migration. Make it specific — name a place or event.]
-```
+### Vegetation/Wildlife Follows Climate
+Always connect: "This vegetation type grows in this climate because of these conditions, and these animals adapted to it." Don't list animals and vegetation separately — show the chain: Climate → Vegetation → Adapted Wildlife.
 
 ---
 
@@ -107,18 +59,6 @@ Common geography comparisons: Western vs Eastern Ghats, Himalayan vs Peninsular 
 - **Cause vs effect mixed up in geography**: "Why does Mumbai get more rain than Delhi?" Students list facts without the chain. Emphasize: "Distance from sea → rainfall. Latitude → temperature. Altitude → colder." Happens in Climate chapter.
 - **Population numbers without context**: "India has 1.4 billion people" — students don't know if density is high or low. Always pair numbers with meaning: "X people per sq km means Y. Compare to Z country for perspective." Happens in Population chapter.
 - **Vegetation and wildlife — memorized species, no location pattern**: Students list animals but don't know which regions they live in. Always connect: "This vegetation → this climate → these animals adapted to it." Happens in Natural Vegetation and Wildlife chapter.
-
-### Mnemonics Guidance
-
-Geography-specific mnemonic patterns to use in Section 9:
-
-- **Cardinal directions**: "Never Eat Shredded Wheat" — North, East, South, West (clockwise from top)
-- **Himalayan ranges from north to south**: "GPNS" — Great Himalaya (Himadri), Pir Panal, Lower Himalaya (Himachal), Shiwalik
-- **Major rivers of India (peninsular)**: "GMKM" — Godavari, Mahanadi, Krishna, Mahi (east-flowing to Bay of Bengal)
-- **Climate factors**: "LADA" — Latitude, Altitude, Distance from sea, Air mass/wind direction
-- **Soil types**: "AIRR" — Alluvial, Iron-rich (Red), Laterite, Rocky (Black/Regur)
-
-For each mnemonic: the mnemonic itself + a 1-sentence explanation of how to recall it.
 
 ---
 

@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This project develops a **Claude Code skill (`cbse-notes-creator`)** that automatically generates comprehensive, exam-aligned study notes for **CBSE Class 9 students (ages 14-15)** from any source material. The skill covers 10 subjects: Mathematics, Science (Physics/Chemistry/Biology), History, Geography, Economics, Political Science, Computer Science, English, and Hindi.
 
-The skill produces 10-section structured notes with subject-specific adaptations (5 variants: Narrative, Formula, Process/Classification, Language, Applied), self-assessment quizzes, model exam answers, mnemonics, and an extensive practice question bank — all with complete ideal answers.
+The skill produces 7-section structured notes with subject-specific adaptations (5 variants: Narrative, Formula, Process/Classification, Language, Applied), a quick revision section, and a comprehensive question bank with inline answers — all with complete ideal answers.
 
 ## Directory Structure
 
@@ -14,7 +14,7 @@ The skill produces 10-section structured notes with subject-specific adaptations
 cbse-notes-creator/          # The skill itself
 ├── SKILL.md                 # Main orchestration (workflow steps for the AI to follow)
 └── references/              # Reference files loaded by the skill at runtime
-    ├── universal-template.md     # 10-section template, quality checks, answer key (shared)
+    ├── universal-template.md     # 7-section template, topic-type framework, quality checks (shared)
     ├── exam-patterns-general.md  # CBSE exam structure, question type formats (shared)
     └── subjects/                 # Per-subject files (loaded conditionally)
         ├── mathematics.md, science-physics.md, science-chemistry.md,
@@ -43,17 +43,17 @@ evals/samples/               # Sample NCERT chapter PDFs for testing across subj
 2. User provides: source material (PDF/markdown/pasted text), subject, chapter name
 3. AI analyzes source, identifies subject variant, extracts core concepts
 4. AI presents outline for user approval (with option for section-by-section review)
-5. AI generates all 10 sections following the template + subject profile
+5. AI generates all 7 sections following the template + subject profile
 6. Output saved as `{ChapterName}_Notes.md`
 
 ## Key Design Decisions
 
-- **Notes are structured into 10 mandatory sections** (not 9 — Section 10 "Extra Practice Questions with Answers" was added in iteration 2 based on user feedback that more question variations with ideal answers were needed)
+- **Notes are structured into 7 mandatory sections** (reduced from 10→8 in iteration 4, then 8→7 in iteration 5: Mnemonics removed, Quick Revision split out as its own section, all question types merged into single Q&A section with inline answers, no separate Answer Key)
 - **5 structural variants** adapt the core content section per subject type — don't try to make one format fit all subjects
 - **Every question must have a complete ideal answer** — no exceptions
 - **Target word counts** vary by subject (Math: 5K-7K, Science: 6K-9K, History: 7K-10K, Geography/Economics/Pol Sci/English/Hindi: 6K-9K, Computer Science: 5K-7K) — see the per-subject file in `references/subjects/`
 - **Language subjects (English/Hindi)** must include grammar sub-sections even when the source chapter is only prose/poetry, because CBSE exams test grammar alongside literature
-- **French_Revolution_Notes_v2.md** in `docs/` is the original reference example but the skill is designed to produce higher quality output (with misconceptions, quizzes, mnemonics, cross-chapter connections, and practice questions that v2 lacks)
+- **French_Revolution_Notes_v2.md** in `docs/` is the original reference example but the skill is designed to produce higher quality output (with misconceptions, quizzes, cross-chapter connections, and practice questions that v2 lacks)
 
 ## Prompt Document
 

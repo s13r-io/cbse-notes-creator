@@ -1,78 +1,35 @@
-# Science — Physics — Subject Profile & Variant Structure
+# Science — Physics — Subject Profile
 
-## Structural Variant: B — Formula
+## Topic Type Patterns
 
-#### Organization
-Move from concept intuition → formal statement → application. The student should understand *why* before *how*.
+| Topic Type | When It Occurs | Explanation Style | Depth Requirements |
+|------------|---------------|-------------------|-------------------|
+| Formula/Concept | Speed/velocity, acceleration, force, work-energy, gravitation | Intuition → Formal Statement → Worked Examples (2-3, graded easy→hard) | "The Big Idea" (everyday language) → formula with variable definitions and units → each example includes "Why this approach?" |
+| Physical Law | Newton's laws, law of conservation of momentum, law of inertia | Statement → Explanation (everyday analogy) → Application → Mathematical Formulation | State the law in words first. Give an analogy. Then show the math. Students understand laws through analogies before equations. |
+| Graph Interpretation | Distance-time graphs, velocity-time graphs | Describe Axes → Identify Shape → Explain Slope/Area → Connect to Physical Meaning | Always state: what's on each axis, what does the slope mean, what does the area under the curve mean. Common error: confusing v-t and s-t graphs. |
+| Derivation | Second/third equation of motion, conservation of momentum proof | Step-by-Step Derivation (numbered, with reasoning) | Number each step. Explain why each mathematical operation is valid. Connect to real-world meaning. |
+| Experiment | Verifying laws of motion, measuring speed, pendulum experiment | Experiment Format: Aim → Apparatus → Procedure → Observation → Conclusion | Conclusion must connect back to the physical law being tested. |
+| Concept Clarification | Distance vs displacement, speed vs velocity, mass vs weight, scalar vs vector | Comparison Table (4+ aspects) + Decision Rule | End with: "To tell X from Y, check for Z." Example: "Does the quantity have direction? Yes = vector. No = scalar." |
 
-#### Required Elements
+## Quality Guidance for Physics
 
-**Concept Intuition**
-```markdown
-### [Concept Name]
+### The "Big Idea" Before Every Formula
+Never start with the formula. Start with a 1-2 sentence everyday explanation of what problem the formula solves. "The distance formula tells you how far apart two points are — like finding the shortest path between two places on a map." Only then show: `d = √[(x₂-x₁)² + (y₂-y₁)²]`. Students who see the formula first memorize it; students who see the "Big Idea" first understand it.
 
-**The Big Idea**: [1-2 sentences explaining what problem this concept/formula solves, using everyday language. No formulas yet.]
+### Units Are Not an Afterthought
+Every formula explanation must include units for every variable. Every worked example must track units through every step. Every final answer must include the correct unit. Common error: getting the number right but the unit wrong (m/s vs m/s²). After the formula, add: "Check: does your answer have the right units for what you're finding?"
 
-**Real-World Connection**: [A concrete scenario where this concept applies — something a 14-year-old encounters]
-```
+### Decision Rules for Formula Selection
+Physics has many similar-looking formulas (three equations of motion, kinematic equations). After presenting related formulas, give a decision rule: "If time is given, use v = u + at. If distance is given but not time, use v² = u² + 2as. If you need displacement from a v-t graph, use the area under the curve." Students who can't choose the right formula can't solve problems.
 
-**Formula Statement**
-```markdown
-**Formula**:
-`[Formula in code block]`
+### Graph Interpretation Is a Skill, Not a Fact
+When teaching graph interpretation, systematically cover: what's on each axis → what the overall shape means → what the slope represents → what the area under the curve represents. Students who skip any of these make errors. "The slope of this v-t graph gives acceleration. The area under this v-t graph gives displacement." Present both in the same lesson so students don't mix them up.
 
-Where:
-- [Variable 1] = [what it represents] (unit: [unit])
-- [Variable 2] = [what it represents] (unit: [unit])
-- ...
+### Worked Examples Must Show Complete Reasoning
+Every worked example must show: Given (what we know) → To Find (what we need) → "Why this approach?" (method justification) → Formula → Substitution (with units) → Step-by-step calculation → Answer (with units, bolded). Skipping the "Why this approach?" step is the #1 reason students can't solve new problems — they pattern-match but don't reason.
 
-**Important Notes**:
-- [Any conditions for when the formula applies]
-- [Common unit conversions needed]
-```
-
-**Worked Examples** (2-3 per concept, graded difficulty)
-```markdown
-**Example 1** (Easy) ⭐
-**Given**: [What we know]
-**To Find**: [What we need to calculate]
-**Solution**:
-Step 1: [Write the formula] — `[formula]`
-Step 2: [Substitute values] — `[substitution]`
-Step 3: [Calculate] — `[calculation]`
-**Answer**: [Final answer with units, boxed or bolded]
-
-**Example 2** (Medium)
-[Same structure]
-
-**Example 3** (Hard)
-[Same structure — may involve multiple formulas or multi-step reasoning]
-```
-
-**Practice Problems**
-```markdown
-### Practice Problems
-
-1. [Easy problem] ⭐
-2. [Easy problem]
-3. [Medium problem]
-4. [Medium problem]
-5. [Hard problem]
-
-*(Answers at the end of this document)*
-```
-
-**Common Calculation Errors**
-```markdown
-> **⚠️ Watch Out:** [Describe a common error — e.g., "Students often forget to convert km/h to m/s before using the formula. Always check your units first!"]
-```
-
-**Critical Thinking Prompt**
-```markdown
-> **THINK Think About It:** [Question extending the concept — e.g., "If there were no friction, could you walk? Why or why not?"]
-```
-
-Good physics prompts ask: "What happens if this force/quantity becomes zero?", "Why do you think this law exists — what would happen without it?", "Can you think of an everyday situation where this applies?"
+### Real-World Analogies for Every Law
+Every physical law needs an everyday analogy the student has experienced. Newton's First Law: "A ball on the floor stays still until you kick it. Once kicked, it keeps rolling but slows down because of friction — friction is the external force." Conservation of momentum: "Two skateboarding friends pushing off each other — one moves left, one moves right, but the total 'push' is the same."
 
 ---
 
@@ -101,18 +58,6 @@ Good physics prompts ask: "What happens if this force/quantity becomes zero?", "
 - **Units and quantities getting mixed up**: m/s vs m/s², N vs J vs W. Students plug numbers into correct formulas but write the wrong unit for the answer. Emphasize: "Does the answer need a speed? A force? An energy?"
 - **Graph interpretation — reading the wrong graph type**: Students interpret v-t graphs as s-t graphs, or confuse slope (acceleration) with area (displacement). Always state: what's on each axis, what does the slope mean, what does the area mean?
 - **Work = 0 confusion — "but I pushed, shouldn't there be work?"**: Students expect work when force is applied, even if motion is zero or perpendicular. Real-world: carrying a bag horizontally, holding a book above your head. Happens in Work and Energy chapter.
-
-### Mnemonics Guidance
-
-Physics-specific mnemonic patterns to use in Section 9:
-
-- **Kinematic equations**: "UVAST" — the 5 variables in equations of motion: s (displacement), u (initial velocity), v (final velocity), a (acceleration), t (time). Each equation uses 4 of these 5.
-- **Force types**: "NMGW" — Non-contact (gravity, magnetic, electrostatic) vs Mechanical (friction, tension, normal, applied)
-- **SI unit prefixes**: "K H D Base D C M" — Kilo, Hecto, Deca, (Base unit), Deci, Centi, Milli — for unit conversions
-- **Newton's laws**: "ILM" — Inertia (1st), F = ma (2nd), action-reaction (3rd) — "I Learned Mechanics"
-- **Energy forms**: "K P S H L C" — Kinetic, Potential, Sound, Heat, Light, Chemical — the 6 common energy transformations
-
-For each mnemonic: the mnemonic itself + a 1-sentence explanation of how to recall it.
 
 ---
 

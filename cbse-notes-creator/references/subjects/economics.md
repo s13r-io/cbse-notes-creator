@@ -1,73 +1,35 @@
-# Economics — Subject Profile & Variant Structure
+# Economics — Subject Profile
 
-## Structural Variant: A — Narrative
+## Topic Type Patterns
 
-#### Organization
-Organize by theme (production, distribution, poverty, food security). Economics chapters are thematic, not chronological. Each concept should connect to real-world examples the student can observe.
+| Topic Type | When It Occurs | Explanation Style | Depth Requirements |
+|------------|---------------|-------------------|-------------------|
+| Economic Concept | Food security, poverty, factors of production, human capital | Define → Explain → Apply | 1-2 sentence definition + 150-250 word explanation (how + why) + 1 real-world + 1 exam scenario |
+| Policy/Scheme | PDS, MNREGA, Jawahar Rozgar Yojana, Food Security Act | Scheme Profile: Name → Year → Target → Mechanism → Outcomes → Limitations | Always cover all 6 elements. Outcomes need data if available. Limitations must be specific, not vague. |
+| Historical Development | Story of Palampur, Green Revolution, poverty trends in India | Sequence of Events (chronological) | Why it started (2-3 sentences) + 4+ stages with years + before vs after comparison table |
+| Data Analysis | Poverty statistics, employment data, GDP figures | Data Table → Interpretation → Trend Explanation | Present as: Year | Indicator | Value | What It Means. Follow with 2-3 sentences on what the trend shows. |
+| Case Study | Village Palampur, specific poverty studies, food security examples | Case Study Format: Setting → Situation → Key Concept → Outcome → Lesson | Connect the case to a general principle: "Palampur illustrates a pattern found in thousands of Indian villages." |
+| Comparison | Rural vs urban economy, organized vs unorganized sector, primary vs secondary vs tertiary | Side-by-Side Table (4+ aspects) + Narrative of key differences | Include a decision rule: "To tell X from Y, look for Z." |
 
-#### Required Elements
+## Quality Guidance for Economics
 
-**Cause → Effect Chains** (for economic processes and policies)
-```markdown
-### [Economic Concept/Policy]
+### The Household Connection
+Every economic concept must reach the student's family. After explaining a concept, answer: "What does this mean for my family?" Example: "GDP growing means more jobs, higher incomes. GDP falling means layoffs, lower wages." Never leave an indicator or policy abstract — always land it at the household level. This is not optional; it is how students retain economic concepts.
 
-**What it is**: [1-2 sentences defining the concept in plain language]
+### Policy Depth Formula
+For every government policy or scheme, use this mandatory structure: **Name → Year launched → Target group → Mechanism (how it works step-by-step) → Outcomes/Impact (with data) → Limitations/Criticisms.** Skipping any element produces a shallow, exam-useless explanation. "MNREGA provides employment" is insufficient. "MNREGA (2005) guarantees 100 days of wage employment to rural households. Gram panchayats identify projects. Workers get minimum wage. As of 2023, it employed 50 million people. Limitation: delayed wage payments" is exam-ready.
 
-**How it works**:
-1. [Step 1 — cause or input]
-2. [Step 2 — mechanism]
-3. [Step 3 — outcome]
+### The "Which Sector?" Decision Rule
+Students constantly confuse economic sectors (primary vs secondary vs tertiary, organized vs unorganized). After any sector comparison, give a one-line decision rule: "Is it extracting from nature? → Primary. Manufacturing? → Secondary. Providing a service? → Tertiary." Or: "Does the worker have a contract and benefits? → Organized. No contract, daily wage? → Unorganized." Without these rules, students memorize but don't discriminate.
 
-**Effects**:
-- **On individuals/households**: [How it affects daily life]
-- **On the economy/society**: [Broader impact]
+### Data Is Not Decoration
+Every data table must be followed by interpretation: what the numbers mean and why the trend matters. A table of poverty rates from 1993 to 2011 without commentary is wasted space. The commentary should answer: "Is this improving or worsening? For which groups? Why might that be?" Connect data to causes wherever possible.
 
-> **THINK Think About It:** [Question connecting this to the student's world — e.g., "If the government removed all taxes on farming, who benefits most — the farmer or the consumer?"]
-```
+### Before vs After Is Mandatory for Changes
+Whenever explaining a change (economic reform, Green Revolution, liberalization), present a before/after comparison table. Students understand change through contrast, not through description. "After liberalization, foreign companies could invest in India" is weaker than a table showing what changed: | Aspect | Before 1991 | After 1991 |.
 
-**Minimum depth for policy/process explanations**: Include the underlying economic framework or theory, not just the surface mechanism. For government schemes and policies, always cover: name → year launched → target group → mechanism (how it works) → outcomes/impact → limitations/criticisms. For theoretical frameworks (e.g., Amartya Sen's exchange entitlement approach for food security), name the economist/thinker, explain the core idea in student-friendly language, and connect it to the chapter's specific topic.
-
-**Case Study Format**
-```markdown
-### Case Study: [Name/Place]
-
-**Setting**: [Location, time period, economic context]
-**Situation**: [What was happening — 2-3 sentences]
-**Key Economic Concept Illustrated**: [Name the concept this case demonstrates]
-**Outcome**: [What happened and why]
-**Lesson**: [1-2 sentences on what this teaches about economics]
-```
-
-**Data/Statistics Tables**
-```markdown
-| Year/Region | Indicator | Value | What It Means |
-|-------------|-----------|-------|---------------|
-| [Year] | [e.g., Poverty Rate] | [% or number] | [Plain-language interpretation] |
-```
-
-**Economic Process Flowcharts**
-```markdown
-### [Process Name]
-
-**Flow**: [Input/Resources] → [Production] → [Distribution] → [Consumption]
-
-Each stage: [What happens] + [Who is involved] + [What economic concept applies]
-```
-
-**Comparison Tables** (use whenever comparing 2+ economic systems, sectors, or time periods)
-```markdown
-| Aspect | [System/Region A] | [System/Region B] |
-|--------|-------------------|-------------------|
-| [Aspect 1] | ... | ... |
-| [Aspect 2] | ... | ... |
-```
-
-Common economics comparisons: Rural vs Urban economy, Primary vs Secondary vs Tertiary sector, Organized vs Unorganized sector, Before reform vs After reform, Market vs Planned economy.
-
-**"In Today's World" Connections**
-```markdown
-> **[WORLD] In Today's World:** [1-2 sentences connecting an economic concept to current events — inflation, unemployment, GST, digital payments, farmer protests, climate economics. Make it specific — name a policy or event.]
-```
+### Scheme Comparison When Multiple Schemes Appear
+When a chapter mentions 3+ government schemes (common in poverty and food security chapters), add a comparison table: | Scheme | Year | Target Group | Key Feature | Limitation |. Students are frequently asked to distinguish between schemes in exams, and isolated descriptions don't support comparison questions.
 
 ---
 
@@ -82,10 +44,10 @@ Common economics comparisons: Rural vs Urban economy, Primary vs Secondary vs Te
 | Real-world connections | 15% |
 
 ### Formatting Rules
-- **Case studies**: Summarize examples as: Setting → Situation → Key Economic Concept Illustrated
+- **Case studies**: Summarize as: Setting → Situation → Key Economic Concept Illustrated → Outcome → Lesson
 - **Statistics**: Always present in tables with Year | Indicator | Value | What It Means
 - **Economic processes**: Flowcharts in text (Raw materials → Production → Distribution → Consumption)
-- **Comparison tables**: Rural vs Urban, Before reform vs After reform
+- **Comparison tables**: Rural vs Urban, Before reform vs After reform, Organized vs Unorganized
 
 ### Target Word Count
 6K-9K words
@@ -97,18 +59,6 @@ Common economics comparisons: Rural vs Urban economy, Primary vs Secondary vs Te
 - **Case studies vs general principles — "Palampur is just one village"**: Students treat case studies as isolated. Teach: "Palampur illustrates a general pattern about rural economies. What happens here happens in thousands of Indian villages." Happens in The Story of Village Palampur chapter.
 - **Rural vs urban economy — flipping which sector does what**: Students mix up which activities are rural (farming, dairy) vs urban (services, large industry). Decision rule: "Rural = land-based. Urban = market-based." Happens in People as Resource chapter.
 - **"Green Revolution" — remembering positives but forgetting negatives, or vice versa**: Students write only one side. Always present both: "More food → less hunger (positive). But also: water depletion, soil damage, inequality (negative)." Happens in Food Security in India chapter.
-
-### Mnemonics Guidance
-
-Economics-specific mnemonic patterns to use in Section 9:
-
-- **Factors of production**: "LLPH" — Land, Labor, Physical capital, Human capital
-- **Sectors of economy**: "PST" — Primary (extraction), Secondary (manufacturing), Tertiary (services)
-- **Types of unemployment**: "DES" — Disguised, Educated, Seasonal
-- **Poverty alleviation programs**: "JRY" — Jawahar Rozgar Yojana, Rural Employment Guarantee, and others — use "Jobs, Rights, Yojanas"
-- **Food security components**: "AAA" — Availability, Accessibility, Affordability
-
-For each mnemonic: the mnemonic itself + a 1-sentence explanation of how to recall it.
 
 ---
 

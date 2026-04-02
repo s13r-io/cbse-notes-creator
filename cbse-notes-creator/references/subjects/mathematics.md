@@ -1,80 +1,34 @@
-# Mathematics — Subject Profile & Variant Structure
+# Mathematics — Subject Profile
 
-## Structural Variant: B — Formula
+## Topic Type Patterns
 
-#### Organization
-Move from concept intuition → formal statement → application. The student should understand *why* before *how*.
+| Topic Type | When It Occurs | Explanation Style | Depth Requirements |
+|------------|---------------|-------------------|-------------------|
+| Formula/Concept | Quadratic formula, area formulas, Pythagoras theorem, linear equations | Intuition → Formal Statement → Worked Examples (2-3, graded easy→hard) | "The Big Idea" (everyday language) → formula with variable definitions and units → each example includes "Why this approach?" |
+| Proof/Derivation | Proof that √2 is irrational, Euclid's axioms, theorem derivations | Step-by-Step Proof: Statement → Proof Steps (numbered, with reasoning) → Conclusion | Number each step. After each step, explain WHY this step is valid. End with "Therefore, [conclusion]." |
+| Construction | Geometric constructions (angle bisector, perpendicular bisector, triangle) | Construction Steps: Given → Steps (numbered, with justification) → Verification | Each step states what to do AND why. Include the "why" for every compass/straightedge move. |
+| Classification | Types of angles, types of triangles, types of numbers, types of quadrilaterals | Category Breakdown: Tree or table with 3+ items per level, distinguishing characteristic | Each category: Name + Definition + Example + What makes it different from the others |
+| Concept Application | Word problems, real-world math, coordinate geometry applications | Given → To Find → Strategy → Solution → Answer (boxed) | Always include a "Why this approach?" sentence before solving. Step-by-step with units. |
 
-#### Required Elements
+## Quality Guidance for Mathematics
 
-**Concept Intuition**
-```markdown
-### [Concept Name]
+### The "Why This Approach?" Rule
+Every worked example must begin with a one-sentence justification of the method chosen. "We use Heron's formula here because no angle is given, so we cannot use trigonometric approaches. We have all three side lengths, which is exactly what Heron's formula requires." This prevents pattern-matching without understanding — students who only see "substitute and solve" can't choose the right formula on their own.
 
-**The Big Idea**: [1-2 sentences explaining what problem this concept/formula solves, using everyday language. No formulas yet.]
+### Common Error Anticipation
+For every formula or concept, include a specific error students make. Format: "⚠️ Watch Out: [specific error]." Example: "Students often forget to convert km/h to m/s before using the formula. Always check your units first!" Generic warnings ("be careful with signs") are useless — name the exact mistake and when it happens.
 
-**Real-World Connection**: [A concrete scenario where this concept applies — something a 14-year-old encounters]
-```
+### Proof Accessibility
+Proofs are the hardest part of math for most students. Never present a proof as a wall of algebraic steps. Before starting: state what we're proving, WHY it matters (1 sentence), and the strategy (1 sentence: "We'll prove this by contradiction"). Number every step. After the proof: "Therefore, [conclusion]" in bold. For proofs by contradiction, explicitly label "Assumption", "Contradiction found", "Therefore assumption was false."
 
-**Formula Statement**
-```markdown
-**Formula**:
-`[Formula in code block]`
+### Sign Discipline
+Sign mistakes are the #1 calculation error across all math chapters. When a formula involves negative numbers, brackets, or subtraction, add an explicit reminder at the substitution step: "Watch the signs carefully — we're subtracting a negative, so this becomes addition." This applies in Number Systems, Linear Equations, Coordinate Geometry, and Polynomials chapters.
 
-Where:
-- [Variable 1] = [what it represents] (unit: [unit])
-- [Variable 2] = [what it represents] (unit: [unit])
-- ...
+### Decision Rules for Formula Selection
+Students often know formulas but can't choose the right one. After presenting related formulas (e.g., area of triangle: Heron's vs ½×base×height), give a decision rule: "If you have the base and height → use ½×b×h. If you have all three sides but no height → use Heron's formula. If you have two sides and the included angle → use ½×a×b×sin C." This is exam-critical.
 
-**Important Notes**:
-- [Any conditions for when the formula applies]
-- [Common unit conversions needed]
-```
-
-**Worked Examples** (2-3 per concept, graded difficulty)
-```markdown
-**Example 1** (Easy) ⭐
-**Given**: [What we know]
-**To Find**: [What we need to calculate]
-**Solution**:
-Step 1: [Write the formula] — `[formula]`
-Step 2: [Substitute values] — `[substitution]`
-Step 3: [Calculate] — `[calculation]`
-**Answer**: [Final answer with units, boxed or bolded]
-
-**Example 2** (Medium)
-[Same structure]
-
-**Example 3** (Hard)
-[Same structure — may involve multiple formulas or multi-step reasoning]
-```
-
-**Depth per worked example**: Every worked example must include a brief "Why this approach?" sentence before starting the solution. This prevents pattern-matching without understanding. For example: *"We use Heron's formula here because no angle is given, so we cannot use trigonometric approaches. We have all three side lengths, which is exactly what Heron's formula requires."* Hard examples should involve multi-step reasoning or combine two concepts (e.g., using both the distance formula and the section formula in coordinate geometry).
-
-**Practice Problems**
-```markdown
-### Practice Problems
-
-1. [Easy problem] ⭐
-2. [Easy problem]
-3. [Medium problem]
-4. [Medium problem]
-5. [Hard problem]
-
-*(Answers at the end of this document)*
-```
-
-**Common Calculation Errors**
-```markdown
-> **⚠️ Watch Out:** [Describe a common error — e.g., "Students often forget to convert km/h to m/s before using the formula. Always check your units first!"]
-```
-
-**Critical Thinking Prompt**
-```markdown
-> **THINK Think About It:** [Question extending the concept — e.g., "A rectangle has the same area as a square. Which has a smaller perimeter? Why does that matter for fencing a field?"]
-```
-
-Good math prompts ask: "Why does this formula work?", "What happens if this value becomes zero/negative?", "Can you find a real-world situation where this concept applies?"
+### Progressive Difficulty in Worked Examples
+Every concept needs 2-3 worked examples graded easy → medium → hard. Easy = direct substitution. Medium = requires choosing the right formula or a simple multi-step. Hard = combines two concepts (e.g., distance formula + section formula) or requires interpretation. Skipping the hard example leaves students unprepared for 5-mark questions.
 
 ---
 
@@ -103,18 +57,6 @@ Good math prompts ask: "Why does this formula work?", "What happens if this valu
 - **Surface area vs volume — same numbers, different meaning**: Students calculate the right number but for the wrong question (paint vs. water filling analogy). Not just mensuration — generalizes to "which quantity does this problem actually want?" Happens in Surface Areas and Volumes chapter.
 - **Proofs and derivations seem pointless**: Students memorize the steps without understanding why each step exists or when the rule applies. Explain the geometric reasoning: proofs tell you when a rule works and when it fails. Happens in Introduction to Euclid's Geometry, Lines and Angles chapters.
 - **Statistics: computing the wrong measure**: Mean, median, and mode produce different numbers from the same data. Students compute one without reading carefully which the question asks. Show a dataset where the three differ so the distinction is visible. Happens in Statistics chapter.
-
-### Mnemonics Guidance
-
-Math-specific mnemonic patterns to use in Section 9:
-
-- **BODMAS/PEMDAS**: Order of operations — "Brackets, Orders, Division, Multiplication, Addition, Subtraction" or "Please Excuse My Dear Aunt Sally"
-- **Coordinate plane quadrants**: "All Students Take Calculus" — All positive (Q1), Sine positive (Q2), Tangent positive (Q3), Cosine positive (Q4)
-- **Types of angles**: Acute (< 90), Right (= 90), Obtuse (90-180), Straight (= 180), Reflex (180-360), Complete (= 360) — "A ROSC" or use the "clock face" visual association
-- **Heron's formula setup**: "S-A-B-C" — Semi-perimeter first, then the three sides substituted into √[s(s-a)(s-b)(s-c)]
-- **Statistics measures**: "M-M-M" — Mode (most frequent), Median (middle value), Mean (mathematical average) — in order of complexity
-
-For each mnemonic: the mnemonic itself + a 1-sentence explanation of how to recall it.
 
 ---
 

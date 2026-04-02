@@ -1,113 +1,35 @@
-# Computer Science — Subject Profile & Variant Structure
+# Computer Science — Subject Profile
 
-## Structural Variant: E — Applied
+## Topic Type Patterns
 
-#### Organization
-Move from concept → technical detail → practical application → hands-on.
+| Topic Type | When It Occurs | Explanation Style | Depth Requirements |
+|------------|---------------|-------------------|-------------------|
+| Concept with Analogy | RAM vs ROM, binary numbers, IP addresses, compiler vs interpreter | Everyday Analogy → Technical Explanation → Why It Matters | Analogy first (something a 14-year-old knows), then technical. "Think of RAM like a desk — the bigger the desk, the more papers you can work on at once." |
+| Code Example | Variables, loops, conditionals, functions, data types | Code (with line comments) → Sample Run → How It Works (step-by-step) → "What if you change it?" | 2-3 examples per concept, graded easy→hard. Comments on every line of code. Sample input/output. |
+| Classification | Data types, operators, loop types, number systems | Category Breakdown (table) | Each category: Name + Description + Example + When to Use. Decision rule for choosing between categories. |
+| Comparison | RAM vs ROM, for vs while loop, list vs tuple, compiler vs interpreter | Side-by-Side Table (4+ aspects) + Decision Rule | Include "Real-world analogy" row. End with when to use which. |
+| Hands-On Exercise | Any concept that can be practiced on a computer | Instructions → Expected Result → What to learn from this | Clear, step-by-step instructions the student can follow on their own computer. |
+| Cyber Safety/Ethics | Passwords, phishing, data privacy, social media safety | Scenario → Risk → Protection | Use real-world scenarios teenagers encounter, not abstract warnings. |
 
-#### Required Elements
+## Quality Guidance for Computer Science
 
-**Concept with Analogy**
-```markdown
-### [Concept Name]
+### Analogy Before Technical Explanation — Always
+Every concept in CS needs an everyday analogy before the technical explanation. "Think of a variable as a labelled box. You put a value inside, and you can look it up later by reading the label." Students who get the analogy first understand the technical explanation faster and retain it longer. Without the analogy, CS concepts feel abstract and forgettable.
 
-**Everyday Analogy**: [Explain the concept using something the student already knows — e.g., "Think of RAM like a desk. The bigger the desk, the more papers (programs) you can spread out and work on at the same time."]
+### Code Comments on Every Line
+Every code example must have comments explaining what each line does — not just the concept, but each individual line. Students learn to read code line-by-line, not in blocks. Format: `code here  # What this line does`. The comments should be in simple language, not technical jargon.
 
-**Technical Explanation**: [Now explain it properly, building on the analogy]
-```
+### "What If You Change It?" After Every Example
+After each code example, include one "What if you change it?" prompt: "What happens if you change `>` to `>=`? What happens if you remove the `else` block?" This builds debugging intuition — students learn to predict output before running code, which is a core programming skill.
 
-**Code Examples** (2-3 per concept, graded difficulty)
-````markdown
-**Example 1** (Easy) ⭐
-```python
-# [Title: What this code does]
-# [Brief description]
+### The Two Error Types — Always Distinguish
+Whenever showing code, distinguish between syntax errors and logic errors. "Syntax error = the computer can't understand your code (forgot a colon, wrong indentation). Logic error = the code runs but gives the wrong answer (used `=` instead of `==` in a condition)." Students who don't know the difference can't debug.
 
-[code line 1]    # [What this line does]
-[code line 2]    # [What this line does]
-```
+### Common Code Errors — Specific, Not Generic
+For every code concept, include a specific error students make. "Watch Out: `range(5)` produces 0, 1, 2, 3, 4 — not 1 to 5." "Watch Out: `input()` always returns a string. Wrap in `int()` for numbers." Generic warnings ("be careful with syntax") are useless.
 
-**Sample Run**:
-```
-Input: [sample input]
-Output: [expected output]
-```
-
-**How It Works**:
-1. [Step-by-step explanation of the code logic]
-
-**What if you change it?**: [1 sentence — e.g., "What happens if you change `>` to `>=`? Try it!"]
-````
-
-[Example 2 (Medium) and Example 3 (Hard) follow the same structure — Hard examples may combine 2+ concepts]
-
-**Practice Problems** (3-5 per concept, graded difficulty)
-```markdown
-### Practice Problems
-
-1. [Easy: Write a short program or predict output] ⭐
-2. [Easy: Write a short program or predict output]
-3. [Medium: Modify a given program to add a feature]
-4. [Medium: Find and fix the bug in this code]
-5. [Hard: Write a program combining 2+ concepts]
-
-*(Answers at the end of this document)*
-```
-
-**Comparison Tables** (use whenever comparing 2+ concepts)
-```markdown
-| Aspect | [Concept A] | [Concept B] |
-|--------|-------------|-------------|
-| [Aspect 1] | ... | ... |
-| [Aspect 2] | ... | ... |
-| [Aspect 3] | ... | ... |
-| [Real-world analogy] | ... | ... |
-```
-
-Common comparisons in CS: RAM vs ROM, Compiler vs Interpreter, HTTP vs HTTPS, TCP vs UDP, `int` vs `float` vs `str`, `for` loop vs `while` loop, List vs Tuple.
-
-**Hands-On Exercise**
-```markdown
-> **Try It Yourself:**
-> [Clear instructions for something the student can do on their computer]
-> **Expected Result**: [What they should see if they did it correctly]
-```
-
-**Safety/Ethics** (where applicable)
-```markdown
-> **[SAFE] Stay Safe:** [Cyber safety tip or ethical consideration related to this topic — 1-2 sentences, age-appropriate]
-```
-
-**Critical Thinking Prompt**
-```markdown
-> **THINK Think About It:** [Question that extends beyond the concept — e.g., "If a program processes 1 million records, would your approach still work? What would you change?" or "A company stores your password in plain text. What could go wrong?"]
-```
-
-Good CS prompts ask: "What happens if...?", "Why did the designer choose...?", "What are the trade-offs of...?"
-
-**Common Code Errors** (use alongside each code example where relevant)
-```markdown
-> **Watch Out:** [Describe a specific code error — e.g., "Using `=` instead of `==` in an if-condition is a SyntaxError in Python. Always use `==` for comparison."]
-```
-
-Common CS watch-outs:
-- `range(n)` produces 0 to n-1, not 1 to n
-- `input()` always returns a string — wrap in `int()` or `float()` for numbers
-- String concatenation with `+` doesn't add spaces automatically
-- Division: `/` gives float, `//` gives integer — choose the right one
-- `print` inside a loop prints every iteration; `print` outside prints once
-
-**Cross-Topic Connection**
-```markdown
-> **[CONNECT] Across Topics:** [1-2 sentences showing how this topic connects to another CS topic. E.g., "Binary numbers (from Number Systems) are how IP addresses are written in Networking. Every device's address is just a long binary number."]
-```
-
-Key CS cross-topic connections:
-- Binary/Number Systems ↔ IP addresses (Networking)
-- Variables/Data Types ↔ Database concepts (future learning)
-- Flowcharts/Pseudocode ↔ Algorithm design (Functions)
-- Logic gates (if covered) ↔ Boolean expressions in Python
-- Cyber safety ↔ Data privacy (Social Science links)
+### Binary/Number Conversion — Show Direction Clearly
+Students divide correctly but read remainders in the wrong direction. Emphasize with arrows: "Divide top-to-bottom. Write remainders top-to-bottom. Read answer bottom-to-top." Show the full stack visually. This is the #1 error in number system conversions.
 
 ---
 
@@ -133,45 +55,8 @@ Key CS cross-topic connections:
   ```
 - **Binary/Number systems**: Show conversion steps explicitly (Decimal → keep dividing by 2, write remainders)
 - **Input/Output examples**: Always show sample input and expected output
-- **Flowcharts**: Text-based using this standard format:
-  ```
-  [Start]
-     |
-     v
-  [Input: describe what]
-     |
-     v
-  [Process: describe what]
-     |
-     v
-  <Decision: condition?>
-   /          \
-  Yes          No
-  |             |
-  v             v
-  [Action A]   [Action B]
-   \          /
-    \        /
-     v      v
-  [Output: describe what]
-     |
-     v
-  [End]
-  ```
-- **Pseudocode**: Use this format when asked:
-  ```
-  BEGIN
-    INPUT [variable]
-    IF [condition] THEN
-        [action]
-    ELSE
-        [action]
-    END IF
-    PRINT [output]
-  END
-  ```
-
-Note: Practice Problems and Comparison Tables are part of "Practical examples/code (30%)". "Think About It" prompts are part of "Concept explanation (40%)". Mnemonics are generated in Section 9 per the universal template and are not counted in the above weights.
+- **Flowcharts**: Text-based using standard format ([Start] → [Input] → [Process] → <Decision?> → [Action] → [End])
+- **Pseudocode**: Use BEGIN/END format with IF/THEN/ELSE blocks
 
 ### Target Word Count
 5K-7K words
@@ -186,17 +71,6 @@ Note: Practice Problems and Comparison Tables are part of "Practical examples/co
 - **Indentation errors in Python — "it's just spaces, why does it matter?"**: Python uses indentation to define code blocks, unlike other languages that use braces `{}`. Happens in Flow of Control (if-else, loops) and Functions chapters. Students get `IndentationError` and don't understand why. Show: "Same code, indented differently = completely different meaning."
 - **Loop off-by-one errors — "why does it print one extra/less time?"**: Students use `range(5)` and expect it to print 1-5, not 0-4. Happens in Flow of Control chapter. Emphasize: "Python's `range(n)` always starts at 0 and stops at n-1. It never includes the stop value."
 - **`==` vs `=` confusion — "but I wrote `if x = 5`"**: Students use assignment in conditions instead of comparison. Happens in Flow of Control and Functions chapters. Decision rule: "Checking a value? Use `==`. Storing a value? Use `=`."
-
-### Mnemonics Guidance
-
-CS-specific mnemonic patterns to use in Section 9:
-
-- **Number systems**: "Divide and collect" for decimal-to-binary conversion (the process of dividing by 2 and collecting remainders bottom-to-top)
-- **Data types**: Acronym for Python data types — "IBSFL" (int, bool, str, float, list) — create a memorable phrase
-- **Cyber safety rules**: "STRONG" (Strong passwords, Two-factor auth, Regular updates, Only visit secure sites, Never share personal info, Guard against phishing)
-- **Variable naming rules**: "LUCID" (Letters, Underscores, Case-sensitive, Identifiers must start with letter or underscore, Digits after first character only)
-
-For each mnemonic: the mnemonic itself + a 1-sentence explanation of how to recall it.
 
 ---
 

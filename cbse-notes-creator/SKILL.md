@@ -5,9 +5,9 @@ description: "Generate comprehensive, exam-aligned CBSE Class 9 study notes from
 
 # CBSE Class 9 Study Notes Generator
 
-You transform source material (textbook chapters, PDFs, raw content) into comprehensive, exam-aligned study notes for CBSE Class 9 students aged 14-15. The notes you produce follow a proven 10-section structure that adapts to different subject types — narrative, formula-based, process/classification, language, and applied.
+You transform source material (textbook chapters, PDFs, raw content) into comprehensive, exam-aligned study notes for CBSE Class 9 students aged 14-15. The notes you produce follow a proven 7-section structure that adapts to different subject types — narrative, formula-based, process/classification, language, and applied.
 
-The goal is study notes that a student can use as their primary revision resource: they understand the concepts, know what examiners want, can test themselves, and have memory aids for retention.
+The goal is study notes that a student can use as their primary revision resource: they understand the concepts, know what examiners want, can test themselves, and retain what they've learned.
 
 ---
 
@@ -15,7 +15,7 @@ The goal is study notes that a student can use as their primary revision resourc
 
 Before doing anything else, read these two shared files from the `references/` directory (relative to this skill):
 
-1. `references/universal-template.md` — The 10-section structure, quality checks, and answer key
+1. `references/universal-template.md` — The 7-section structure, topic-type decision framework, and quality checks
 2. `references/exam-patterns-general.md` — General CBSE exam structure, question type formats, answer-writing tips
 
 These references are your operating manual. Every decision you make about structure, content, and formatting should trace back to guidance in these files.
@@ -36,10 +36,10 @@ These references are your operating manual. Every decision you make about struct
 | English | `references/subjects/english.md` |
 | Hindi | `references/subjects/hindi.md` |
 
-Each per-subject file contains: the structural variant template for Section 3, subject-specific formatting rules, common pain points, word count targets, and subject-specific exam patterns.
+Each per-subject file contains: topic type patterns for that subject, quality guidance, subject-specific formatting rules, common pain points, word count targets, and subject-specific exam patterns.
 
 **Fallbacks:** If a reference file is missing, proceed with defaults from the skill's own guidance:
-- If `universal-template.md` is missing: Use the 10-section structure described in `SKILL.md`.
+- If `universal-template.md` is missing: Use the 7-section structure described in `SKILL.md`.
 - If a per-subject file is missing: Identify the subject from the source content and apply the rules in `SKILL.md` Writing Principles.
 - If `exam-patterns-general.md` is missing: Use standard 80-mark CBSE model: 1-mark (1-2 sentences), 3-mark (60-80 words, 3 points), 5-mark (120-150 words, 5 points with examples).
 
@@ -87,19 +87,21 @@ If the source is garbled, incomplete, or you can't extract this basic structure,
 
 If the check passes, continue with:
 
-1. **Identify the subject branch** — Use the subject-to-file mapping in Step 1 to determine the structural variant (A through E) and load the corresponding per-subject file.
+1. **Identify the subject branch** — Use the subject-to-file mapping in Step 1 to determine the structural variant and load the corresponding per-subject file.
 
 2. **Extract core concepts** — List 8-12 core concepts from the source. These become the backbone of the Core Content section. Include them in the outline for user approval.
 
-3. **Identify key terms** — Every term the chapter introduces or relies on. These go into Section 2.
+3. **Classify each concept by topic type** — For each core concept, determine its explanation style using the decision framework in `universal-template.md`: Event/Development, Concept/Definition, Process/Mechanism, Classification, Comparison, or Formula/Theorem. A single concept can combine multiple styles.
 
-4. **Assess content density** — Is this a concept-heavy chapter (many ideas, less depth) or a depth chapter (fewer ideas, more detail)? This affects how you allocate word count across sub-sections.
+4. **Identify key terms** — Every term the chapter introduces or relies on. These go into Section 2.
 
-5. **Note what's in the source vs. what you'll need to supplement** — The source may not have real-world examples, modern connections, or exam-style questions. You'll generate those. But the factual content must come from or be consistent with the source. Do not invent facts that contradict the source material.
+5. **Assess content density** — Is this a concept-heavy chapter (many ideas, less depth) or a depth chapter (fewer ideas, more detail)? This affects how you allocate word count across sub-sections.
 
-6. **Handle source conflicts** — If the source contradicts widely-accepted NCERT content (e.g., wrong formula, incorrect date, outdated term), flag it in the final report to the user. In the notes themselves, use the source's version (it's the student's textbook), but add a brief clarifying note if the conflict could affect exam answers. Don't silently override the source.
+6. **Note what's in the source vs. what you'll need to supplement** — The source may not have real-world examples, modern connections, or exam-style questions. You'll generate those. But the factual content must come from or be consistent with the source. Do not invent facts that contradict the source material.
 
-7. **Create a coverage checklist** — After extracting 8-12 core concepts, also identify every sub-topic, named example, data point, named process/mechanism, and key fact from the source material. This checklist becomes your completeness verification in Step 5. Before finishing Core Content, check: is every item on this list explained? If any item is missing or only mentioned in passing, add proper coverage before moving to the next section. This prevents "structurally perfect but content-thin" notes.
+7. **Handle source conflicts** — If the source contradicts widely-accepted NCERT content (e.g., wrong formula, incorrect date, outdated term), flag it in the final report to the user. In the notes themselves, use the source's version (it's the student's textbook), but add a brief clarifying note if the conflict could affect exam answers. Don't silently override the source.
+
+8. **Create a coverage checklist** — After extracting 8-12 core concepts, also identify every sub-topic, named example, data point, named process/mechanism, and key fact from the source material. This checklist becomes your completeness verification in Step 5. Before finishing Core Content, check: is every item on this list explained? If any item is missing or only mentioned in passing, add proper coverage before moving to the next section. This prevents "structurally perfect but content-thin" notes.
 
 ---
 
@@ -110,29 +112,26 @@ Before writing, show the user a clear outline:
 ```
 Subject: [Subject]
 Chapter: [Chapter Name]
-Structural Variant: [A/B/C/D/E] ([Variant Name])
+Structural Variant: [Variant Name]
 Target Word Count: [range from the per-subject file]
 
 Core Concepts (included in Core Content):
-- [Concept 1]
-- [Concept 2]
+- [Concept 1] — [Topic type: e.g., Sequence of Events, Concept/Definition, Process/Mechanism]
+- [Concept 2] — [Topic type]
 - [...]
 
 Planned Sections:
-1. Chapter Introduction
+1. Chapter Introduction (200-300 words)
 2. Key Terms & Definitions (10-15 terms)
 3. Core Content
-   3.1 [Sub-section topic]
-   3.2 [Sub-section topic]
-   3.3 [Sub-section topic]
+   3.1 [Sub-section topic] — [Explanation style to use]
+   3.2 [Sub-section topic] — [Explanation style to use]
+   3.3 [Sub-section topic] — [Explanation style to use]
    ...
 4. Common Mistakes & Misconceptions
-5. Concept Connections
-6. Self-Assessment Quiz (10 questions)
-7. Exam-Oriented Summary (3×1-mark, 2×3-mark, 2×5-mark model answers)
-8. Quick Revision Sheet
-9. Mnemonics & Memory Aids (2-4, at least 3)
-10. Extra Practice Questions with Answers (8-12 questions across all mark types)
+5. How This Chapter Connects
+6. Quick Revision (Top X Things, Revision Table, Examiner's Tips)
+7. Questions and Answers (22+ questions, all types, inline answers)
 
 Review mode: [Section-by-section / Complete draft]
 ```
@@ -145,25 +144,25 @@ Wait for the user's response before proceeding.
 
 ## Step 5 — Generate the Notes
 
-Now write the notes following the structure and guidelines in `universal-template.md`, applying the subject-specific rules from the per-subject file loaded in Step 1.
+Now write the notes following the structure and guidelines in `universal-template.md`, applying the topic-type patterns and quality guidance from the per-subject file loaded in Step 1.
 
 ### If the user chose "section-by-section review":
 Write each section and present it. After each section, ask: **"How does this section look? Any changes before I continue?"** Wait for approval before moving to the next section. After all sections are approved, assemble into the complete file.
 
 ### If the user chose "complete draft":
-Write all 10 sections plus the Answer Key in one go. Present the complete document for review.
+Write all 7 sections in one go. Present the complete document for review.
 
 ### Writing Principles
 
-These principles apply regardless of subject or variant:
+These principles apply regardless of subject or topic type:
 
 **Clarity over completeness.** A shorter explanation that the student understands is better than a thorough one that loses them. If a concept is complex, break it into smaller pieces. Use analogies from the student's world — sports, social media, cooking, school life.
 
-**The source is truth, but context is yours to add.** All factual content (definitions, dates, formulas, events, processes) must come from or be consistent with the source material. But real-world connections, modern relevance, exam tips, mnemonics, and "Think About It" questions are yours to create. This is where you add value beyond the textbook.
+**The source is truth, but context is yours to add.** All factual content (definitions, dates, formulas, events, processes) must come from or be consistent with the source material. But real-world connections, modern relevance, exam tips, and "Think About It" questions are yours to create. This is where you add value beyond the textbook.
 
 **Write for the struggling student, not the top scorer.** The top scorer will understand regardless. The student who's confused needs: shorter sentences, more examples, explicit "this means..." bridges between abstract and concrete, and reassurance that confusion is normal.
 
-**Exams matter.** These students will be tested. Every section should implicitly support exam preparation. The Core Content teaches understanding; the Exam Summary teaches performance. Both matter.
+**Exams matter.** These students will be tested. Every section should implicitly support exam preparation. The Core Content teaches understanding; the Exam Preparation section teaches performance. Both matter.
 
 **Formatting is not decoration.** Bold terms, tables, bullet points, and markers (⭐ △) are navigation aids. A student scanning the notes before an exam should be able to find what they need in seconds.
 
@@ -173,7 +172,17 @@ These principles apply regardless of subject or variant:
 - **Language subjects**: Include grammar rules and writing format templates relevant to the chapter, even if the source material doesn't explicitly cover grammar. CBSE English/Hindi exams test grammar alongside literature.
 - **Biology/Science**: Include labeled diagram descriptions — describe what a diagram would show, part by part, with functions. Students need to visualize.
 
-**Questions are the most valuable part.** Students learn by doing, not just reading. Include a focused set of practice questions with complete ideal answers spanning all mark types (1, 2, 3, and 5 marks). Beyond the self-assessment quiz (Section 6) and model answers (Section 7), include an **Extra Practice Questions** section (Section 10) with 8-12 additional questions, each with a complete ideal answer. Quality over quantity — every question should test a different skill or concept.
+**Match the explanation style to the topic.** This is critical. Do not force every topic into the same structure. Use the topic-type decision framework:
+- Historical events → Sequence of Events (chronological stages)
+- Concepts and definitions → Define → Explain → Apply
+- Processes and mechanisms → Cause-Effect Chain (numbered steps with reasons)
+- Classifications → Category Breakdown (tree or table)
+- Comparisons → Side-by-Side Analysis (table + narrative)
+- Formulas and theorems → Intuition → Statement → Worked Examples
+
+The per-subject file provides additional topic-type patterns specific to that subject. Follow them.
+
+**Questions are the most valuable part.** Students learn by doing, not just reading. Include all questions in a single "Questions and Answers" section (Section 7) with complete ideal answers immediately after each question. Cover all mark types (MCQ, fill-in, assertion-reason, 1-mark, 2-mark, 3-mark, 5-mark, case-based). Minimum 22 questions total, no upper cap. Include textbook end-of-chapter questions from the source with model answers. Don't test the same concept across same-depth question types (MCQ, fill-in, 1-mark all test recall — pick one). At least 3 questions should require analysis or evaluation, not just recall.
 
 ### Quality Checks During Writing
 
@@ -185,6 +194,12 @@ As you write each section, verify against the quality checks in `universal-templ
 - Real-world examples included
 - ⭐ and △ markers applied
 - Exam answer formats match `exam-patterns-general.md`
+- **Section 1 is 200-300 words** (hard constraint — do not exceed)
+- **Core Content uses topic-appropriate subheadings** (not a fixed template)
+- **Core Content has substantive explanations for every major topic**
+- **Questions and Answers has 22+ questions, all with inline answers**
+- **No concept repeated across same-depth question types (MCQ/fill-in/1-mark)**
+- **Textbook end-of-chapter questions from source are included**
 
 ---
 
@@ -192,7 +207,7 @@ As you write each section, verify against the quality checks in `universal-templ
 
 After the user approves the notes (or the complete draft):
 
-1. **Assemble** all sections into a single markdown file in the correct order (Sections 1-10 + Answer Key at the end).
+1. **Assemble** all sections into a single markdown file in the correct order (Sections 1-7).
 
 2. **Save** to the specified output path. Default: `{SourceFilename}_notes.md` in the same directory as the source file. Derive `{SourceFilename}` from the source file's name (without extension). Use underscores for spaces in the filename.
 
@@ -223,6 +238,7 @@ The best study notes have these qualities:
 - A student can read them without the textbook and still understand the chapter
 - A student can find any specific fact or formula within 30 seconds of scanning
 - The exam-oriented sections directly prepare for the types of questions CBSE asks
-- The mnemonics actually help — they're not forced or awkward
 - The "Think About It" questions make the student pause and think, not just read passively
+- Core Content explains topics in the same sequence as the textbook, with explanation styles that match each topic type
+- Every major concept has labeled sub-headings so the student can navigate without reading linearly
 - After reading, the student feels confident rather than overwhelmed

@@ -1,92 +1,34 @@
-# Hindi — Subject Profile & Variant Structure
+# Hindi — Subject Profile
 
-## Structural Variant: D — Language
+## Topic Type Patterns
 
-#### Organization
-Organize by chapter component: literary content first (summary, character analysis, literary devices), then grammar relevant to the chapter, then writing skills. **Important**: Even if the source material is only a prose/poetry chapter with no grammar content, you MUST include a grammar sub-section. CBSE exams test grammar alongside literature. For English, cover grammar topics like tenses, reported speech, active/passive voice, subject-verb agreement, or determiners — pick 2-3 topics relevant to the language patterns in the chapter. For Hindi, cover relevant व्याकरण topics like संधि, समास, अलंकार, or पद-परिचय.
+| Topic Type | When It Occurs | Explanation Style | Depth Requirements |
+|------------|---------------|-------------------|-------------------|
+| Prose (गद्य) | Stories, essays, articles from textbook | सारांश (Brief + Detailed) → Character Analysis → Theme Discussion | Character table: पात्र | मुख्य विशेषताएँ | प्रमाण (पाठ से) | विषय से संबंध |
+| Poetry (कविता) | Poems from textbook | Stanza-by-Stanza: Original → शब्दार्थ → भावार्थ → अलंकार | Three layers: शब्शार्थ (literal) → भावार्थ (meaning) → केंद्रीय भाव (theme). Identify अलंकार per stanza. |
+| Grammar (व्याकरण) | संधि, समास, अलंकार, पद-परिचय, वाक्य भेद | Rule → When It Applies → Examples (3-5 with विच्छेद/विग्रह) → Practice (3) | Rule in Hindi. Examples must show the correct application AND mark the relevant parts. Practice items with answers. |
+| Writing Format (लेखन) | पत्र लेखन, निबंध, अनुच्छेद | Template → Example → Common Mistakes | Template in Hindi with every element in order. Example follows template exactly. Common mistakes specific to that format. |
+| Vocabulary (शब्दार्थ) | Words from the chapter, मुहावरे, लोकोक्तियाँ | शब्द | अर्थ | वाक्य में प्रयोग | 15-20 words per chapter. Each word used in a sentence for context. |
 
-#### Required Elements
+## Quality Guidance for Hindi
 
-**Chapter/Poem Summary**
-```markdown
-### Summary
+### भावार्थ Writing — Three Layers, Not One
+Students often paraphrase the verse without explaining the poet's intention. For every stanza, provide three layers: (1) शब्दार्थ — word-by-word meaning, (2) भावार्थ — what the poet is actually saying, (3) केंद्रीय भाव से संबंध — how this stanza connects to the poem's central theme. Students who skip layer 3 write shallow exam answers.
 
-**In Brief**: [2-3 sentence summary of the plot/argument/theme]
+### संधि विच्छेद — Identify the Joining Point First
+Before applying any संधि rule, students must identify which characters are joining. Decision flowchart: "स्वर + स्वर? → स्वर संधि. व्यंजन + स्वर? → व्यंजन संधि. विसर्ग + स्वर/व्यंजन? → विसर्ग संधि." Always show 5 examples with full विच्छेद (separated form) alongside the joined form. Students learn by seeing the transformation, not by reading the rule alone.
 
-**Detailed Summary**:
-[3-5 paragraphs telling the story or explaining the poem. Use simple language. For poetry, explain stanza by stanza.]
-```
+### समास — Decision Flowchart, Not Just Types
+Students confuse तत्पुरुष vs कर्मधारय vs द्विगु vs बहुव्रीहि. Teach a decision flowchart: "Is there a संबंध (relationship between words)? → तत्पुरुष. Does one word describe another? → कर्मधारय. Is it a number? → द्विगु. Does it refer to something external? → बहुव्रीहि." Always show विग्रह (expanded form) for every example.
 
-**Character Analysis** (for prose) / **Literary Devices** (for poetry)
-```markdown
-### Character Analysis
+### अलंकार — The Distinguishing Test
+Students confuse उपमा (simile) and रूपक (metaphor). Give a one-line distinguishing test: "जैसे/सा/सी present? → उपमा. Direct identification (A है B)? → रूपक." Apply this test to every example. "विद्याधन सर्वदा साथ है — संचित धन नहीं" has no जैसे → this is रूपक.
 
-| Character | Key Traits | Evidence from Text | Role in Theme |
-|-----------|-----------|-------------------|---------------|
-| [Name] | [2-3 traits] | "[Quote or reference]" | [How they serve the theme] |
-```
+### औपचारिक पत्र — Hindi Format Is Different from English
+Students write Hindi letters using English format. The Hindi formal letter order is fixed: प्रेषक का पता → दिनांक → प्राप्तकर्ता → विषय → संबोधन → विषय-वस्तु → धन्यवाद. Present this as a numbered list the student can follow step-by-step. Then provide one complete example.
 
-```markdown
-### Literary Devices Used
-
-| Device | Example from Poem | Effect |
-|--------|------------------|--------|
-| [Metaphor/Simile/etc.] | "[Exact line]" | [What effect it creates] |
-```
-
-**Poetry: Stanza-by-Stanza Explanation** (for Hindi: भावार्थ)
-```markdown
-### Stanza 1
-> [Original stanza text]
-
-**Word Meanings**: [word] = [meaning]; [word] = [meaning]
-**Explanation**: [What the poet is saying in plain language — 2-3 sentences]
-**Literary Devices**: [Identify any devices used in this stanza]
-```
-
-**Grammar Rules**
-```markdown
-### Grammar: [Topic — e.g., Tenses, संधि, समास]
-
-**Rule**: [State the rule clearly]
-**Explanation**: [Elaborate with simple language — when does this rule apply?]
-
-**Examples**:
-1. [Example with the rule applied — bold the relevant part]
-2. [Example]
-3. [Example]
-
-**Practice**:
-1. [Sentence for the student to correct/complete] → Answer: [answer]
-2. [...]
-3. [...]
-```
-
-**Vocabulary List**
-```markdown
-### Vocabulary
-
-| Word | Meaning | Part of Speech | Synonym | Antonym | Sentence |
-|------|---------|---------------|---------|---------|----------|
-| [word] | [meaning] | [noun/verb/adj/etc.] | [synonym] | [antonym] | [Use in a sentence] |
-```
-
-**Writing Format Templates**
-```markdown
-### Writing: [Format Name — e.g., Formal Letter, Diary Entry]
-
-**When to use**: [Brief description of when this format is used]
-
-**Template**:
-[Show the complete structure with placeholders]
-
-**Example**:
-[One complete example following the template]
-
-**Common Mistakes to Avoid**:
-- [Mistake 1]
-- [Mistake 2]
-```
+### Vocabulary Retention — Connect to Familiar Context
+Students memorize शब्दार्थ but forget by exam day. For each vocabulary word, connect it to a familiar context: "अभ्यास = practice. 'मैंने गणित का अभ्यास किया' — I practiced math." Using the word in a sentence the student already knows creates a durable memory. Always include a वाक्य में प्रयोग column.
 
 ---
 
@@ -122,18 +64,6 @@ Organize by chapter component: literary content first (summary, character analys
 - **अलंकार identification — उपमा vs रूपक confusion**: Students mix up comparison metaphors. Rule: "like/as present (जैसे, सा, सी) = उपमा. Direct identification (A है B) = रूपक." Happens in Section स (कविता sections) and Section ब (व्याकरण — अलंकार).
 - **Formal Hindi letter format — different from English structure**: Students write Hindi letters using English format. Side-by-side: "औपचारिक पत्र = प्रेषक → दिनांक → प्राप्तकर्ता → विषय → संबोधन → विषय-वस्तु → धन्यवाद." Happens in Section द (लेखन).
 - **वocabulary retention — "I memorized the शब्दार्थ but forgot by exam day"**: Students know meanings short-term but lose them. Teach: connect each word to a familiar context. "अभ्यास = practice (like homework). Use the word in a sentence you already know." Happens across all chapters — vocabulary builds cumulatively.
-
-### Mnemonics Guidance
-
-Hindi-specific mnemonic patterns to use in Section 9:
-
-- **संधि types**: "स्वाद" — स्वर संधि, व्यंजन संधि, विसर्ग संधि, दीर्घ संधि — "स्वादिष्ट" (tasty — easy to remember)
-- **समास types**: "तकदब" — तत्पुरुष, कर्मधारय, द्विगु, बहुव्रीहि — decision rule: "संबंध? स्वरूप? संख्या? बाहर?" (in order)
-- **अलंकार types (शब्दालंकार)**: अनुप्रास, यमक, श्लेष, उपमा, रूपक — "अयुशरू" (sounds like "Ayush" — name)
-- **अलंकार types (अर्थालंकार)**: उत्प्रेक्षा, अतिशयोक्ति, विरोधाभास — "उअवि" (unusual but memorable)
-- **पत्र लेखन format**: "प्रदिवसंविध" — प्रेषक, दिनांक, विषय, संबोधन, विषय-वस्तु, धन्यवाद — the order of a formal letter
-
-For each mnemonic: the mnemonic itself + a 1-sentence explanation of how to recall it.
 
 ---
 
