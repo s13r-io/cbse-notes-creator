@@ -25,6 +25,8 @@ Organize by theme (climate zones, physiographic regions, drainage systems). Geog
 > **THINK Think About It:** [Question connecting this to the student's world — e.g., "If the monsoon fails, what happens to the food you eat?"]
 ```
 
+**Minimum depth for complex processes**: 5-8 steps. Complex geographical processes like the Indian monsoon mechanism require at least 6 steps covering: differential heating → pressure gradient formation → wind direction shift → branch splitting (Arabian Sea + Bay of Bengal) → orographic effects → retreating monsoon characteristics. Shortening to 3-4 steps loses essential exam-relevant detail (e.g., why Chennai gets winter rain from the northeast monsoon, the role of the Intertropical Convergence Zone, or the El Nino effect). When in doubt, include the step — students can skip it, but they can't recover what was never written.
+
 **Spatial Description** (for physical features, locations)
 ```markdown
 ### [Feature Name]

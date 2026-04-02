@@ -31,14 +31,14 @@ Every generated note must contain these 10 sections in this order:
 |---|---------|---------|-------------------|
 | 1 | Chapter Introduction | Orient the student: what, why, prerequisites | 300-500 words |
 | 2 | Key Terms & Definitions | Quick-reference glossary | 10-15 terms |
-| 3 | Core Content | Main body — structure defined by subject variant | 50-65% of total |
+| 3 | Core Content | Main body — structure defined by subject variant | 30-45% of total |
 | 4 | Common Mistakes & Misconceptions | Prevent common errors | 4-6 items |
 | 5 | Concept Connections | Link to other chapters/subjects | 200-400 words |
-| 6 | Self-Assessment Quiz | Test understanding | 10-11 questions |
+| 6 | Self-Assessment Quiz | Test understanding | 10-12 questions |
 | 7 | Exam-Oriented Summary | Exam-ready revision + model answers | 800-1,200 words |
 | 8 | Quick Revision Sheet | One-page recap | 400-600 words |
 | 9 | Mnemonics & Memory Aids | Memory tricks | 2-4 (at least 3) items |
-| 10 | Extra Practice Questions with Answers | Focused question bank | 10-14 questions |
+| 10 | Extra Practice Questions with Answers | Focused question bank | 12-16 questions |
 
 ---
 
@@ -112,7 +112,7 @@ A scannable glossary the student can refer back to while reading. Definitions sh
 
 ## Section 3: Core Content
 
-This is the main body of the notes and takes up 50-65% of the total word count. The structure depends on the subject's structural variant (see the per-subject file in `references/subjects/`).
+This is the main body of the notes and takes up 30-45% of the total word count. The structure depends on the subject's structural variant (see the per-subject file in `references/subjects/`).
 
 ### Universal Rules (Apply to ALL Variants)
 
@@ -127,6 +127,18 @@ This is the main body of the notes and takes up 50-65% of the total word count. 
 6. **Frequently tested markers**: Mark concepts that appear often in exams with ⭐ at the start of the paragraph/point. Mark important but rarely tested concepts with △.
 7. **No paragraph longer than 5 sentences.** If you need more, break into two paragraphs or use bullet points.
 8. **Progressive scaffolding**: Within each sub-section, start with the simplest idea and build to the most complex. Don't start with exceptions, edge cases, or advanced applications. Build the foundation first, then layer complexity.
+
+### Depth Requirements Per Sub-Section
+
+Each sub-section must meet ALL of these minimums:
+
+1. **Explanation length**: 150-300 words per sub-section (not counting tables, worked examples, or Think About It boxes). If a concept is complex, err on the longer side. A 3-sentence treatment is never sufficient for a sub-section.
+2. **Examples**: At least 2 concrete examples per sub-section — one familiar/accessible (from a student's daily life), one exam-style (the kind CBSE would ask about).
+3. **Cause-effect chains**: For any process or mechanism, include 5-8 steps minimum. Do not abbreviate a complex process (e.g., the Indian monsoon) to 3-4 steps — that loses exam-relevant detail.
+4. **Worked examples** (Math/Science): 2-3 per formula/concept, graded easy → medium → hard. Each must show complete reasoning, not just "substitute and solve."
+5. **Comparison depth**: When comparing 2+ items, cover at least 3 aspects. Surface-level comparisons ("A is bigger, B is smaller") earn no depth points.
+
+> **⚠️ Depth vs. Bloat**: Depth means explaining *why* and *how*, not adding filler words. A 200-word explanation of why the Aravallis cause rain shadow (adiabatic warming, wind direction, altitude effect) is depth. A 200-word restatement of "rain falls on the windward side" is bloat.
 
 **Variant-specific structure** (Cause→Event→Effect chains, formulas, classifications, literary analysis, code examples, etc.) is defined in the per-subject file for the subject you are generating notes for. Consult that file for the exact Section 3 template.
 
@@ -399,7 +411,7 @@ Give the student specific tricks to remember key facts. Good mnemonics dramatica
 ```
 
 ### Writing Guidelines
-- Include at least 3 mnemonics per chapter (more for content-heavy chapters).
+- Include 3-5 mnemonics for standard chapters, 5-7 for content-heavy chapters (Geography, History, Biology).
 - Types to use: acronyms (first letters), rhymes, visual associations, mini-stories, number associations.
 - For Math: formula recall tricks (e.g., "Some People Have Curly Brown Hair Through Proper Brushing" for trig ratios — adapted for what's relevant at Class 9 level).
 - For History: date associations (link years to something memorable).
@@ -413,7 +425,12 @@ A good mnemonic meets ALL of these:
 3. **Age-appropriate**: Uses references familiar to a 14-15 year old Indian student. Avoid culturally obscure references.
 4. **Accurate**: Each letter/element maps to exactly one item with no ambiguity. No forcing items to fit.
 
----
+### Mnemonic Depth Standards
+
+- **Don't just list the mnemonic** — every mnemonic must include a "How to Use" explanation AND a concrete recall scenario ("When you see a question about X, recall Y")
+- **Vary the types**: Do not use 3 acronyms in a row. Mix types across the section: acronym + story + visual association + rhyme
+- **Go beyond generic subject mnemonics**: The per-subject file provides starting mnemonics. Create additional chapter-specific ones that help recall THIS chapter's unique details (specific dates, specific processes, specific data points)
+- **Content-heavy chapters deserve more investment**: For Geography and History chapters with many facts to memorize, aim for 5-7 mnemonics covering different aspects (processes, locations, dates, classifications)
 
 ## Section 10: Extra Practice Questions with Answers
 
@@ -514,7 +531,7 @@ This is the question bank — the section students will use most for active prac
 
 ### Competency-Based Question Mix
 
-Target roughly 30% recall and 70% competency-based (application/analysis/evaluation) across all questions in Sections 6 and 10 combined. Competency-based questions require the student to *use* knowledge, not just recall it:
+Target roughly 30% recall and 70% competency-based (application/analysis/evaluation) across all 22-28 questions in Sections 6 and 10 combined. Competency-based questions require the student to *use* knowledge, not just recall it:
 
 - **Recall**: "What is X?" — defines, states, lists
 - **Application**: "Given [scenario], use X to find Y" — applies a formula/process to a new situation
@@ -590,8 +607,8 @@ Apply these checks to every section before considering the notes complete. These
 - [ ] Total word count is within target range (check the per-subject file for subject-specific range)
 - [ ] Key Terms section covers all important terms from the source material
 - [ ] Quick Revision Sheet is concise enough to read in 5 minutes
-- [ ] At least 3 mnemonics are included
-- [ ] Extra Practice Questions section has 10-14 questions, ALL with complete ideal answers
+- [ ] At least 3 mnemonics are included (5-7 for Geography, History, Biology)
+- [ ] Extra Practice Questions section has 12-16 questions, ALL with complete ideal answers
 - [ ] Practice questions cover all mark types (1, 2, 3, 5 marks) and all major topics in the chapter
 
 ### Pedagogical Quality

@@ -49,6 +49,8 @@ Step 3: [Calculate] — `[calculation]`
 [Same structure — may involve multiple formulas or multi-step reasoning]
 ```
 
+**Depth per worked example**: Every worked example must include a brief "Why this approach?" sentence before starting the solution. This prevents pattern-matching without understanding. For example: *"We use Heron's formula here because no angle is given, so we cannot use trigonometric approaches. We have all three side lengths, which is exactly what Heron's formula requires."* Hard examples should involve multi-step reasoning or combine two concepts (e.g., using both the distance formula and the section formula in coordinate geometry).
+
 **Practice Problems**
 ```markdown
 ### Practice Problems

@@ -15,7 +15,8 @@
       "Bash(grep:*)",
       "Bash(wc:*)",
       "Bash(lit --version)",
-      "Bash(lit parse:*)"
+      "Bash(lit parse:*)",
+      "Bash(bash:*)"
     ]
   }
 }

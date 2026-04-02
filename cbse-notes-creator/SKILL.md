@@ -99,6 +99,8 @@ If the check passes, continue with:
 
 6. **Handle source conflicts** — If the source contradicts widely-accepted NCERT content (e.g., wrong formula, incorrect date, outdated term), flag it in the final report to the user. In the notes themselves, use the source's version (it's the student's textbook), but add a brief clarifying note if the conflict could affect exam answers. Don't silently override the source.
 
+7. **Create a coverage checklist** — After extracting 8-12 core concepts, also identify every sub-topic, named example, data point, named process/mechanism, and key fact from the source material. This checklist becomes your completeness verification in Step 5. Before finishing Core Content, check: is every item on this list explained? If any item is missing or only mentioned in passing, add proper coverage before moving to the next section. This prevents "structurally perfect but content-thin" notes.
+
 ---
 
 ## Step 4 — Present the Outline for Approval

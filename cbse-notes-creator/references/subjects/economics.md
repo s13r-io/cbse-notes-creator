@@ -25,6 +25,8 @@ Organize by theme (production, distribution, poverty, food security). Economics 
 > **THINK Think About It:** [Question connecting this to the student's world — e.g., "If the government removed all taxes on farming, who benefits most — the farmer or the consumer?"]
 ```
 
+**Minimum depth for policy/process explanations**: Include the underlying economic framework or theory, not just the surface mechanism. For government schemes and policies, always cover: name → year launched → target group → mechanism (how it works) → outcomes/impact → limitations/criticisms. For theoretical frameworks (e.g., Amartya Sen's exchange entitlement approach for food security), name the economist/thinker, explain the core idea in student-friendly language, and connect it to the chapter's specific topic.
+
 **Case Study Format**
 ```markdown
 ### Case Study: [Name/Place]
