@@ -79,3 +79,7 @@ evals/samples/               # Sample NCERT chapter PDFs for testing across subj
 - Hindi and Computer Science have no sample chapters for testing
 - The skill is currently a local project-level skill, not installed globally — it must be invoked by pointing to the SKILL.md path
 - PDF reading quality varies — the skill instructs the AI to ask for markdown/text if PDF parsing fails
+
+## Brainstorming
+
+All brainstorming content should be saved in the `brainstorm/` folder.

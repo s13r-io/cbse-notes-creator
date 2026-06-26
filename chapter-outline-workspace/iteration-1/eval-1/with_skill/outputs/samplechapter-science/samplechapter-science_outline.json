@@ -1,0 +1,128 @@
+{
+  "chapter": {
+    "number": 5,
+    "title": "The Fundamental Unit of Life"
+  },
+  "description": "This chapter explains what cells are, how they were discovered, and how they are organised inside. It covers the cell membrane, nucleus, organelles, and how cells divide — because every living thing is made of cells, and understanding them is the foundation of biology.",
+  "sections": [
+    {
+      "title": "5.1 What are Living Organisms Made Up Of?",
+      "priority": "HIGH",
+      "summary": "Discovery of cells, unicellular vs multicellular organisms, cell theory, and the concept of division of labour within a cell",
+      "keyTerms": ["cells", "unicellular", "multicellular", "cell theory", "cell organelles", "Robert Hooke", "Leeuwenhoek", "Robert Brown", "Purkinje", "Schleiden", "Schwann", "Virchow", "protoplasm", "nucleus"],
+      "diagrams": ["Figure 5.1 — Compound microscope", "Figure 5.2 — Cells of an onion peel", "Figure 5.3 — Various cells from the human body"]
+    },
+    {
+      "title": "5.2 What is a Cell Made Up Of? — Structural Organisation of a Cell",
+      "priority": "HIGH",
+      "summary": "Three main features of every cell — plasma membrane, nucleus, and cytoplasm — and how they work together",
+      "keyTerms": ["plasma membrane", "cytoplasm", "nucleus"],
+      "diagrams": [],
+      "subsections": [
+        {
+          "title": "5.2.1 Plasma Membrane or Cell Membrane",
+          "priority": "HIGH",
+          "summary": "Structure and function of the plasma membrane, diffusion, osmosis, tonicity, endocytosis, and membrane composition",
+          "keyTerms": ["plasma membrane", "selectively permeable membrane", "diffusion", "osmosis", "hypotonic solution", "isotonic solution", "hypertonic solution", "endocytosis", "lipids", "proteins"],
+          "diagrams": []
+        },
+        {
+          "title": "5.2.2 Cell Wall",
+          "priority": "HIGH",
+          "summary": "Plant cell wall composition (cellulose), its role in structural strength, and plasmolysis in living plant cells",
+          "keyTerms": ["cell wall", "cellulose", "plasmolysis"],
+          "diagrams": []
+        },
+        {
+          "title": "5.2.3 Nucleus",
+          "priority": "HIGH",
+          "summary": "Structure of the nucleus, nuclear membrane, chromosomes, DNA, genes, chromatin, prokaryotes vs eukaryotes, and the nucleoid",
+          "keyTerms": ["nucleus", "nuclear membrane", "chromosomes", "DNA", "genes", "chromatin", "nucleoid", "prokaryotes", "eukaryotes"],
+          "diagrams": ["Figure 5.4 — Prokaryotic cell"]
+        },
+        {
+          "title": "5.2.5 Cell Organelles",
+          "priority": "HIGH",
+          "summary": "Overview of membrane-bound organelles in eukaryotic cells — ER, Golgi apparatus, lysosomes, mitochondria, plastids, and vacuoles",
+          "keyTerms": ["cell organelles", "endoplasmic reticulum", "Golgi apparatus", "lysosomes", "mitochondria", "plastids", "vacuoles"],
+          "diagrams": ["Figure 5.5 — Animal cell", "Figure 5.6 — Plant cell"],
+          "subsections": [
+            {
+              "title": "5.2.5 (i) Endoplasmic Reticulum (ER)",
+              "priority": "HIGH",
+              "summary": "Structure of ER, rough vs smooth ER, ribosomes, membrane biogenesis, and functions in transport and detoxification",
+              "keyTerms": ["endoplasmic reticulum", "rough endoplasmic reticulum", "smooth endoplasmic reticulum", "ribosomes", "membrane biogenesis"],
+              "diagrams": []
+            },
+            {
+              "title": "5.2.5 (ii) Golgi Apparatus",
+              "priority": "MED",
+              "summary": "Structure of Golgi apparatus (cisterns), its role in packaging/modification/dispatch, and Camillo Golgi's contributions",
+              "keyTerms": ["Golgi apparatus", "cisterns", "Camillo Golgi"],
+              "diagrams": []
+            },
+            {
+              "title": "5.2.5 (iii) Lysosomes",
+              "priority": "MED",
+              "summary": "Structure and function of lysosomes as waste disposal system, suicide bags concept",
+              "keyTerms": ["lysosomes", "digestive enzymes", "suicide bags"],
+              "diagrams": []
+            },
+            {
+              "title": "5.2.5 (iv) Mitochondria",
+              "priority": "HIGH",
+              "summary": "Structure (double membrane, folded inner membrane), ATP production, mitochondria as powerhouse with own DNA and ribosomes",
+              "keyTerms": ["mitochondria", "ATP", "energy currency", "powerhouse of the cell"],
+              "diagrams": []
+            },
+            {
+              "title": "5.2.5 (v) Plastids",
+              "priority": "HIGH",
+              "summary": "Types of plastids (chromoplasts, leucoplasts, chloroplasts), their roles in photosynthesis and storage, internal structure (stroma)",
+              "keyTerms": ["plastids", "chromoplasts", "leucoplasts", "chloroplasts", "chlorophyll", "stroma"],
+              "diagrams": []
+            },
+            {
+              "title": "5.2.5 (vi) Vacuoles",
+              "priority": "MED",
+              "summary": "Vacuoles as storage sacs, differences between plant and animal cell vacuoles, cell sap and turgidity",
+              "keyTerms": ["vacuoles", "cell sap", "turgidity", "food vacuole"],
+              "diagrams": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Cell Division",
+      "priority": "HIGH",
+      "summary": "Two types of cell division — mitosis (growth/repair, two identical daughter cells) and meiosis (gamete formation, four cells with half chromosomes)",
+      "keyTerms": ["cell division", "mitosis", "meiosis", "mother cell", "daughter cells", "gametes", "chromosomes"],
+      "diagrams": ["Figure 5.7 — Mitosis", "Figure 5.8 — Meiosis"]
+    },
+    {
+      "title": "What You Have Learnt",
+      "priority": "LOW",
+      "summary": "Chapter summary — key points about cell structure, membrane, organelles, prokaryotic vs eukaryotic cells, and cell division",
+      "keyTerms": [],
+      "diagrams": []
+    },
+    {
+      "title": "Exercises",
+      "priority": "MED",
+      "summary": "10 practice questions covering comparisons, organelle functions, osmosis experiments, and cell division types",
+      "keyTerms": [],
+      "diagrams": []
+    }
+  ],
+  "metadata": {
+    "subject": "Science",
+    "sourceFile": "samplechapter-science.md",
+    "totalSections": 5,
+    "totalSubsections": 10,
+    "keyTermCount": 67,
+    "diagramCount": 8,
+    "priorityDistribution": { "HIGH": 10, "MED": 4, "LOW": 1 },
+    "priorityMethod": "heuristic"
+  }
+}

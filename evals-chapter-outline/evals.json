@@ -1,0 +1,32 @@
+{
+  "skill_name": "chapter-outline",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create a chapter outline for this history chapter.\n\nChapter file: evals/samples/markdown/samplechapter-history.md\nBlueprint file: evals/samples/markdown/test-blueprint.md\nSubject: History",
+      "expected_output": "Folder 'samplechapter-history/' created with samplechapter-history_outline.md and samplechapter-history_outline.json. Outline has sections matching chapter headings, priority tags based on blueprint (French Revolution = 5 marks → HIGH), key terms extracted, diagrams listed, 2-3 sentence jargon-free description.",
+      "files": [
+        "evals/samples/markdown/samplechapter-history.md",
+        "evals/samples/markdown/test-blueprint.md"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I need a chapter outline for this science chapter.\n\nChapter file: evals/samples/markdown/samplechapter-science.md\nBlueprint file: evals/samples/markdown/test-blueprint.md\nSubject: Science",
+      "expected_output": "Folder 'samplechapter-science/' created with outline.md and outline.json. Sections extracted from science chapter, priority from blueprint (Fundamental Unit of Life = 7 marks → HIGH), key terms including biological vocabulary, diagrams referenced, simple description.",
+      "files": [
+        "evals/samples/markdown/samplechapter-science.md",
+        "evals/samples/markdown/test-blueprint.md"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Generate a chapter outline.\n\nChapter file: evals/samples/markdown/samplechapter-maths.md\nBlueprint file: evals/samples/markdown/test-blueprint.md\nSubject: Mathematics",
+      "expected_output": "Folder 'samplechapter-maths/' created with outline.md and outline.json. Sections from Euclid's Geometry chapter, priority from blueprint (3 marks → MED/LOW), key terms including theorems/axioms, no diagrams expected, description in plain language.",
+      "files": [
+        "evals/samples/markdown/samplechapter-maths.md",
+        "evals/samples/markdown/test-blueprint.md"
+      ]
+    }
+  ]
+}

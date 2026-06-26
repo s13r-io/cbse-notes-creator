@@ -1,0 +1,87 @@
+{
+  "chapter": {
+    "number": 5,
+    "title": "Introduction to Euclid's Geometry"
+  },
+  "description": "This chapter traces how geometry evolved from ancient land-measuring practices into a formal mathematical system built on definitions, axioms, and postulates. It introduces Euclid's framework — the foundation of all the geometry you'll study in school — and shows how mathematicians use deductive reasoning to prove theorems from basic assumptions.",
+  "sections": [
+    {
+      "title": "5.1 Introduction",
+      "priority": "MED",
+      "summary": "Historical origins of geometry across ancient civilisations (Egypt, India, Greece) leading to Euclid's systematic approach",
+      "keyTerms": ["geometry", "geo", "metrein", "Sulbasutras", "vedis", "sriyantra", "deductive reasoning", "Thales", "Pythagoras", "Euclid", "Elements"],
+      "diagrams": ["Figure 5.1 — A Truncated Pyramid", "Figure 5.2 — Thales (640 BCE – 546 BCE)", "Figure 5.3 — Euclid (325 BCE – 265 BCE)"],
+      "subsections": []
+    },
+    {
+      "title": "5.2 Euclid's Definitions, Axioms and Postulates",
+      "priority": "HIGH",
+      "summary": "Euclid's foundational definitions (point, line, surface), axioms (universal truths), five postulates (geometry-specific assumptions), worked examples, and Theorem 5.1",
+      "keyTerms": ["point", "line", "plane", "surface", "solid", "dimensions", "undefined terms", "axioms", "postulates", "common notions", "propositions", "theorems", "consistent system", "equilateral triangle", "mid-point", "Axiom 5.1"],
+      "diagrams": ["Figure 5.4 — Line through points P and Q", "Figure 5.5 — Line segment extension", "Figure 5.6 — Parallel lines with transversal (Postulate 5)", "Figure 5.7 — Points A, B, C on a line", "Figure 5.8 — Equilateral triangle construction", "Figure 5.9 — Line segments for exercise", "Figure 5.10 — Line segments for exercise"],
+      "subsections": [
+        {
+          "title": "Definitions (Solids to Points)",
+          "priority": "HIGH",
+          "summary": "Euclid's 7 key definitions from Book 1, the problem of infinite regress, and why point/line/plane are left undefined",
+          "keyTerms": ["solid", "surface", "curve", "dimension", "undefined terms", "intuitive representation"],
+          "diagrams": []
+        },
+        {
+          "title": "Axioms (Common Notions)",
+          "priority": "HIGH",
+          "summary": "Seven universal axioms (equality, addition, subtraction, coincidence, whole-part, doubles, halves) and their application to magnitudes",
+          "keyTerms": ["axioms", "common notions", "magnitudes", "principle of superposition", "universal truth"],
+          "diagrams": []
+        },
+        {
+          "title": "Postulates (Five Geometry Assumptions)",
+          "priority": "HIGH",
+          "summary": "Euclid's five postulates with special focus on the complexity of Postulate 5 (parallel lines), and Axiom 5.1 (unique line through two points)",
+          "keyTerms": ["postulate", "terminated line", "line segment", "right angle", "interior angles", "Axiom 5.1"],
+          "diagrams": ["Figure 5.4", "Figure 5.5", "Figure 5.6"]
+        },
+        {
+          "title": "Consistent Systems and Theorems",
+          "priority": "MED",
+          "summary": "Definition of a consistent axiomatic system, deductive reasoning chain, and Theorem 5.1 (two distinct lines share at most one point)",
+          "keyTerms": ["consistent system", "deductive reasoning", "proposition", "theorem", "proof by contradiction"],
+          "diagrams": []
+        },
+        {
+          "title": "Worked Examples",
+          "priority": "HIGH",
+          "summary": "Example 1 (AB + BC = AC using Axiom 4), Example 2 (equilateral triangle construction using Postulate 3)",
+          "keyTerms": ["equilateral triangle", "radii", "coincidence", "proof"],
+          "diagrams": ["Figure 5.7", "Figure 5.8"]
+        }
+      ]
+    },
+    {
+      "title": "EXERCISE 5.1",
+      "priority": "MED",
+      "summary": "Seven practice questions testing true/false reasoning, term definitions, postulate analysis, midpoint proofs, and segment equality proofs",
+      "keyTerms": ["parallel lines", "perpendicular lines", "line segment", "radius", "square", "mid-point"],
+      "diagrams": ["Figure 5.9", "Figure 5.10"],
+      "subsections": []
+    },
+    {
+      "title": "5.3 Summary",
+      "priority": "LOW",
+      "summary": "Recap of the seven key points — undefined terms, axioms/postulates as unproven assumptions, theorems as proved statements, list of axioms and postulates",
+      "keyTerms": [],
+      "diagrams": [],
+      "subsections": []
+    }
+  ],
+  "metadata": {
+    "subject": "Mathematics",
+    "sourceFile": "samplechapter-maths.md",
+    "totalSections": 4,
+    "totalSubsections": 5,
+    "keyTermCount": 47,
+    "diagramCount": 10,
+    "priorityDistribution": { "HIGH": 5, "MED": 3, "LOW": 1 },
+    "priorityMethod": "heuristic"
+  }
+}

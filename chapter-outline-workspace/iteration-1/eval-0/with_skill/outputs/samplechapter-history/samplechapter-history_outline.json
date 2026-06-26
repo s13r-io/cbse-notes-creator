@@ -1,0 +1,231 @@
+{
+  "chapter": {
+    "number": null,
+    "title": "The French Revolution"
+  },
+  "description": "This chapter explains why the French Revolution happened, what happened during it, and how it changed France and the world. It matters because it shows how ordinary people can overthrow unfair systems — a pattern that repeats in history.",
+  "sections": [
+    {
+      "title": "French Society During the Late Eighteenth Century",
+      "priority": "MED",
+      "summary": "Introduces the three-estate system, the financial crisis under Louis XVI, and the social inequalities that set the stage for revolution.",
+      "keyTerms": [
+        "Louis XVI",
+        "Marie Antoinette",
+        "livres",
+        "clergy",
+        "nobility",
+        "Old Regime",
+        "feudal dues",
+        "tithes",
+        "taille"
+      ],
+      "diagrams": [
+        "Figure 2 — A Society of Estates",
+        "Figure 3 — The Spider and the Fly"
+      ],
+      "subsections": [
+        {
+          "title": "The Struggle to Survive",
+          "priority": "MED",
+          "summary": "Population growth, rising bread prices, and the widening gap between rich and poor leading to subsistence crises.",
+          "keyTerms": [
+            "subsistence crisis"
+          ],
+          "diagrams": []
+        },
+        {
+          "title": "How a Subsistence Crisis Happens",
+          "priority": "LOW",
+          "summary": "The chain reaction from bad harvest to food riots, illustrated as a flow diagram.",
+          "keyTerms": [
+            "bad harvest",
+            "food riots",
+            "scarcity of grain"
+          ],
+          "diagrams": [
+            "Figure 4 — The course of a subsistence crisis"
+          ]
+        },
+        {
+          "title": "A Growing Middle Class Envisages an End to Privileges",
+          "priority": "HIGH",
+          "summary": "The emergence of the educated middle class and Enlightenment ideas from Locke, Rousseau, and Montesquieu that challenged feudal privilege.",
+          "keyTerms": [
+            "middle class",
+            "John Locke",
+            "Jean Jacques Rousseau",
+            "Montesquieu",
+            "Two Treatises of Government",
+            "The Social Contract",
+            "The Spirit of the Laws",
+            "social contract",
+            "division of power"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "title": "The Outbreak of the Revolution",
+      "priority": "HIGH",
+      "summary": "The calling of the Estates General, the Third Estate's walkout, the Tennis Court Oath, the storming of the Bastille, and the Great Fear in the countryside.",
+      "keyTerms": [
+        "Estates General",
+        "National Assembly",
+        "Mirabeau",
+        "Abbé Sieyès",
+        "Tennis Court Oath",
+        "Bastille",
+        "Great Fear",
+        "chateau",
+        "manor"
+      ],
+      "diagrams": [
+        "Figure 5 — The Tennis Court Oath",
+        "Figure 6 — The spread of the Great Fear"
+      ],
+      "subsections": [
+        {
+          "title": "France Becomes a Constitutional Monarchy",
+          "priority": "HIGH",
+          "summary": "The Constitution of 1791, the Declaration of the Rights of Man and Citizen, and the new political system separating powers.",
+          "keyTerms": [
+            "constitutional monarchy",
+            "active citizens",
+            "passive citizens",
+            "Declaration of the Rights of Man and Citizen",
+            "natural and inalienable rights"
+          ],
+          "diagrams": [
+            "Figure 7 — The Political system under the Constitution of 1791",
+            "Figure 8 — The Declaration of the Rights of Man and Citizen",
+            "Box 1 — Reading political symbols"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "France Abolishes Monarchy and Becomes a Republic",
+      "priority": "HIGH",
+      "summary": "The war against Prussia and Austria, the rise of the Jacobins, the storming of the Tuileries, the execution of the king, and France becoming a republic.",
+      "keyTerms": [
+        "Jacobins",
+        "Maximilian Robespierre",
+        "sans-culottes",
+        "Convention",
+        "republic",
+        "treason",
+        "Marseillaise"
+      ],
+      "diagrams": [
+        "Figure 9 — A sans-culottes couple",
+        "Figure 10 — Nanine Vallain, Liberty"
+      ],
+      "subsections": [
+        {
+          "title": "The Reign of Terror",
+          "priority": "HIGH",
+          "summary": "Robespierre's policy of severe control and punishment, the guillotine, wage/price controls, and his eventual downfall.",
+          "keyTerms": [
+            "Reign of Terror",
+            "guillotine",
+            "Dr Guillotin",
+            "pain d'égalité",
+            "Citoyen/Citoyenne"
+          ],
+          "diagrams": [
+            "Figure 11 — Revolutionary festival"
+          ]
+        },
+        {
+          "title": "A Directory Rules France",
+          "priority": "MED",
+          "summary": "The fall of the Jacobins, the new constitution, the Directory system, and the political instability that led to Napoleon's rise.",
+          "keyTerms": [
+            "Directory",
+            "Napoleon Bonaparte"
+          ],
+          "diagrams": []
+        }
+      ]
+    },
+    {
+      "title": "Did Women have a Revolution?",
+      "priority": "MED",
+      "summary": "Women's participation in the revolution, their demands for equal rights, Olympe de Gouges, and the eventual closure of women's clubs.",
+      "keyTerms": [
+        "Society of Revolutionary and Republican Women",
+        "Olympe de Gouges",
+        "Declaration of the Rights of Woman and Citizen",
+        "suffrage movement"
+      ],
+      "diagrams": [
+        "Figure 12 — Parisian women on their way to Versailles",
+        "Figure 13 — Women queuing up at a bakery"
+      ],
+      "subsections": []
+    },
+    {
+      "title": "The Abolition of Slavery",
+      "priority": "MED",
+      "summary": "The triangular slave trade, the Convention's 1794 legislation to free slaves, Napoleon's reintroduction of slavery, and final abolition in 1848.",
+      "keyTerms": [
+        "triangular slave trade",
+        "Negroes",
+        "emancipation",
+        "Martinique",
+        "Guadeloupe",
+        "San Domingo"
+      ],
+      "diagrams": [
+        "Figure 14 — The emancipation of slaves"
+      ],
+      "subsections": []
+    },
+    {
+      "title": "The Revolution and Everyday Life",
+      "priority": "LOW",
+      "summary": "The abolition of censorship, freedom of the press, and how revolutionary ideas spread through print, plays, and festivals.",
+      "keyTerms": [
+        "censorship",
+        "freedom of speech and expression"
+      ],
+      "diagrams": [
+        "Figure 15 — The patriotic fat-reducing press",
+        "Figure 16 — Marat addressing the people"
+      ],
+      "subsections": []
+    },
+    {
+      "title": "Conclusion",
+      "priority": "LOW",
+      "summary": "Napoleon's rise and fall, the legacy of liberty and democratic rights spreading across Europe, and the impact on Indian reformers like Raja Rammohan Roy.",
+      "keyTerms": [
+        "Napoleon Bonaparte",
+        "Waterloo",
+        "Raja Rammohan Roy",
+        "Tipu Sultan",
+        "Bengal Renaissance"
+      ],
+      "diagrams": [
+        "Figure 17 — Napoleon crossing the Alps"
+      ],
+      "subsections": []
+    }
+  ],
+  "metadata": {
+    "subject": "History",
+    "sourceFile": "samplechapter-history.md",
+    "totalSections": 7,
+    "totalSubsections": 6,
+    "keyTermCount": 52,
+    "diagramCount": 17,
+    "priorityDistribution": {
+      "HIGH": 3,
+      "MED": 3,
+      "LOW": 2
+    },
+    "priorityMethod": "blueprint"
+  }
+}
